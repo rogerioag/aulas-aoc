@@ -1,0 +1,29 @@
+digraph "Scop Graph for 'main' function" {
+	label="Scop Graph for 'main' function";
+
+	Node0x15ae120 [shape=record,label="{%0:\l  call void @init_array()\l  br label %1\l}"];
+	Node0x15ae120 -> Node0x15ade50;
+	Node0x15ade50 [shape=record,label="{%1:\l\l  %indvar = phi i64 [ %indvar.next, %6 ], [ 0, %0 ]\l  %exitcond = icmp ne i64 %indvar, 1024\l  br i1 %exitcond, label %2, label %7\l}"];
+	Node0x15ade50 -> Node0x15ae340;
+	Node0x15ade50 -> Node0x15adf70;
+	Node0x15ae340 [shape=record,label="{%2:\l\l  %scevgep2.moved.to. = getelementptr [1024 x float]* @h_a, i64 0, i64 %indvar\l  %scevgep1.moved.to. = getelementptr [1024 x float]* @h_b, i64 0, i64 %indvar\l  %scevgep.moved.to. = getelementptr [1024 x float]* @h_c, i64 0, i64 %indvar\l  %3 = load float* %scevgep2.moved.to., align 4\l  %4 = load float* %scevgep1.moved.to., align 4\l  %5 = fadd float %3, %4\l  store float %5, float* %scevgep.moved.to., align 4\l  br label %6\l}"];
+	Node0x15ae340 -> Node0x15ae2b0;
+	Node0x15ae2b0 [shape=record,label="{%6:\l\l  %indvar.next = add i64 %indvar, 1\l  br label %1\l}"];
+	Node0x15ae2b0 -> Node0x15ade50[constraint=false];
+	Node0x15adf70 [shape=record,label="{%7:\l\l  call void @print_array()\l  call void @check_result()\l  ret i32 0\l}"];
+	colorscheme = "paired12"
+        subgraph cluster_0x15ae5b0 {
+          label = "";
+          style = solid;
+          color = 1
+          subgraph cluster_0x15ad780 {
+            label = "";
+            style = filled;
+            color = 3            Node0x15ade50;
+            Node0x15ae340;
+            Node0x15ae2b0;
+          }
+          Node0x15ae120;
+          Node0x15adf70;
+        }
+}

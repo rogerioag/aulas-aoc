@@ -1,0 +1,18 @@
+Printing analysis 'Basic Alias Analysis (stateless AA impl)':
+Pass::print not implemented for pass: 'Basic Alias Analysis (stateless AA impl)'!
+Printing analysis 'Polly - Generate an AST from the SCoP (isl)' for region: '<bb 4> => <bb 6>' in function 'main':
+Printing analysis 'Polly - Generate an AST from the SCoP (isl)' for region: '<bb 5>.preheader => <bb 8>' in function 'main':
+main():
+
+if (1)
+
+    for (int c1 = 0; c1 <= 3; c1 += 1) {
+      Stmt__<bb 5>_preheader_(c1);
+      for (int c3 = 0; c3 <= 3; c3 += 1)
+        Stmt__<bb 4>_(c1, c3);
+    }
+
+else
+    {  /* original code */ }
+
+Printing analysis 'Polly - Generate an AST from the SCoP (isl)' for region: 'entry => <Function Return>' in function 'main':

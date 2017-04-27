@@ -1,0 +1,14 @@
+Polly Options:
+Configure the polly loop optimizer
+
+  -enable-polly-openmp                            - Generate OpenMP parallel code
+  -polly                                          - Enable the polly optimizer (only at -O3)
+  -polly-no-tiling                                - Disable tiling in the scheduler
+  -polly-only-func=<function-name>                - Only run on a single function
+  -polly-report                                   - Print information about the activities of Polly
+  -polly-vectorizer                               - Select the vectorization strategy
+    =none                                         -   No Vectorization
+    =polly                                        -   Polly internal vectorizer
+    =unroll-only                                  -   Only grouped unroll the vectorize candidate loops
+    =bb                                           -   The Basic Block vectorizer driven by Polly
+

@@ -1,0 +1,12 @@
+Printing analysis 'Basic Alias Analysis (stateless AA impl)':
+Pass::print not implemented for pass: 'Basic Alias Analysis (stateless AA impl)'!
+Printing analysis 'Polly - Calculate dependences' for region: '%5 => %13' in function 'main':
+Printing analysis 'Polly - Calculate dependences' for region: '%3 => %15' in function 'main':
+Printing analysis 'Polly - Calculate dependences' for region: '%1 => %17' in function 'main':
+	RAW dependences:
+		{ Stmt_6[i0, i1, i2] -> Stmt_6[i0, i1, 1 + i2] : i0 >= 0 and i0 <= 1023 and i1 >= 0 and i1 <= 1023 and i2 >= 0 and i2 <= 1022; Stmt_4[i0, i1] -> Stmt_6[i0, i1, 0] : i0 >= 0 and i0 <= 1023 and i1 >= 0 and i1 <= 1023 }
+	WAR dependences:
+		{  }
+	WAW dependences:
+		{ Stmt_6[i0, i1, i2] -> Stmt_6[i0, i1, 1 + i2] : i0 >= 0 and i0 <= 1023 and i1 >= 0 and i1 <= 1023 and i2 >= 0 and i2 <= 1022; Stmt_4[i0, i1] -> Stmt_6[i0, i1, 0] : i0 >= 0 and i0 <= 1023 and i1 >= 0 and i1 <= 1023 }
+Printing analysis 'Polly - Calculate dependences' for region: '%0 => <Function Return>' in function 'main':

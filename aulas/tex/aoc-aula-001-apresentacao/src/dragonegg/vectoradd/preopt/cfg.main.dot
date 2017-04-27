@@ -1,0 +1,14 @@
+digraph "CFG for 'main' function" {
+	label="CFG for 'main' function";
+
+	Node0x228e0c0 [shape=record,label="{%0:\l  call void @init_array()\l  br label %1\l}"];
+	Node0x228e0c0 -> Node0x22a3090;
+	Node0x22a3090 [shape=record,label="{%1:\l\l  %indvar = phi i64 [ %indvar.next, %6 ], [ 0, %0 ]\l  %scevgep = getelementptr [1024 x float]* @h_c, i64 0, i64 %indvar\l  %scevgep1 = getelementptr [1024 x float]* @h_b, i64 0, i64 %indvar\l  %scevgep2 = getelementptr [1024 x float]* @h_a, i64 0, i64 %indvar\l  %exitcond = icmp ne i64 %indvar, 1024\l  br i1 %exitcond, label %2, label %7\l|{<s0>T|<s1>F}}"];
+	Node0x22a3090:s0 -> Node0x22a89c0;
+	Node0x22a3090:s1 -> Node0x22a8a20;
+	Node0x22a89c0 [shape=record,label="{%2:\l\l  %3 = load float* %scevgep2, align 4\l  %4 = load float* %scevgep1, align 4\l  %5 = fadd float %3, %4\l  store float %5, float* %scevgep, align 4\l  br label %6\l}"];
+	Node0x22a89c0 -> Node0x22a31f0;
+	Node0x22a31f0 [shape=record,label="{%6:\l\l  %indvar.next = add i64 %indvar, 1\l  br label %1\l}"];
+	Node0x22a31f0 -> Node0x22a3090;
+	Node0x22a8a20 [shape=record,label="{%7:\l\l  call void @print_array()\l  call void @check_result()\l  ret i32 0\l}"];
+}

@@ -1,0 +1,415 @@
+\documentclass{beamer}
+%\documentclass[12pt]{beamer}
+
+%\documentclass[handout]{beamer}
+
+% \setbeameroption{show notes}
+% \setbeamertemplate{note page}[plain]
+	
+\usepackage{etex}
+
+\usepackage{pgfpages}
+
+% inclui o modo handout.
+\include{seisporpagina}
+
+\include{colors-defs}
+
+\include{variables}
+\include{configurations} 
+
+\usepackage{appendixnumberbeamer}
+
+\newtcolorbox{mybox}[3][]
+{
+	breakable,
+	boxsep=1pt,
+	left=2pt,
+	right=2pt,
+	top=1pt,
+	bottom=1pt,
+	colframe = #2!40!black,
+	colback  = #2!10,
+	% coltitle = #2!20!black,  
+	title    = #3,
+	#1,
+}
+
+%-----------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title[\idsubjectcourseinstitution] %optional
+{\texttt{\classnumber}: \classtitle}
+%\subtitle{Visão Geral}
+\normalsize
+\author[\authorcitation] % (optional)
+{\authorname\inst{1} \\
+	\texttt{\authoremail}
+}
+
+\normalsize
+\institute[] % (optional)
+{
+  \inst{1}%
+  \universityname \\
+  \departmentname \\
+  \citystatecountry
+  \and
+  \large
+  \textbf{\coursename}
+  
+  \vspace{-1.0cm}
+}
+\date[\today] % (optional)
+{\vspace{-1.5cm} \texttt{\subjectname}}
+
+% \logo{\includegraphics[height=0.7cm]{logos/logos.png}}
+%\titlegraphic{\includegraphics[width=2cm]{logos/logos.png}\hspace*{4.75cm}~%
+%	\includegraphics[width=2cm]{logos/logos.png}
+%}
+
+% \titlegraphic{\includegraphics[height=0.7cm]{logos/logos.png}\vspace*{-0.2cm}}
+
+\setbeamertemplate{navigation symbols}{}
+
+%End of title page configuration block
+%-------------------------------------------------------
+
+%-----------------------------------------------------
+%The next block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+
+%\AtBeginSection[]
+%{
+%  \begin{frame}
+%    \frametitle{Agenda}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+%-----------------------------------------------------
+\begin{document}
+
+%The next statement creates the title page.
+%\frame{\titlepage}
+%\note{note}
+
+{
+	\setbeamertemplate{headline}{}
+	\usebackgroundtemplate{\includegraphics[trim=1.0cm 1.0cm 1.0cm 1.0cm, scale=0.47]{logos/header-utfpr.pdf}}
+	\begin{frame}
+		\maketitle
+	\end{frame}
+}
+
+%-----------------------------------------------------
+%-----------------------------------------------------
+%This block of code is for the table of contents after
+%the title page
+\begin{frame}
+\frametitle{Agenda}
+\tableofcontents
+\end{frame}
+%-----------------------------------------------------
+\section[Introdução]{Introdução}
+%-----------------------------------------------------
+\begin{frame}
+\frametitle{Objetivos}
+\justifying
+\Large
+\begin{itemize}
+    \item Uma visão geral sobre a disciplina.
+    \item Apresentar os critérios de avaliação.
+    \item Plano de Ensino.
+\end{itemize}
+\end{frame}
+%-----------------------------------------------------
+\section[Disciplina]{Disciplina}
+%-----------------------------------------------------
+\begin{frame}
+	\frametitle{BCC33B - Arquitetura e Organização de Computadores}
+	\fontsize{14pt}{7.2}\selectfont
+	\begin{minipage}[t][\textheight][t]{\textwidth}
+	% \begin{itemize}
+		% \item  \textbf{BCC33B - Arquitetura e Organização de Computadores}
+		% \item \textbf{Objetivos:} Compreender os conceitos fundamentais de Arquitetura e Organização de Computadores, o funcionamento de computadores através do estudo do ciclo de instrução e do tráfego de informações dentro da CPU e até a memória e unidades de entrada e saída. 
+		% \item \textbf{Ementa:} Aritmética para computadores com inteiros e ponto flutuante. Arquiteturas gerais de computadores. Arquiteturas RISC e CISC. CPU. ALU. Instruções e linguagem de máquina. Modos de endereçamento. Sistemas de memória cache, virtual, principal e externa. Pipeline. Mecanismos de interrupção. Interface com periféricos. Arquiteturas Paralelas e não Convencionais.
+	% \end{itemize}
+	\begin{exampleblock}{Objetivos}
+		\fontsize{12pt}{7.2}\selectfont
+		Compreender os conceitos fundamentais de Arquitetura e Organização de Computadores, o funcionamento de computadores através do estudo do ciclo de instrução e do tráfego de informações dentro da CPU e até a memória e unidades de entrada e saída.
+	\end{exampleblock}
+	\begin{alertblock}{Ementa}
+		\fontsize{12pt}{7.2}\selectfont
+		Aritmética para computadores com inteiros e ponto flutuante. Arquiteturas gerais de computadores. Arquiteturas RISC e CISC. CPU. ALU. Instruções e linguagem de máquina. Modos de endereçamento. Sistemas de memória cache, virtual, principal e externa. Pipeline. Mecanismos de interrupção. Interface com periféricos. Arquiteturas Paralelas e não Convencionais.
+	\end{alertblock}
+	\end{minipage}
+\end{frame}
+%-----------------------------------------------------
+\begin{frame}[fragile]
+	\frametitle{Arquitetura e Organização de Computadores}
+	\fontsize{14pt}{7.2}\selectfont
+	\begin{minipage}[t][\textheight][t]{\textwidth}
+		\begin{itemize}
+			\item  É uma disciplina básica para a Computação.
+			\item Cursos relacionados à computação necessitam de disciplinas dessa natureza para sua fundamentação conceitual.
+			\item \textbf{Na Computação:} Ingresso na pós-graduação: \texttt{POSCOMP}
+			\item \textbf{Para vocês:} Contribuição para o entendimento de Sistemas de Computação.
+			\item Entender como o Computador funciona é indispensável a qualquer profissional da área, mesmo que não atue diretamente neste assunto.
+		\end{itemize}
+	\end{minipage}
+\end{frame}
+%-----------------------------------------------------
+\begin{frame}
+	\frametitle{Relação disciplina e curso}
+	\begin{figure}[htbp]
+		\includegraphics[width=\textwidth,height=\textheight]{figures/grade-bcc.png}
+	\end{figure}
+\end{frame}
+%-----------------------------------------------------------------------
+\begin{frame}
+	\frametitle{O que deve estar claro}
+	\fontsize{14pt}{7.2}\selectfont
+	\begin{minipage}[t][\textheight][t]{\textwidth}
+	\begin{itemize}
+		\item Resolver as listas de exercícios é uma boa forma de preparar-se para a avaliação.
+		\item Revisar a matéria semanalmente para não acumular conteúdo também é uma abordagem interessante.
+		\item Façam as atividades e participem das aulas.
+		\item Reclamar na véspera da avaliação pela quantidade de matéria acumulada para estudar, também não vale!
+		\item Se dediquem e NÃO deixem para estudar na última hora.
+	\end{itemize}
+	\begin{figure}[htbp]
+		\includegraphics[scale=0.2]{figures/estudando-na-moto.jpg}
+	\end{figure}
+	\end{minipage}
+\end{frame}
+%-----------------------------------------------------
+\section[Ensino]{Ensino}
+%-----------------------------------------------------
+%\begin{frame}
+%\frametitle{Plano de Ensino}
+%\begin{itemize}
+%    \item Datas de avaliações e trabalhos:
+%    \begin{itemize}
+%        \item {\textbf{Projeto A} (entrega/apresentação) - 17/12}
+%        \item {\textbf{1ª Avaliação} - 18/12}
+%        \item {\textbf{Projeto B} (entrega/apresentação) - 11/03}
+%        \item {\textbf{2ª Avaliação} - 12/03}
+%    \end{itemize}
+%    \item Critério:
+%    \begin{itemize}
+%        \item{\textbf{Avaliação 1 (AV1)}}
+%        \[ AV1 = P1 * 0,5 + PA * 0,3 \]
+%        \item{\textbf{Avaliação 2 (AV2)}}
+%        \[ AV2 = P2 *  0,5 + PB * 0,3 \]
+%        \item A nota final será calculada pela fórmula:
+%        \[ NF = \frac{(AV1 + AV2)}{2} + (ACA * 0,2) \]
+%        \item Avaliação Final (AF)
+%        \[ RF = \frac{(NF + AF)}{2} \geq 6,0 \]
+%    \end{itemize}
+%\end{itemize}
+%\end{frame}
+%-----------------------------------------------------------------------
+\begin{frame}[allowframebreaks]
+	\frametitle{Plano de Ensino}
+	\fontsize{14pt}{7.2}\selectfont
+	\begin{minipage}[t][\textheight][t]{\textwidth}
+	\vspace{-0.5cm}
+	\begin{columns}
+		\column{0.5\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[page=1,trim=2.0cm 3.0cm 2.0cm 3.0cm, scale=0.3]{figures/plano-ensino-BCC33B-IC3A}
+			\end{figure}
+		\column{0.5\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[page=2,trim=2.0cm 3.0cm 2.0cm 3.0cm, scale=0.3]{figures/plano-ensino-BCC33B-IC3A}
+			\end{figure}
+	\end{columns}
+	\end{minipage}
+\end{frame}
+%-----------------------------------------------------------------------
+\begin{frame}[allowframebreaks]
+	\frametitle{Plano de Ensino}
+	\fontsize{14pt}{7.2}\selectfont
+	\begin{minipage}[t][\textheight][t]{\textwidth}
+		\vspace{-0.5cm}
+		\begin{columns}
+			\column{0.5\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[page=3,trim=2.0cm 3.0cm 2.0cm 3.0cm, scale=0.3]{figures/plano-ensino-BCC33B-IC3A}
+			\end{figure}
+			\column{0.5\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[page=4,trim=2.0cm 3.0cm 2.0cm 3.0cm, scale=0.3]{figures/plano-ensino-BCC33B-IC3A}
+			\end{figure}
+		\end{columns}
+	\end{minipage}
+\end{frame}
+%-----------------------------------------------------------------------
+%\begin{frame}
+%	\frametitle{Material Adicional}
+%	\fontsize{14pt}{7.2}\selectfont
+%	\begin{minipage}[t][\textheight][t]{\textwidth}
+%	\begin{itemize}
+%		\item  Livro gratuito do Prof. Carlos Maziero (UTFPR).
+%		\item  \url{http://dainf.ct.utfpr.edu.br/~maziero}
+%		\item  \url{http://dainf.ct.utfpr.edu.br/~maziero/doku.php/so:livro_de_sistemas_operacionais}
+%	\end{itemize}
+%	\end{minipage}
+%\end{frame}
+%-----------------------------------------------------------------------
+\section[Metodologia]{Metodologia}
+\begin{frame}
+	\frametitle{Metodologia de Ensino}
+	\fontsize{14pt}{7.2}\selectfont
+	\begin{minipage}[t][\textheight][t]{\textwidth}
+		\begin{itemize}
+			\item  Aulas expositivas e práticas.
+			\item Teoria (Conceitos e Exemplos) + Exercícios.
+			\item Resumo da aula (Individual).
+			\item Revisão (simplificada) da aula anterior no início de cada aula.
+			\item Missão Im\textbf{possível}: Convencer os alunos a revisarem o conteúdo semanalmente.
+			\item \textbf{Tarefa dos alunos:} Estudar cada aula para não acumular o conteúdo e para dar bons exemplos a outros colegas.
+		\end{itemize}
+	\end{minipage}
+\end{frame}
+%-----------------------------------------------------------------------
+\section[Atendimento]{Atendimento}
+\begin{frame}
+	\frametitle{Professor}
+	\fontsize{14pt}{7.2}\selectfont
+	\begin{minipage}[t][\textheight][t]{\textwidth}
+		\vspace{1.0cm}
+	\begin{center}
+		\textbf{Rogério Aparecido Gonçalves (RAG)} \\
+		%            Doutorando em Ciência da Computação – IME/USP (2011 ...) \\
+		%            Mestre em Ciência da Computação – PCC/UEM  (2008) \\
+		%            Bacharel em Informática – UEM (2005)  \\
+		\texttt{rogerioag@utfpr.edu.br}
+	\end{center}
+	\begin{itemize}
+		\item Professor na UTFPR desde de JAN/2009.
+		\item Estive afastado para Doutorado entre SET/2014 e MAI/2016.
+		\item Áreas:
+		\begin{itemize}
+			\fontsize{14pt}{7.2}\selectfont
+			\item Computação Paralela em Sistemas Heterogêneos
+			\item Arquitetura de Computadores e Processamento Paralelo
+			\item Compiladores e \emph{Runtimes}
+		\end{itemize}
+	\end{itemize}
+	\end{minipage}
+\end{frame}
+%-----------------------------------------------------------------------
+\begin{frame}
+	\frametitle{Horário}
+	\fontsize{14pt}{7.2}\selectfont
+	\begin{minipage}[t][\textheight][t]{\textwidth}
+		\begin{figure}
+			\centering
+			\includegraphics[trim=1.0cm 5.0cm 1.0cm 16.3cm, clip, width=0.9\textwidth]{figures/horario-rag-2017-01}
+		\end{figure}
+		\begin{itemize}
+			\item \textbf{Atendimento:} QUI.
+			\item \textbf{Obs:} Horários de Atendimento são para tirar dúvidas no decorrer das aulas e não somente em véspera de Prova.
+			\item Utilizem os recursos colocados à disposição de vocês!
+		\end{itemize}
+	\end{minipage}
+\end{frame}
+%-----------------------------------------------------------------------
+\begin{frame}
+	\frametitle{Canais de Comunicação}
+	\fontsize{14pt}{7.2}\selectfont
+	\begin{minipage}[t][\textheight][t]{\textwidth}
+		\begin{itemize}
+			\item \textbf{Departamento:} DACOM
+			\item \textbf{Coordenação:} COINT/COCIC
+			\item \textbf{Sala:} E-006/12
+			\item Horários de atendimento
+			\item \textbf{E-mail institucional:} \texttt{rogerioag@utfpr.edu.br}
+			\item \textbf{Moodle:} Informações, materiais e avaliações \url{http://moodle.utfpr.edu.br}
+			\item E-mail da turma? Redes Sociais...
+		\end{itemize}
+	\end{minipage}
+\end{frame}
+%-----------------------------------------------------------------------
+\section[Convivência]{Convivência}
+\begin{frame}
+	\frametitle{Regimento disciplinar}
+	\fontsize{14pt}{7.2}\selectfont
+	\begin{minipage}[t][\textheight][t]{\textwidth}
+		\begin{itemize}
+			\item Leiam o Regimento Disciplinar
+			\item {Disponível em: \url{http://www.cm.utfpr.edu.br/images/arquivospdf/regdisciplinar.pdf}}
+			\item É importante saber sobre os Direitos e Deveres.
+		\end{itemize}
+	\end{minipage}
+\end{frame}
+%-----------------------------------------------------------------------
+\begin{frame}
+	\frametitle{Boa convivência}
+	\fontsize{14pt}{7.2}\selectfont
+	\begin{minipage}[t][\textheight][t]{\textwidth}
+		\begin{itemize}
+			\item  Horário
+			\item  Uso de celulares, notebook e outros
+			\item  Dediquem-se agora
+			\item  Procuro ser justo: \texttt{(trabalho = crédito) -> resultado}
+			\item  \textbf{Plágio}
+			Segundo Art. 9o., as sanções disciplinares cabíveis são:
+			\begin{enumerate}[I.]
+				\item advertência escrita;
+				\item suspensão;
+				\item expulsão.
+			\end{enumerate}
+		\end{itemize}
+	\end{minipage}
+\end{frame}
+%-----------------------------------------------------------------------
+\section[Dúvidas]{Dúvidas}
+\begin{frame}
+	\frametitle{Perguntas?}
+	\fontsize{14pt}{7.2}\selectfont
+	\begin{minipage}[t][\textheight][t]{\textwidth}
+		
+	\end{minipage}
+\end{frame}
+%-----------------------------------------------------
+\section[Referências]{Referências}
+%-----------------------------------------------------
+\begin{frame}[t,allowframebreaks]
+	\frametitle{Referências}
+    \scriptsize
+    \raggedright
+    % \nocite{*}
+    % \bibliographystyle{amsalpha}
+    \bibliographystyle{apalike}
+    % make bibliography entries smaller
+    % \renewcommand\bibfont{\scriptsize}
+    % If you have more than one page of references, you want to tell beamer
+    % to put the continuation section label from the second slide onwards
+    \setbeamertemplate{frametitle continuation}[from second]
+    % Now get rid of all the colours
+    \setbeamercolor*{bibliography entry title}{fg=black}
+    \setbeamercolor*{bibliography entry author}{fg=black}
+    \setbeamercolor*{bibliography entry location}{fg=black}
+    \setbeamercolor*{bibliography entry note}{fg=black}
+    % and kill the abominable icon
+    \setbeamertemplate{bibliography item}{}
+        
+    \bibliography{ref}
+\end{frame}
+%-----------------------------------------------------
+
+\appendix
+%-----------------------------------------------------
+\begin{frame}[fragile, allowframebreaks]
+	\frametitle{Extras}
+	\begin{minipage}[t][\textheight][t]{\textwidth}
+	\end{minipage}
+\end{frame}
+%-----------------------------------------------------
+\end{document}

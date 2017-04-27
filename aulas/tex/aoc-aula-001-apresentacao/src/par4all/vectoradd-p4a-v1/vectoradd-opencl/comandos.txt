@@ -1,0 +1,24 @@
+make run_cuda ou make cuda
+# Editar o arquivo e retirar os bs...
+vectoradd.p4a.cu e retirar esse trecho.
+
+static unsigned short __bswap_16(unsigned short __bsx)
+{
+   return (unsigned short) (__bsx>>8&0xff|(__bsx&0xff)<<8);
+}
+static unsigned int __bswap_32(unsigned int __bsx)
+{
+   return (__bsx&0xff000000)>>24|(__bsx&0x00ff0000)>>8|(__bsx&0x0000ff00)<<8|(__bsx&0x000000ff)<<24;
+}
+
+Gerar o cpp.
+
+nvcc --cuda -DP4A -D_GNU_SOURCE -I/usr/local/cuda/include -DP4A_ACCEL_CUDA -I/usr/local/par4all/share/p4a_accel -arch=sm_20  -o /usr/local/par4all/examples/P4A/vectoradd/P4AXv3o.build/vectoradd.p4a_lxg8.cu.cpp /usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.cu
+
+# gera o .o
+nvcc -v --compile -DP4A -D_GNU_SOURCE -I/usr/local/cuda/include -DP4A_ACCEL_CUDA -I/usr/local/par4all/share/p4a_accel -arch=sm_20  /usr/local/par4all/examples/P4A/vectoradd/P4AXv3o.build/vectoradd.p4a_lxg8.cu.cpp -o /usr/local/par4all/examples/P4A/vectoradd/P4AXv3o.build/vectoradd.p4a_lxg8.cu.o
+
+gcc -c -x c++ -D__NVCC__  -I"/usr/local/cuda/include" -I"/usr/local/par4all/share/p4a_accel" "-I/usr/local/cuda/bin/../include"   -DP4A -D_GNU_SOURCE -DP4A_ACCEL_CUDA -m32 -malign-double -o "/usr/local/par4all/examples/P4A/vectoradd/P4AXv3o.build/tmpxft_00003017_00000000-1_vectoradd.p4a_lxg8.cu.o" "/usr/local/par4all/examples/P4A/vectoradd/P4AXv3o.build/vectoradd.p4a_lxg8.cu.cpp"
+
+g++ -m32 -malign-double -o "/usr/local/par4all/examples/P4A/vectoradd/P4AXv3o.build/vectoradd.p4a_lxg8.cu.o" -Wl,--start-group "/usr/local/par4all/examples/P4A/vectoradd/P4AXv3o.build/tmpxft_00003017_00000000-1_vectoradd.p4a_lxg8.cu.o"   "-L/usr/local/cuda/bin/../lib" -lcudart "-L/usr/local/par4all/lib/" -llinearlibs -lnewgenlibs -lpipslibs -lpolylib64 -Wl,--end-group 
+

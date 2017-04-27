@@ -1,0 +1,10 @@
+\beamer@endinputifotherversion {3.33pt}
+\select@language {brazil}
+\beamer@sectionintoc {1}{Introdu\IeC {\c c}\IeC {\~a}o}{3}{0}{1}
+\beamer@sectionintoc {2}{Disciplina}{4}{0}{2}
+\beamer@sectionintoc {3}{Ensino}{8}{0}{3}
+\beamer@sectionintoc {4}{Metodologia}{10}{0}{4}
+\beamer@sectionintoc {5}{Atendimento}{11}{0}{5}
+\beamer@sectionintoc {6}{Conviv\IeC {\^e}ncia}{14}{0}{6}
+\beamer@sectionintoc {7}{D\IeC {\'u}vidas}{16}{0}{7}
+\beamer@sectionintoc {8}{Refer\IeC {\^e}ncias}{17}{0}{8}

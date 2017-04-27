@@ -1,0 +1,17 @@
+{
+   "context" : "{ : }",
+   "name" : "_bb_5_preheader => _bb_8_",
+   "statements" : [
+      {
+         "accesses" : [
+            {
+               "kind" : "write",
+               "relation" : "{ Stmt__bb_4_[i, j] -> MemRef_A[5i + j] }"
+            }
+         ],
+         "domain" : "{ Stmt__bb_4_[i, j] : i >= 1 and i <= n-1 and j >= 1 and j <= m-1 }",
+         "name" : "Stmt__bb_4_",
+         "schedule" : "{ Stmt__bb_4_[i, j] -> scattering[1, c1, c2]: 2 <= c1 <= 8 and 1 <= c2 <= 4 and c1=i+j and c2=i}"
+      }
+   ]
+}

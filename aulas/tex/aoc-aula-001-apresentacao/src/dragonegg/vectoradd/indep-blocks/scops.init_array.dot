@@ -1,0 +1,29 @@
+digraph "Scop Graph for 'init_array' function" {
+	label="Scop Graph for 'init_array' function";
+
+	Node0x15ae2f0 [shape=record,label="{%0:\l  %1 = load %struct._IO_FILE** @stdout, align 8\l  %2 = call i32 (%struct._IO_FILE*, i8*, ...)* @fprintf(%struct._IO_FILE* %1,\l... i8* getelementptr inbounds ([29 x i8]* @.str, i32 0, i32 0))\l  br label %3\l}"];
+	Node0x15ae2f0 -> Node0x15ae310;
+	Node0x15ae310 [shape=record,label="{%3:\l\l  %indvar = phi i64 [ %indvar.next, %5 ], [ 0, %0 ]\l  %exitcond = icmp ne i64 %indvar, 1024\l  br i1 %exitcond, label %4, label %6\l}"];
+	Node0x15ae310 -> Node0x15ae610;
+	Node0x15ae310 -> Node0x15ae550;
+	Node0x15ae610 [shape=record,label="{%4:\l\l  %scevgep1.moved.to. = getelementptr [1024 x float]* @h_a, i64 0, i64 %indvar\l  %scevgep.moved.to. = getelementptr [1024 x float]* @h_b, i64 0, i64 %indvar\l  store float 5.000000e-01, float* %scevgep1.moved.to., align 4\l  store float 5.000000e-01, float* %scevgep.moved.to., align 4\l  br label %5\l}"];
+	Node0x15ae610 -> Node0x15ae450;
+	Node0x15ae450 [shape=record,label="{%5:\l\l  %indvar.next = add i64 %indvar, 1\l  br label %3\l}"];
+	Node0x15ae450 -> Node0x15ae310[constraint=false];
+	Node0x15ae550 [shape=record,label="{%6:\l\l  ret void\l}"];
+	colorscheme = "paired12"
+        subgraph cluster_0x15ae0c0 {
+          label = "";
+          style = solid;
+          color = 1
+          subgraph cluster_0x15adeb0 {
+            label = "";
+            style = filled;
+            color = 3            Node0x15ae310;
+            Node0x15ae610;
+            Node0x15ae450;
+          }
+          Node0x15ae2f0;
+          Node0x15ae550;
+        }
+}

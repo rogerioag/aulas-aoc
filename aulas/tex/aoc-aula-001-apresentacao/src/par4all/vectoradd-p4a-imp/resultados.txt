@@ -1,0 +1,173 @@
+[Vector addition of 1024 elements]
+Copy input data from the host memory to the CUDA device
+CUDA kernel launch with 4 blocks of 256 threads
+time spent executing by the GPU: 0.12
+time spent by CPU in CUDA calls: 0.13
+CPU executed 1 iterations while waiting for GPU to finish
+time spent executing by the GPU: 0.08
+time spent by CPU in CUDA calls: 0.08
+CPU executed 4 iterations while waiting for GPU to finish
+Copy output data from the CUDA device to the host memory
+Done
+[Vector addition of 2048 elements]
+Copy input data from the host memory to the CUDA device
+CUDA kernel launch with 8 blocks of 256 threads
+time spent executing by the GPU: 0.13
+time spent by CPU in CUDA calls: 0.14
+CPU executed 1 iterations while waiting for GPU to finish
+time spent executing by the GPU: 0.08
+time spent by CPU in CUDA calls: 0.08
+CPU executed 4 iterations while waiting for GPU to finish
+Copy output data from the CUDA device to the host memory
+Done
+[Vector addition of 4096 elements]
+Copy input data from the host memory to the CUDA device
+CUDA kernel launch with 16 blocks of 256 threads
+time spent executing by the GPU: 0.13
+time spent by CPU in CUDA calls: 0.14
+CPU executed 3 iterations while waiting for GPU to finish
+time spent executing by the GPU: 0.03
+time spent by CPU in CUDA calls: 0.03
+CPU executed 23 iterations while waiting for GPU to finish
+Copy output data from the CUDA device to the host memory
+Done
+[Vector addition of 8192 elements]
+Copy input data from the host memory to the CUDA device
+CUDA kernel launch with 32 blocks of 256 threads
+time spent executing by the GPU: 0.13
+time spent by CPU in CUDA calls: 0.14
+CPU executed 2 iterations while waiting for GPU to finish
+time spent executing by the GPU: 0.08
+time spent by CPU in CUDA calls: 0.08
+CPU executed 5 iterations while waiting for GPU to finish
+Copy output data from the CUDA device to the host memory
+Done
+[Vector addition of 16384 elements]
+Copy input data from the host memory to the CUDA device
+CUDA kernel launch with 64 blocks of 256 threads
+time spent executing by the GPU: 0.12
+time spent by CPU in CUDA calls: 0.13
+CPU executed 4 iterations while waiting for GPU to finish
+time spent executing by the GPU: 0.10
+time spent by CPU in CUDA calls: 0.10
+CPU executed 5 iterations while waiting for GPU to finish
+Copy output data from the CUDA device to the host memory
+Done
+[Vector addition of 32768 elements]
+Copy input data from the host memory to the CUDA device
+CUDA kernel launch with 128 blocks of 256 threads
+time spent executing by the GPU: 0.05
+time spent by CPU in CUDA calls: 0.06
+CPU executed 6 iterations while waiting for GPU to finish
+time spent executing by the GPU: 0.02
+time spent by CPU in CUDA calls: 0.03
+CPU executed 8 iterations while waiting for GPU to finish
+Copy output data from the CUDA device to the host memory
+Done
+[Vector addition of 65536 elements]
+Copy input data from the host memory to the CUDA device
+CUDA kernel launch with 256 blocks of 256 threads
+time spent executing by the GPU: 0.06
+time spent by CPU in CUDA calls: 0.06
+CPU executed 10 iterations while waiting for GPU to finish
+time spent executing by the GPU: 0.03
+time spent by CPU in CUDA calls: 0.02
+CPU executed 12 iterations while waiting for GPU to finish
+Copy output data from the CUDA device to the host memory
+Done
+[Vector addition of 131072 elements]
+Copy input data from the host memory to the CUDA device
+CUDA kernel launch with 512 blocks of 256 threads
+time spent executing by the GPU: 0.04
+time spent by CPU in CUDA calls: 0.03
+CPU executed 68 iterations while waiting for GPU to finish
+time spent executing by the GPU: 0.03
+time spent by CPU in CUDA calls: 0.01
+CPU executed 74 iterations while waiting for GPU to finish
+Copy output data from the CUDA device to the host memory
+Done
+[Vector addition of 262144 elements]
+Copy input data from the host memory to the CUDA device
+CUDA kernel launch with 1024 blocks of 256 threads
+time spent executing by the GPU: 0.05
+time spent by CPU in CUDA calls: 0.02
+CPU executed 109 iterations while waiting for GPU to finish
+time spent executing by the GPU: 0.04
+time spent by CPU in CUDA calls: 0.01
+CPU executed 110 iterations while waiting for GPU to finish
+Copy output data from the CUDA device to the host memory
+Done
+[Vector addition of 524288 elements]
+Copy input data from the host memory to the CUDA device
+CUDA kernel launch with 2048 blocks of 256 threads
+time spent executing by the GPU: 0.09
+time spent by CPU in CUDA calls: 0.03
+CPU executed 198 iterations while waiting for GPU to finish
+time spent executing by the GPU: 0.07
+time spent by CPU in CUDA calls: 0.01
+CPU executed 211 iterations while waiting for GPU to finish
+Copy output data from the CUDA device to the host memory
+Done
+[Vector addition of 1048576 elements]
+Copy input data from the host memory to the CUDA device
+CUDA kernel launch with 4096 blocks of 256 threads
+time spent executing by the GPU: 0.15
+time spent by CPU in CUDA calls: 0.03
+CPU executed 377 iterations while waiting for GPU to finish
+time spent executing by the GPU: 0.13
+time spent by CPU in CUDA calls: 0.01
+CPU executed 373 iterations while waiting for GPU to finish
+Copy output data from the CUDA device to the host memory
+Done
+[Vector addition of 2097152 elements]
+Copy input data from the host memory to the CUDA device
+CUDA kernel launch with 8192 blocks of 256 threads
+time spent executing by the GPU: 0.28
+time spent by CPU in CUDA calls: 0.03
+CPU executed 690 iterations while waiting for GPU to finish
+time spent executing by the GPU: 0.26
+time spent by CPU in CUDA calls: 0.01
+CPU executed 736 iterations while waiting for GPU to finish
+Copy output data from the CUDA device to the host memory
+Done
+[Vector addition of 4194304 elements]
+Copy input data from the host memory to the CUDA device
+CUDA kernel launch with 16384 blocks of 256 threads
+time spent executing by the GPU: 0.53
+time spent by CPU in CUDA calls: 0.03
+CPU executed 1426 iterations while waiting for GPU to finish
+time spent executing by the GPU: 0.52
+time spent by CPU in CUDA calls: 0.01
+CPU executed 1484 iterations while waiting for GPU to finish
+Copy output data from the CUDA device to the host memory
+Done
+[Vector addition of 8388608 elements]
+Copy input data from the host memory to the CUDA device
+CUDA kernel launch with 32768 blocks of 256 threads
+time spent executing by the GPU: 1.02
+time spent by CPU in CUDA calls: 0.03
+CPU executed 2720 iterations while waiting for GPU to finish
+time spent executing by the GPU: 1.01
+time spent by CPU in CUDA calls: 0.01
+CPU executed 2759 iterations while waiting for GPU to finish
+Copy output data from the CUDA device to the host memory
+Done
+[Vector addition of 16777216 elements]
+Copy input data from the host memory to the CUDA device
+CUDA kernel launch with 65536 blocks of 256 threads
+time spent executing by the GPU: 32.84
+time spent by CPU in CUDA calls: 32.84
+CPU executed 2 iterations while waiting for GPU to finish
+time spent executing by the GPU: 0.04
+time spent by CPU in CUDA calls: 0.04
+CPU executed 6 iterations while waiting for GPU to finish
+Failed to launch vectorAdd kernel (error code invalid configuration argument)!
+[Vector addition of 16777216 elements]
+Copy input data from the host memory to the CUDA device
+CUDA kernel launch with 65536 blocks of 256 threads
+time spent executing by the GPU: 0.06
+time spent by CPU in CUDA calls: 0.07
+CPU executed 17 iterations while waiting for GPU to finish
+time spent executing by the GPU: 0.01
+time spent by CPU in CUDA calls: 0.01
+CPU executed 20 iterations while waiting for GPU to finish

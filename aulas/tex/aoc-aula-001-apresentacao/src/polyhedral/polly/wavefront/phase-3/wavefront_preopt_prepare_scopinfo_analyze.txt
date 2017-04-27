@@ -1,0 +1,15 @@
+Printing analysis 'Basic Alias Analysis (stateless AA impl)':
+Pass::print not implemented for pass: 'Basic Alias Analysis (stateless AA impl)'!
+Printing analysis 'Polly - Prepare code for polly' for function 'main':
+Printing analysis 'Polly - Analyse the LLVM-IR in the detected regions' for function 'main':
+Scop: <bb 5>.preheader => <bb 8>, Max Loop Depth: 2
+BB: <bb 5>.preheader
+  Read A[{20,+,20}<%"<bb 5>.preheader">]
+  Write .reg2mem[0]
+BB: <bb 4>
+  Read .reg2mem[0]
+  Read A[{{4,+,20}<%"<bb 5>.preheader">,+,4}<%"<bb 4>">]
+  Read A[{{44,+,20}<%"<bb 5>.preheader">,+,4}<%"<bb 4>">]
+  Read A[{{28,+,20}<%"<bb 5>.preheader">,+,4}<%"<bb 4>">]
+  Write A[{{24,+,20}<%"<bb 5>.preheader">,+,4}<%"<bb 4>">]
+  Write .reg2mem[0]

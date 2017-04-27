@@ -1,0 +1,45 @@
+/dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/bin/clang -S -emit-llvm wavefront.c -o wavefront.ll
+
+View:
+/dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/bin/opt -load /dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/lib/LLVMPolly.so -basicaa -view-scops -disable-output wavefront.ll
+
+Dot:
+/dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/bin/opt -load /dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/lib/LLVMPolly.so -basicaa -dot-scops -disable-output wavefront.ll
+
+mv scops.main.dot scops.wavefront.main.dot
+dot -Tpng scops.wavefront.main.dot > scops_wavefront_main.png
+
+Prepare:
+/dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/bin/opt -load /dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/lib/LLVMPolly.so -S -mem2reg -loop-simplify -polly-indvars wavefront.ll > wavefront_preopt.ll
+
+View:
+/dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/bin/opt -load /dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/lib/LLVMPolly.so -basicaa -view-scops -disable-output wavefront_preopt.ll
+
+Dot:
+/dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/bin/opt -load /dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/lib/LLVMPolly.so -basicaa -dot-scops -disable-output wavefront_preopt.ll
+
+mv scops.main.dot scops.wavefront.preopt.main.dot
+dot -Tpng scops.wavefront.preopt.main.dot > scops_wavefront_preopt_main.png
+
+Analisar:
+/dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/bin/opt -load /dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/lib/LLVMPolly.so -basicaa -polly-cloog -analyze -q wavefront_preopt.ll > wavefront_preopt_polly_analyze.txt
+
+
+Dependências:
+/dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/bin/opt -load /dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/lib/LLVMPolly.so -basicaa -polly-dependences -analyze wavefront_preopt.ll > wavefront_preopt_deps.txt
+
+
+Export jscop:
+/dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/bin/opt -load /dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/lib/LLVMPolly.so -basicaa -polly-export-jscop wavefront_preopt.ll
+
+Skewed:
+/dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/bin/opt -load /dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/lib/LLVMPolly.so -basicaa -polly-import-jscop -polly-import-jscop-postfix=skewed -polly-cloog -analyze wavefront_preopt.ll
+
+
+Gerar código com Polly:
+/dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/bin/opt -load /dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/lib/LLVMPolly.so -basicaa -polly-import-jscop -polly-import-jscop-postfix=skewed -polly-codegen interchange_preopt_prepare.ll | /dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/bin/opt -load /dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/lib/LLVMPolly.so -O3 > interchange_preopt_prepare_skewed.ll
+
+
+Verificando dependências:
+
+/dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/bin/opt -load /dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/lib/LLVMPolly.so -basicaa -polly-dependences -analyze interchange_preopt_prepare_skewed.ll

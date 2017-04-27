@@ -1,0 +1,45 @@
+RAG: Gerando OpenCL...
+RAG: p4a -v -k --opencl --c-flags="-lm" --cpp-flags="-lm" --cxx-flags="-lm" --ld-flags="-lm" vectoradd.c -o vectoradd-opencl
+p4a: Enabling --accel because of --opencl
+p4a: Generated project name: P4AFp39
+p4a: CUDA_DIR environment variable undefined. Using '/usr/local/cuda' as default location for CUDA installation
+p4a: CPP flags: -lm -I/usr/local/cuda/include/CL -I/usr/local/cuda/include/CL2 -I/usr/local/cuda/include -DP4A_ACCEL_OPENCL -I/usr/local/par4all/share/p4a_accel
+p4a: PIPS: user warning in generic_proper_effects_of_complex_address_call_expression: PIPS currently does not know how to precisely handle address values used in complex call expressions expression
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`b and 0`a
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`c and 0`b
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`c and 0`a
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`sum and 0`c
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`a and 0`b
+p4a: Not removing database directory /usr/local/par4all/examples/P4A/vectoradd/P4AFp39.database (--keep-database)
+p4a: Generated /usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.c
+p4a: Generated /usr/local/par4all/examples/P4A/vectoradd/P4AFp39.generated/p4a_wrapper_main.cl
+p4a: Generated /usr/local/par4all/examples/P4A/vectoradd/P4AFp39.generated/p4a_wrapper_main_1.cl
+p4a: Building /usr/local/par4all/examples/P4A/vectoradd/vectoradd-opencl
+p4a: gcc -c -lm -I/usr/local/cuda/include/CL -I/usr/local/cuda/include/CL2 -I/usr/local/cuda/include -DP4A_ACCEL_OPENCL -I/usr/local/par4all/share/p4a_accel -Wall -fno-strict-aliasing -fPIC -lm -O3 -std=gnu99 -o "/usr/local/par4all/examples/P4A/vectoradd/P4AFp39.build/vectoradd.p4a_rKn4.o" "/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.c"
+/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.c: In function 'p4a_launcher_main_1':
+/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.c:34:1: warning: unused variable 'P4A_block_descriptor' [-Wunused-variable]
+/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.c: In function 'p4a_launcher_main':
+/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.c:41:1: warning: unused variable 'P4A_block_descriptor' [-Wunused-variable]
+/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.c: In function 'p4a_launcher_main_1':
+/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.c:34:4: warning: 'i' may be used uninitialized in this function [-Wuninitialized]
+/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.c: In function 'p4a_launcher_main':
+/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.c:41:4: warning: 'i' may be used uninitialized in this function [-Wuninitialized]
+p4a: gcc -c -lm -I/usr/local/cuda/include/CL -I/usr/local/cuda/include/CL2 -I/usr/local/cuda/include -DP4A_ACCEL_OPENCL -I/usr/local/par4all/share/p4a_accel -Wall -fno-strict-aliasing -fPIC -lm -O3 -std=gnu99 -o "/usr/local/par4all/examples/P4A/vectoradd/P4AFp39.build/p4a_accel_68NF.o" "/usr/local/par4all/share/p4a_accel/p4a_accel.c"
+In file included from /usr/local/par4all/share/p4a_accel/p4a_accel.c:22:0:
+/usr/local/par4all/share/p4a_accel/p4a_accel-OpenCL.c: In function 'new_p4a_kernel':
+/usr/local/par4all/share/p4a_accel/p4a_accel-OpenCL.c:486:3: warning: implicit declaration of function 'asprintf' [-Wimplicit-function-declaration]
+p4a: gcc -o "/usr/local/par4all/examples/P4A/vectoradd/vectoradd-opencl" "/usr/local/par4all/examples/P4A/vectoradd/P4AFp39.build/vectoradd.p4a_rKn4.o" "/usr/local/par4all/examples/P4A/vectoradd/P4AFp39.build/p4a_accel_68NF.o" -lm -L/usr/local/cuda/lib64 -L/usr/local/cuda/lib -L/usr/lib -l OpenCL
+p4a: Generated /usr/local/par4all/examples/P4A/vectoradd/vectoradd-opencl
+p4a: rm -rf /usr/local/par4all/examples/P4A/vectoradd/P4AFp39.build/
+RAG: Executando vectoradd-opencl 
+RAG: Compactando diretorio vectoradd
+  adding: vectoradd/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/p4a-saida-openmp.txt	(in=4049) (out=974) (deflated 76%)
+  adding: vectoradd/comandos.txt	(in=1732) (out=543) (deflated 69%)
+  adding: vectoradd/P4AFp39.generated/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AFp39.generated/p4a_new_files_include.h	(in=114) (out=83) (deflated 27%)
+  adding: vectoradd/P4AFp39.generated/p4a_wrapper_main.h	(in=47) (out=47) (stored 0%)
+  adding: vectoradd/P4AFp39.generated/p4a_wrapper_main_1.h	(in=49) (out=49) (stored 0%)
+  adding: vectoradd/P4AFp39.generated/p4a_wrapper_main_1.cl	(in=956) (out=266) (deflated 72%)
+  adding: vectoradd/P4AFp39.generated/p4a_wrapper_main.cl	(in=836) (out=269) (deflated 68%)
+  adding: vectoradd/p4a-saida-opencl.txt

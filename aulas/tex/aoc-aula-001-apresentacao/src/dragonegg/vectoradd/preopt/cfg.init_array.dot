@@ -1,0 +1,14 @@
+digraph "CFG for 'init_array' function" {
+	label="CFG for 'init_array' function";
+
+	Node0x229e710 [shape=record,label="{%0:\l  %1 = load %struct._IO_FILE** @stdout, align 8\l  %2 = call i32 (%struct._IO_FILE*, i8*, ...)* @fprintf(%struct._IO_FILE* %1,\l... i8* getelementptr inbounds ([29 x i8]* @.str, i32 0, i32 0))\l  br label %3\l}"];
+	Node0x229e710 -> Node0x229f4a0;
+	Node0x229f4a0 [shape=record,label="{%3:\l\l  %indvar = phi i64 [ %indvar.next, %5 ], [ 0, %0 ]\l  %scevgep = getelementptr [1024 x float]* @h_b, i64 0, i64 %indvar\l  %scevgep1 = getelementptr [1024 x float]* @h_a, i64 0, i64 %indvar\l  %exitcond = icmp ne i64 %indvar, 1024\l  br i1 %exitcond, label %4, label %6\l|{<s0>T|<s1>F}}"];
+	Node0x229f4a0:s0 -> Node0x229fc00;
+	Node0x229f4a0:s1 -> Node0x229fca0;
+	Node0x229fc00 [shape=record,label="{%4:\l\l  store float 5.000000e-01, float* %scevgep1, align 4\l  store float 5.000000e-01, float* %scevgep, align 4\l  br label %5\l}"];
+	Node0x229fc00 -> Node0x229f670;
+	Node0x229f670 [shape=record,label="{%5:\l\l  %indvar.next = add i64 %indvar, 1\l  br label %3\l}"];
+	Node0x229f670 -> Node0x229f4a0;
+	Node0x229fca0 [shape=record,label="{%6:\l\l  ret void\l}"];
+}

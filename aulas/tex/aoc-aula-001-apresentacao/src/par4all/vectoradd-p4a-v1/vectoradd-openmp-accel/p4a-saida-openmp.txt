@@ -1,0 +1,50 @@
+RAG: Gerando OpenMP...
+RAG: p4a -v -k --c-flags="-lm" --cpp-flags="-lm" --cxx-flags="-lm" --ld-flags="-lm" --openmp vectoradd.c -o vectoradd-openmp
+p4a: Generated project name: P4ACH5m
+p4a: CPP flags: -lm
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`b and 0`a
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`c and 0`b
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`c and 0`a
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`sum and 0`c
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`a and 0`b
+p4a: Not removing database directory /usr/local/par4all/examples/P4A/vectoradd/P4ACH5m.database (--keep-database)
+p4a: Generated /usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.c
+p4a: Building /usr/local/par4all/examples/P4A/vectoradd/vectoradd-openmp
+p4a: gcc -c -lm -Wall -fno-strict-aliasing -fPIC -lm -O3 -std=gnu99 -fopenmp -o "/usr/local/par4all/examples/P4A/vectoradd/P4ACH5m.build/vectoradd.p4a_Np8I.o" "/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.c"
+p4a: gcc -o "/usr/local/par4all/examples/P4A/vectoradd/vectoradd-openmp" "/usr/local/par4all/examples/P4A/vectoradd/P4ACH5m.build/vectoradd.p4a_Np8I.o" -lm -fopenmp
+p4a: Generated /usr/local/par4all/examples/P4A/vectoradd/vectoradd-openmp
+p4a: rm -rf /usr/local/par4all/examples/P4A/vectoradd/P4ACH5m.build/
+RAG: Executando vectoradd-openmp 
+final result: 1.000000
+RAG: Compactando diretorio vectoradd
+  adding: vectoradd/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/p4a-saida-openmp.txt	(in=1696) (out=492) (deflated 71%)
+  adding: vectoradd/vectoradd-openmp	(in=8908) (out=3415) (deflated 62%)
+  adding: vectoradd/comandos.txt	(in=1732) (out=543) (deflated 69%)
+  adding: vectoradd/p4a-saida-cuda-nopt.txt	(in=13675) (out=2227) (deflated 84%)
+  adding: vectoradd/vectoradd.p4a.c	(in=1199) (out=495) (deflated 59%)
+  adding: vectoradd/testes-par4all.sh	(in=3866) (out=630) (deflated 84%)
+  adding: vectoradd/p4a-saida-cuda-opt.txt	(in=14790) (out=2428) (deflated 84%)
+  adding: vectoradd/Makefile	(in=42) (out=36) (deflated 14%)
+  adding: vectoradd/P4ACH5m.database/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4ACH5m.database/Src/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4ACH5m.database/Src/vectoradd.c	(in=1199) (out=495) (deflated 59%)
+  adding: vectoradd/P4ACH5m.database/main/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4ACH5m.database/main/main.pre.c	(in=1076) (out=450) (deflated 58%)
+  adding: vectoradd/P4ACH5m.database/main/main.c	(in=1020) (out=426) (deflated 58%)
+  adding: vectoradd/P4ACH5m.database/Logfile	(in=6378) (out=1250) (deflated 80%)
+  adding: vectoradd/P4ACH5m.database/Warnings	(in=1347) (out=174) (deflated 87%)
+  adding: vectoradd/P4ACH5m.database/vectoradd!/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4ACH5m.database/vectoradd!/vectoradd!.pre.c 	(in=161168) (out=28437) (deflated 82%)
+  adding: vectoradd/P4ACH5m.database/vectoradd!/vectoradd!.c 	(in=182017) (out=30411) (deflated 83%)
+  adding: vectoradd/P4ACH5m.database/Tmp/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4ACH5m.database/Tmp/vectoradd.cpp_processed.c.stderr	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4ACH5m.database/Tmp/vectoradd.cpp_processed.c 	(in=182986) (out=30771) (deflated 83%)
+  adding: vectoradd/P4ACH5m.database/Tmp/pipsdef.h	(in=622) (out=271) (deflated 56%)
+  adding: vectoradd/P4ACH5m.database/Tmp/vectoradd.c 	(in=162297) (out=28861) (deflated 82%)
+  adding: vectoradd/P4ACH5m.database/Program/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4ACH5m.database/Program/Program.txt	(in=104) (out=64) (deflated 38%)
+  adding: vectoradd/P4ACH5m.database/Program/PROGRAM_PRECONDITION	(in=26) (out=24) (deflated 8%)
+  adding: vectoradd/vectoradd.mk	(in=228) (out=186) (deflated 18%)
+  adding: vectoradd/vectoradd.c	(in=1047) (out=443) (deflated 58%)
+total bytes=747423, compressed=132529 -> 82% savings

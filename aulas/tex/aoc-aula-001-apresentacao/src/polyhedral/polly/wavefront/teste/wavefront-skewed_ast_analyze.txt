@@ -1,0 +1,6 @@
+Printing analysis 'Basic Alias Analysis (stateless AA impl)':
+Pass::print not implemented for pass: 'Basic Alias Analysis (stateless AA impl)'!
+Printing analysis 'Polly - Generate an AST from the SCoP (isl)' for region: '<bb 5> => <bb 7>' in function 'main':
+Printing analysis 'Polly - Generate an AST from the SCoP (isl)' for region: '<bb 4> => <bb 7>' in function 'main':
+Printing analysis 'Polly - Generate an AST from the SCoP (isl)' for region: '<bb 4> => <bb 9>' in function 'main':
+Printing analysis 'Polly - Generate an AST from the SCoP (isl)' for region: 'entry => <Function Return>' in function 'main':

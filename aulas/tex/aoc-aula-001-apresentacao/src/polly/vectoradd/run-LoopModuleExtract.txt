@@ -1,0 +1,2 @@
+/dados/rogerio/USP/doutorado/prototipo-trunk/llvm_build/bin/opt -load /dados/rogerio/USP/doutorado/prototipo-trunk/llvm_build/lib/LLVMLoopModuleExtractor.so -loop-module-extract vectoradd.c.polly.interchanged+tiled+vector.ll -S
+

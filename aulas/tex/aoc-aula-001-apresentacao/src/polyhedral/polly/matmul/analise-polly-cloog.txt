@@ -1,0 +1,10 @@
+Pass::print not implemented for pass: 'Basic Alias Analysis (stateless AA impl)'!
+main():
+for (c2=0;c2<=1023;c2++) {
+  for (c4=0;c4<=1023;c4++) {
+    Stmt_4(c2,c4);
+    for (c6=0;c6<=1023;c6++) {
+      Stmt_6(c2,c4,c6);
+    }
+  }
+}

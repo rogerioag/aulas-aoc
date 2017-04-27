@@ -1,0 +1,42 @@
+digraph "Scop Graph for 'main' function" {
+	label="Scop Graph for 'main' function";
+
+	Node0xe98620 [shape=record,label="{entry}"];
+	Node0xe98620 -> Node0xe986a0;
+	Node0xe986a0 [shape=record,label="{polly.loop_header}"];
+	Node0xe986a0 -> Node0xe987d0;
+	Node0xe986a0 -> Node0xe986a0[constraint=false];
+	Node0xe987d0 [shape=record,label="{polly.loop_header19}"];
+	Node0xe987d0 -> Node0xe988c0;
+	Node0xe987d0 -> Node0xe987d0[constraint=false];
+	Node0xe988c0 [shape=record,label="{9}"];
+	Node0xe988c0 -> Node0xe988e0;
+	Node0xe988c0 -> Node0xe988c0[constraint=false];
+	Node0xe988e0 [shape=record,label="{11}"];
+	colorscheme = "paired12"
+        subgraph cluster_0xe92e10 {
+          label = "";
+          style = solid;
+          color = 1
+          subgraph cluster_0xe938c0 {
+            label = "PHI node in exit BB";
+            style = solid;
+            color = 6
+            Node0xe986a0;
+          }
+          subgraph cluster_0xe92eb0 {
+            label = "PHI node in exit BB";
+            style = solid;
+            color = 6
+            Node0xe987d0;
+          }
+          subgraph cluster_0xe93020 {
+            label = "Non canonical PHI node:   %3 = phi float [ %6, %\"9\" ], [ 0.000000e+00, %polly.loop_header19 ]";
+            style = solid;
+            color = 6
+            Node0xe988c0;
+          }
+          Node0xe98620;
+          Node0xe988e0;
+        }
+}

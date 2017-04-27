@@ -1,0 +1,11 @@
+Printing analysis 'Basic Alias Analysis (stateless AA impl)':
+Pass::print not implemented for pass: 'Basic Alias Analysis (stateless AA impl)'!
+Printing analysis 'Polly - Calculate dependences' for region: '<bb 4> => <bb 6>' in function 'main':
+Printing analysis 'Polly - Calculate dependences' for region: '<bb 5>.preheader => <bb 8>' in function 'main':
+	RAW dependences:
+		{ Stmt__<bb 4>_[i0, i1] -> Stmt__<bb 4>_[o0, o1] : i0 >= 0 and o1 <= 3 and i1 >= 0 and i1 <= 3 and o0 >= 1 + i0 and o0 <= 3 and o1 >= 0; Stmt__<bb 4>_[i0, i1] -> Stmt__<bb 4>_[i0, o1] : i0 >= 0 and i0 <= 3 and i1 >= 0 and o1 <= 3 and o1 >= 1 + i1; Stmt__<bb 5>_preheader_[i0] -> Stmt__<bb 4>_[o0, o1] : i0 >= 0 and i0 <= 3 and o0 >= 0 and o0 <= 3 and o1 >= 0 and o1 <= 3 and o0 >= i0 }
+	WAR dependences:
+		{ Stmt__<bb 4>_[i0, i1] -> Stmt__<bb 4>_[o0, o1] : i0 >= 0 and o1 <= 3 and i1 >= 0 and i1 <= 3 and o0 >= 1 + i0 and o0 <= 3 and o1 >= 0; Stmt__<bb 4>_[i0, i1] -> Stmt__<bb 4>_[i0, o1] : i0 >= 0 and i0 <= 3 and i1 >= 0 and o1 <= 3 and o1 >= 1 + i1; Stmt__<bb 4>_[i0, i1] -> Stmt__<bb 5>_preheader_[o0] : i0 >= 0 and i0 <= 3 and i1 >= 0 and i1 <= 3 and o0 >= 0 and o0 <= 3 and o0 >= 1 + i0 }
+	WAW dependences:
+		{ Stmt__<bb 5>_preheader_[i0] -> Stmt__<bb 4>_[o0, o1] : i0 >= 0 and i0 <= 3 and o0 >= 0 and o0 <= 3 and o1 >= 0 and o1 <= 3 and o0 >= i0; Stmt__<bb 4>_[i0, i1] -> Stmt__<bb 4>_[o0, o1] : i0 >= 0 and o1 <= 3 and i1 >= 0 and i1 <= 3 and o0 >= 1 + i0 and o0 <= 3 and o1 >= 0; Stmt__<bb 4>_[i0, i1] -> Stmt__<bb 4>_[i0, o1] : i0 >= 0 and i0 <= 3 and i1 >= 0 and o1 <= 3 and o1 >= 1 + i1; Stmt__<bb 5>_preheader_[i0] -> Stmt__<bb 5>_preheader_[o0] : i0 >= 0 and i0 <= 3 and o0 >= 0 and o0 <= 3 and o0 >= 1 + i0; Stmt__<bb 4>_[i0, i1] -> Stmt__<bb 5>_preheader_[o0] : i0 >= 0 and i0 <= 3 and i1 >= 0 and i1 <= 3 and o0 >= 0 and o0 <= 3 and o0 >= 1 + i0 }
+Printing analysis 'Polly - Calculate dependences' for region: 'entry => <Function Return>' in function 'main':

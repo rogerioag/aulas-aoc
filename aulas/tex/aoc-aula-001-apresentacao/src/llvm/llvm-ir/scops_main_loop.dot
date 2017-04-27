@@ -1,0 +1,30 @@
+digraph "Scop Graph for 'main' function" {
+	label="Scop Graph for 'main' function";
+
+	Node0x984cb0 [shape=record,label="{%0:\l  %1 = alloca i32, align 4\l  %i = alloca i32, align 4\l  %res = alloca i32, align 4\l  store i32 0, i32* %1\l  store i32 0, i32* %res, align 4\l  store i32 0, i32* %i, align 4\l  br label %2\l}"];
+	Node0x984cb0 -> Node0x984e60;
+	Node0x984e60 [shape=record,label="{%2:\l\l  %3 = load i32* %i, align 4\l  %4 = icmp slt i32 %3, 100\l  br i1 %4, label %5, label %12\l}"];
+	Node0x984e60 -> Node0x984e30;
+	Node0x984e60 -> Node0x984fe0;
+	Node0x984e30 [shape=record,label="{%5:\l\l  %6 = load i32* %res, align 4\l  %7 = load i32* %i, align 4\l  %8 = add nsw i32 %6, %7\l  store i32 %8, i32* %res, align 4\l  br label %9\l}"];
+	Node0x984e30 -> Node0x984f50;
+	Node0x984f50 [shape=record,label="{%9:\l\l  %10 = load i32* %i, align 4\l  %11 = add nsw i32 %10, 1\l  store i32 %11, i32* %i, align 4\l  br label %2\l}"];
+	Node0x984f50 -> Node0x984e60[constraint=false];
+	Node0x984fe0 [shape=record,label="{%12:\l\l  ret i32 0\l}"];
+	colorscheme = "paired12"
+        subgraph cluster_0x984bc0 {
+          label = "";
+          style = solid;
+          color = 1
+          subgraph cluster_0x9849b0 {
+            label = "";
+            style = solid;
+            color = 6
+            Node0x984e60;
+            Node0x984e30;
+            Node0x984f50;
+          }
+          Node0x984cb0;
+          Node0x984fe0;
+        }
+}

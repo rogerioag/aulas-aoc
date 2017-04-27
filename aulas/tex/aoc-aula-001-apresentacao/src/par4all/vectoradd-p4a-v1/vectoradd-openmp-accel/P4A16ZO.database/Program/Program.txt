@@ -1,0 +1,25 @@
+! module / file
+p4a_stubs!: ./P4A16ZO.database/Src/p4a_stubs.c
+vectoradd!: ./P4A16ZO.database/Src/vectoradd.c
+p4a_wrapper_main_1: ./P4A16ZO.database/Src/vectoradd.c
+p4a_kernel_main_1: ./P4A16ZO.database/Src/vectoradd.c
+p4a_wrapper_main: ./P4A16ZO.database/Src/vectoradd.c
+p4a_kernel_main: ./P4A16ZO.database/Src/vectoradd.c
+p4a_launcher_main_1: ./P4A16ZO.database/Src/vectoradd.c
+p4a_launcher_main: ./P4A16ZO.database/Src/vectoradd.c
+P4A_copy_from_accel: ./P4A16ZO.database/Src/p4a_stubs.c
+P4A_copy_to_accel: ./P4A16ZO.database/Src/p4a_stubs.c
+P4A_copy_from_accel_1d: ./P4A16ZO.database/Src/p4a_stubs.c
+P4A_copy_to_accel_1d: ./P4A16ZO.database/Src/p4a_stubs.c
+P4A_copy_to_accel_2d: ./P4A16ZO.database/Src/p4a_stubs.c
+P4A_copy_from_accel_2d: ./P4A16ZO.database/Src/p4a_stubs.c
+P4A_copy_from_accel_3d: ./P4A16ZO.database/Src/p4a_stubs.c
+P4A_copy_to_accel_3d: ./P4A16ZO.database/Src/p4a_stubs.c
+P4A_copy_from_accel_4d: ./P4A16ZO.database/Src/p4a_stubs.c
+P4A_copy_to_accel_4d: ./P4A16ZO.database/Src/p4a_stubs.c
+P4A_accel_malloc: ./P4A16ZO.database/Src/p4a_stubs.c
+P4A_accel_free: ./P4A16ZO.database/Src/p4a_stubs.c
+P4A_runtime_copy_to_accel: ./P4A16ZO.database/Src/p4a_stubs.c
+P4A_runtime_copy_from_accel: ./P4A16ZO.database/Src/p4a_stubs.c
+P4A_runtime_host_ptr_to_accel_ptr: ./P4A16ZO.database/Src/p4a_stubs.c
+main: ./P4A16ZO.database/Src/vectoradd.c

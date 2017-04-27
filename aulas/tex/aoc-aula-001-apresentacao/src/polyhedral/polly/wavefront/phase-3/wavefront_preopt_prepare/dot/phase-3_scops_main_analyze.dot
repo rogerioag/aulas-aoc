@@ -1,0 +1,38 @@
+digraph "Scop Graph for 'main' function" {
+	label="Scop Graph for 'main' function";
+
+	Node0x143e8d0 [shape=record,label="{entry:\l  %.reg2mem = alloca i32\l  br label %entry.split\l}"];
+	Node0x143e8d0 -> Node0x143e8f0;
+	Node0x143e8f0 [shape=record,label="{entry.split:                                      \l  br label %\"\<bb 5\>.preheader\"\l}"];
+	Node0x143e8f0 -> Node0x1442ec0;
+	Node0x1442ec0 [shape=record,label="{\"\<bb 5\>.preheader\":                               \l  %indvar2 = phi i64 [ %indvar.next3, %\"\<bb 6\>\" ], [ 0, %entry.split ]\l  %indvars.iv.next13 = add i64 %indvar2, 2\l  %9 = add i64 %indvar2, 1\l  %ar3.phi.trans.insert = getelementptr [5 x [5 x i32]]* @A, i64 0, i64 %9,\l... i64 0\l  %.pre = load i32* %ar3.phi.trans.insert, align 4, !tbaa !0\l  store i32 %.pre, i32* %.reg2mem\l  br label %\"\<bb 4\>\"\l}"];
+	Node0x1442ec0 -> Node0x143e9a0;
+	Node0x143e9a0 [shape=record,label="{\"\<bb 4\>\":                                         \l  %indvar = phi i64 [ 0, %\"\<bb 5\>.preheader\" ], [ %indvar.next, %\"\<bb 4\>\" ]\l  %.reload = load i32* %.reg2mem\l  %0 = add i64 %indvar, 1\l  %ar1 = getelementptr [5 x [5 x i32]]* @A, i64 0, i64 %indvar2, i64 %0\l  %ar5 = getelementptr [5 x [5 x i32]]* @A, i64 0, i64 %indvars.iv.next13, i64\l... %0\l  %1 = add i64 %indvar, 2\l  %ar7 = getelementptr [5 x [5 x i32]]* @A, i64 0, i64 %9, i64 %1\l  %ar9 = getelementptr [5 x [5 x i32]]* @A, i64 0, i64 %9, i64 %0\l  %2 = load i32* %ar1, align 4, !tbaa !0\l  %3 = add nsw i32 %.reload, %2\l  %4 = load i32* %ar5, align 4, !tbaa !0\l  %5 = add nsw i32 %3, %4\l  %6 = load i32* %ar7, align 4, !tbaa !0\l  %7 = add nsw i32 %5, %6\l  %8 = sdiv i32 %7, 4\l  store i32 %8, i32* %ar9, align 4, !tbaa !0\l  %indvar.next = add i64 %indvar, 1\l  %exitcond1 = icmp eq i64 %indvar.next, 4\l  store i32 %8, i32* %.reg2mem\l  br i1 %exitcond1, label %\"\<bb 6\>\", label %\"\<bb 4\>\"\l}"];
+	Node0x143e9a0 -> Node0x143e9c0;
+	Node0x143e9a0 -> Node0x143e9a0[constraint=false];
+	Node0x143e9c0 [shape=record,label="{\"\<bb 6\>\":                                         \l  %indvar.next3 = add i64 %indvar2, 1\l  %exitcond = icmp eq i64 %indvar.next3, 4\l  br i1 %exitcond, label %\"\<bb 8\>\", label %\"\<bb 5\>.preheader\"\l}"];
+	Node0x143e9c0 -> Node0x1441300;
+	Node0x143e9c0 -> Node0x1442ec0[constraint=false];
+	Node0x1441300 [shape=record,label="{\"\<bb 8\>\":                                         \l  ret i32 0\l}"];
+	colorscheme = "paired12"
+        subgraph cluster_0x143dff0 {
+          label = "";
+          style = solid;
+          color = 1
+          subgraph cluster_0x143eaf0 {
+            label = "";
+            style = filled;
+            color = 3            subgraph cluster_0x143e250 {
+              label = "";
+              style = solid;
+              color = 5
+              Node0x143e9a0;
+            }
+            Node0x1442ec0;
+            Node0x143e9c0;
+          }
+          Node0x143e8d0;
+          Node0x143e8f0;
+          Node0x1441300;
+        }
+}

@@ -1,0 +1,17 @@
+{
+   "context" : "[p_0, nk, p_2, nj] -> {  : p_0 >= -2147483648 and p_0 <= 2147483647 and nk >= -2147483648 and nk <= 2147483647 and p_2 >= -2147483648 and p_2 <= 2147483647 and nj >= -2147483648 and nj <= 2147483647 }",
+   "name" : "for.cond31 => for.end51",
+   "statements" : [
+      {
+         "accesses" : [
+            {
+               "kind" : "write",
+               "relation" : "[p_0, nk, p_2, nj] -> { Stmt_for_body38[i0, i1] -> MemRef_B[1024i0 + i1] }"
+            }
+         ],
+         "domain" : "[p_0, nk, p_2, nj] -> { Stmt_for_body38[i0, i1] : i0 >= 0 and i0 <= -1 + p_0 and i1 >= 0 and i1 <= -1 + p_2 }",
+         "name" : "Stmt_for_body38",
+         "schedule" : "[p_0, nk, p_2, nj] -> { Stmt_for_body38[i0, i1] -> scattering[0, i0, 0, i1, 0] }"
+      }
+   ]
+}

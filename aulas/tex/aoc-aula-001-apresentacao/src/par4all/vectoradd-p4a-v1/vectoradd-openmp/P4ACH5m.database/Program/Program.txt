@@ -1,0 +1,3 @@
+! module / file
+vectoradd!: ./P4ACH5m.database/Src/vectoradd.c
+main: ./P4ACH5m.database/Src/vectoradd.c

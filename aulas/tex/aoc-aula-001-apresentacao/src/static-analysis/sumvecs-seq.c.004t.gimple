@@ -1,0 +1,152 @@
+imprimir (float * arranjo, long long unsigned int tamanho)
+{
+  unsigned int D.1731;
+  unsigned int D.1732;
+  float * D.1733;
+  float D.1734;
+  double D.1735;
+
+  {
+    long long unsigned int i;
+
+    i = 0;
+    goto <D.1728>;
+    <D.1727>:
+    D.1731 = (unsigned int) i;
+    D.1732 = D.1731 * 4;
+    D.1733 = arranjo + D.1732;
+    D.1734 = *D.1733;
+    D.1735 = (double) D.1734;
+    printf ("%f ", D.1735);
+    i = i + 1;
+    <D.1728>:
+    if (i < tamanho) goto <D.1727>; else goto <D.1729>;
+    <D.1729>:
+  }
+}
+
+
+inicializar (float * arranjo, long long unsigned int tamanho)
+{
+  unsigned int D.1736;
+  unsigned int D.1737;
+  float * D.1738;
+  int D.1739;
+  float D.1740;
+  long double D.1741;
+  long double D.1742;
+  float D.1743;
+
+  {
+    long long unsigned int i;
+
+    i = 0;
+    goto <D.1720>;
+    <D.1719>:
+    D.1736 = (unsigned int) i;
+    D.1737 = D.1736 * 4;
+    D.1738 = arranjo + D.1737;
+    D.1739 = rand ();
+    D.1740 = (float) D.1739;
+    D.1741 = (long double) D.1740;
+    D.1742 = D.1741 / 2.147483648e+9;
+    D.1743 = (float) D.1742;
+    *D.1738 = D.1743;
+    i = i + 1;
+    <D.1720>:
+    if (i < tamanho) goto <D.1719>; else goto <D.1721>;
+    <D.1721>:
+  }
+}
+
+
+main (int argc, char * * argv)
+{
+  char * * D.1744;
+  char * D.1745;
+  double D.1746;
+  unsigned int D.1747;
+  unsigned int D.1748;
+  unsigned int D.1749;
+  unsigned int D.1750;
+  unsigned int D.1751;
+  unsigned int D.1752;
+  unsigned int D.1753;
+  unsigned int D.1754;
+  float * D.1755;
+  unsigned int D.1756;
+  unsigned int D.1757;
+  float * D.1758;
+  float D.1759;
+  long double D.1760;
+  unsigned int D.1761;
+  unsigned int D.1762;
+  float * D.1763;
+  float D.1764;
+  long double D.1765;
+  long double D.1766;
+  float D.1767;
+  int D.1768;
+
+  {
+    float * A;
+    float * B;
+    float * C;
+    long long unsigned int i;
+    long long unsigned int N;
+
+    D.1744 = argv + 4;
+    D.1745 = *D.1744;
+    D.1746 = atof (D.1745);
+    N = (long long unsigned int) D.1746;
+    D.1747 = (unsigned int) N;
+    D.1748 = D.1747 * 4;
+    A = malloc (D.1748);
+    D.1749 = (unsigned int) N;
+    D.1750 = D.1749 * 4;
+    B = malloc (D.1750);
+    D.1751 = (unsigned int) N;
+    D.1752 = D.1751 * 4;
+    C = malloc (D.1752);
+    inicializar (A, N);
+    inicializar (B, N);
+    i = 0;
+    goto <D.1712>;
+    <D.1711>:
+    D.1753 = (unsigned int) i;
+    D.1754 = D.1753 * 4;
+    D.1755 = C + D.1754;
+    D.1756 = (unsigned int) i;
+    D.1757 = D.1756 * 4;
+    D.1758 = A + D.1757;
+    D.1759 = *D.1758;
+    D.1760 = (long double) D.1759;
+    D.1761 = (unsigned int) i;
+    D.1762 = D.1761 * 4;
+    D.1763 = B + D.1762;
+    D.1764 = *D.1763;
+    D.1765 = (long double) D.1764;
+    D.1766 = D.1760 + D.1765;
+    D.1767 = (float) D.1766;
+    *D.1755 = D.1767;
+    i = i + 1;
+    <D.1712>:
+    if (i < N) goto <D.1711>; else goto <D.1713>;
+    <D.1713>:
+    printf ("\nA: ");
+    imprimir (A, N);
+    printf ("\nB: ");
+    imprimir (B, N);
+    printf ("\nC: ");
+    imprimir (C, N);
+    free (A);
+    free (B);
+    free (C);
+    D.1768 = 0;
+    return D.1768;
+  }
+  D.1768 = 0;
+  return D.1768;
+}
+
+

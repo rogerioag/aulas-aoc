@@ -1,0 +1,8 @@
+# LLVM:
+
+clang -O0 -emit-llvm teste-001.c -S -o teste-001.ll
+llc -march=mipsel teste-001.ll -o teste-001.asm 
+
+# GCC cross:
+
+/opt/cross/bin/mipsel-unknown-linux-gnu-gcc -fno-asynchronous-unwind-tables fatorial.c -S -o factorial-gcc.asm 

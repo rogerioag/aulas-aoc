@@ -1,0 +1,859 @@
+Registering file /usr/local/par4all/examples/P4A/vectoradd/vectoradd.c
+Checking C syntax of file "/usr/local/par4all/examples/P4A/vectoradd/vectoradd.c"
+Preprocessing file /usr/local/par4all/examples/P4A/vectoradd/vectoradd.c
+Splitting file    ./P4A8ykD.database/Tmp/vectoradd.cpp_processed.c
+  Module         main
+  Module         vectoradd!
+Registering file /usr/local/par4all/share/p4a_accel/p4a_stubs.c
+Checking C syntax of file "/usr/local/par4all/share/p4a_accel/p4a_stubs.c"
+Preprocessing file /usr/local/par4all/share/p4a_accel/p4a_stubs.c
+Splitting file    ./P4A8ykD.database/Tmp/p4a_stubs.cpp_processed.c
+  Module         P4A_runtime_host_ptr_to_accel_ptr
+  Module         P4A_runtime_copy_from_accel
+  Module         P4A_runtime_copy_to_accel
+  Module         P4A_accel_free
+  Module         P4A_accel_malloc
+  Module         P4A_copy_to_accel_4d
+  Module         P4A_copy_from_accel_4d
+  Module         P4A_copy_to_accel_3d
+  Module         P4A_copy_from_accel_3d
+  Module         P4A_copy_from_accel_2d
+  Module         P4A_copy_to_accel_2d
+  Module         P4A_copy_to_accel_1d
+  Module         P4A_copy_from_accel_1d
+  Module         P4A_copy_to_accel
+  Module         P4A_copy_from_accel
+  Module         p4a_stubs!
+Workspace P4A8ykD created and opened.
+set PREPROCESSOR_MISSING_FILE_HANDLING "internal_resolver"
+Selecting rule: MUST_REGIONS
+set FOR_TO_DO_LOOP_IN_CONTROLIZER TRUE
+set UNSPAGHETTIFY_TEST_RESTRUCTURING TRUE
+set SEMANTICS_FIX_POINT_OPERATOR "derivative"
+set UNSPAGHETTIFY_RECURSIVE_DECOMPOSITION TRUE
+set ALIASING_ACROSS_IO_STREAMS FALSE
+set ABORT_ON_USER_ERROR FALSE
+set SEMANTICS_COMPUTE_TRANSFORMERS_IN_CONTEXT TRUE
+set CONSTANT_PATH_EFFECTS FALSE
+set PRETTYPRINT_SEQUENTIAL_STYLE "do"
+set MEMORY_EFFECTS_ONLY FALSE
+Request: build phase/rule PRIVATIZE_MODULE for module main.
+  BOOTSTRAP                      building   ENTITIES()
+  COMPILATION_UNIT_PARSER        building   DECLARATIONS(vectoradd!)
+  C_PARSER                       building   PARSED_CODE(main)
+                                 building   CALLEES(main)
+  CONTROLIZER                    building   CODE(main)
+Total number of restructurations: 0
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(main)
+  ATOMIC_CHAINS                  building   CHAINS(main)
+  PRIVATIZE_MODULE               updating   CODE(main)
+PRIVATIZE_MODULE made for main.
+set PRETTYPRINT_SEQUENTIAL_STYLE "do"
+Request: capply INTERNALIZE_PARALLEL_CODE for module [main].
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(main)
+  ATOMIC_CHAINS                  building   CHAINS(main)
+  COMPILATION_UNIT_PARSER        building   DECLARATIONS(p4a_stubs!)
+  C_PARSER                       building   PARSED_CODE(P4A_accel_free)
+                                 building   CALLEES(P4A_accel_free)
+  CONTROLIZER                    building   CODE(P4A_accel_free)
+Total number of restructurations: 0
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(P4A_accel_free)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(P4A_accel_free)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(P4A_accel_free)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(P4A_accel_free)
+  C_PARSER                       building   PARSED_CODE(P4A_accel_malloc)
+                                 building   CALLEES(P4A_accel_malloc)
+  CONTROLIZER                    building   CODE(P4A_accel_malloc)
+Total number of restructurations: 0
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(P4A_accel_malloc)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(P4A_accel_malloc)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(P4A_accel_malloc)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(P4A_accel_malloc)
+  C_PARSER                       building   PARSED_CODE(P4A_copy_from_accel)
+                                 building   CALLEES(P4A_copy_from_accel)
+  CONTROLIZER                    building   CODE(P4A_copy_from_accel)
+Total number of restructurations: 0
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(P4A_copy_from_accel)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(P4A_copy_from_accel)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(P4A_copy_from_accel)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(P4A_copy_from_accel)
+  C_PARSER                       building   PARSED_CODE(P4A_copy_from_accel_1d)
+                                 building   CALLEES(P4A_copy_from_accel_1d)
+  CONTROLIZER                    building   CODE(P4A_copy_from_accel_1d)
+Total number of restructurations: 0
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(P4A_copy_from_accel_1d)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(P4A_copy_from_accel_1d)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(P4A_copy_from_accel_1d)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(P4A_copy_from_accel_1d)
+  C_PARSER                       building   PARSED_CODE(P4A_copy_from_accel_2d)
+                                 building   CALLEES(P4A_copy_from_accel_2d)
+  CONTROLIZER                    building   CODE(P4A_copy_from_accel_2d)
+Total number of restructurations: 0
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(P4A_copy_from_accel_2d)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(P4A_copy_from_accel_2d)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(P4A_copy_from_accel_2d)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(P4A_copy_from_accel_2d)
+  C_PARSER                       building   PARSED_CODE(P4A_copy_from_accel_3d)
+                                 building   CALLEES(P4A_copy_from_accel_3d)
+  CONTROLIZER                    building   CODE(P4A_copy_from_accel_3d)
+Total number of restructurations: 0
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(P4A_copy_from_accel_3d)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(P4A_copy_from_accel_3d)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(P4A_copy_from_accel_3d)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(P4A_copy_from_accel_3d)
+  C_PARSER                       building   PARSED_CODE(P4A_copy_from_accel_4d)
+                                 building   CALLEES(P4A_copy_from_accel_4d)
+  CONTROLIZER                    building   CODE(P4A_copy_from_accel_4d)
+Total number of restructurations: 0
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(P4A_copy_from_accel_4d)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(P4A_copy_from_accel_4d)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(P4A_copy_from_accel_4d)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(P4A_copy_from_accel_4d)
+  C_PARSER                       building   PARSED_CODE(P4A_copy_to_accel)
+                                 building   CALLEES(P4A_copy_to_accel)
+  CONTROLIZER                    building   CODE(P4A_copy_to_accel)
+Total number of restructurations: 0
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(P4A_copy_to_accel)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(P4A_copy_to_accel)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(P4A_copy_to_accel)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(P4A_copy_to_accel)
+  C_PARSER                       building   PARSED_CODE(P4A_copy_to_accel_1d)
+                                 building   CALLEES(P4A_copy_to_accel_1d)
+  CONTROLIZER                    building   CODE(P4A_copy_to_accel_1d)
+Total number of restructurations: 0
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(P4A_copy_to_accel_1d)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(P4A_copy_to_accel_1d)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(P4A_copy_to_accel_1d)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(P4A_copy_to_accel_1d)
+  C_PARSER                       building   PARSED_CODE(P4A_copy_to_accel_2d)
+                                 building   CALLEES(P4A_copy_to_accel_2d)
+  CONTROLIZER                    building   CODE(P4A_copy_to_accel_2d)
+Total number of restructurations: 0
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(P4A_copy_to_accel_2d)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(P4A_copy_to_accel_2d)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(P4A_copy_to_accel_2d)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(P4A_copy_to_accel_2d)
+  C_PARSER                       building   PARSED_CODE(P4A_copy_to_accel_3d)
+                                 building   CALLEES(P4A_copy_to_accel_3d)
+  CONTROLIZER                    building   CODE(P4A_copy_to_accel_3d)
+Total number of restructurations: 0
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(P4A_copy_to_accel_3d)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(P4A_copy_to_accel_3d)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(P4A_copy_to_accel_3d)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(P4A_copy_to_accel_3d)
+  C_PARSER                       building   PARSED_CODE(P4A_copy_to_accel_4d)
+                                 building   CALLEES(P4A_copy_to_accel_4d)
+  CONTROLIZER                    building   CODE(P4A_copy_to_accel_4d)
+Total number of restructurations: 0
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(P4A_copy_to_accel_4d)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(P4A_copy_to_accel_4d)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(P4A_copy_to_accel_4d)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(P4A_copy_to_accel_4d)
+  C_PARSER                       building   PARSED_CODE(P4A_runtime_copy_from_accel)
+                                 building   CALLEES(P4A_runtime_copy_from_accel)
+  CONTROLIZER                    building   CODE(P4A_runtime_copy_from_accel)
+Total number of restructurations: 0
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(P4A_runtime_copy_from_accel)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(P4A_runtime_copy_from_accel)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(P4A_runtime_copy_from_accel)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(P4A_runtime_copy_from_accel)
+  C_PARSER                       building   PARSED_CODE(P4A_runtime_copy_to_accel)
+                                 building   CALLEES(P4A_runtime_copy_to_accel)
+  CONTROLIZER                    building   CODE(P4A_runtime_copy_to_accel)
+Total number of restructurations: 0
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(P4A_runtime_copy_to_accel)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(P4A_runtime_copy_to_accel)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(P4A_runtime_copy_to_accel)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(P4A_runtime_copy_to_accel)
+  C_PARSER                       building   PARSED_CODE(P4A_runtime_host_ptr_to_accel_ptr)
+                                 building   CALLEES(P4A_runtime_host_ptr_to_accel_ptr)
+  CONTROLIZER                    building   CODE(P4A_runtime_host_ptr_to_accel_ptr)
+Total number of restructurations: 0
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(P4A_runtime_host_ptr_to_accel_ptr)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(P4A_runtime_host_ptr_to_accel_ptr)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(P4A_runtime_host_ptr_to_accel_ptr)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(P4A_runtime_host_ptr_to_accel_ptr)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(main)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(main)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(main)
+  CONTROLIZER                    building   CODE(p4a_stubs!)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_stubs!)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_stubs!)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(p4a_stubs!)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(p4a_stubs!)
+  CONTROLIZER                    building   CODE(vectoradd!)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(vectoradd!)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(vectoradd!)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(vectoradd!)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(vectoradd!)
+  PROGRAM_PRECONDITION           building   PROGRAM_PRECONDITION()
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(main)
+  CALLGRAPH                      building   CALLERS(P4A_accel_free)
+                                 building   CALLERS(P4A_accel_malloc)
+                                 building   CALLERS(P4A_copy_from_accel)
+                                 building   CALLERS(P4A_copy_from_accel_1d)
+                                 building   CALLERS(P4A_copy_from_accel_2d)
+                                 building   CALLERS(P4A_copy_from_accel_3d)
+                                 building   CALLERS(P4A_copy_from_accel_4d)
+                                 building   CALLERS(P4A_copy_to_accel)
+                                 building   CALLERS(P4A_copy_to_accel_1d)
+                                 building   CALLERS(P4A_copy_to_accel_2d)
+                                 building   CALLERS(P4A_copy_to_accel_3d)
+                                 building   CALLERS(P4A_copy_to_accel_4d)
+                                 building   CALLERS(P4A_runtime_copy_from_accel)
+                                 building   CALLERS(P4A_runtime_copy_to_accel)
+                                 building   CALLERS(P4A_runtime_host_ptr_to_accel_ptr)
+                                 building   CALLERS(main)
+                                 building   CALLERS(p4a_stubs!)
+                                 building   CALLERS(vectoradd!)
+                                 building   HEIGHT(P4A_accel_free)
+                                 building   HEIGHT(P4A_accel_malloc)
+                                 building   HEIGHT(P4A_copy_from_accel)
+                                 building   HEIGHT(P4A_copy_from_accel_1d)
+                                 building   HEIGHT(P4A_copy_from_accel_2d)
+                                 building   HEIGHT(P4A_copy_from_accel_3d)
+                                 building   HEIGHT(P4A_copy_from_accel_4d)
+                                 building   HEIGHT(P4A_copy_to_accel)
+                                 building   HEIGHT(P4A_copy_to_accel_1d)
+                                 building   HEIGHT(P4A_copy_to_accel_2d)
+                                 building   HEIGHT(P4A_copy_to_accel_3d)
+                                 building   HEIGHT(P4A_copy_to_accel_4d)
+                                 building   HEIGHT(P4A_runtime_copy_from_accel)
+                                 building   HEIGHT(P4A_runtime_copy_to_accel)
+                                 building   HEIGHT(P4A_runtime_host_ptr_to_accel_ptr)
+                                 building   HEIGHT(main)
+                                 building   HEIGHT(p4a_stubs!)
+                                 building   HEIGHT(vectoradd!)
+                                 building   DEPTH(P4A_accel_free)
+                                 building   DEPTH(P4A_accel_malloc)
+                                 building   DEPTH(P4A_copy_from_accel)
+                                 building   DEPTH(P4A_copy_from_accel_1d)
+                                 building   DEPTH(P4A_copy_from_accel_2d)
+                                 building   DEPTH(P4A_copy_from_accel_3d)
+                                 building   DEPTH(P4A_copy_from_accel_4d)
+                                 building   DEPTH(P4A_copy_to_accel)
+                                 building   DEPTH(P4A_copy_to_accel_1d)
+                                 building   DEPTH(P4A_copy_to_accel_2d)
+                                 building   DEPTH(P4A_copy_to_accel_3d)
+                                 building   DEPTH(P4A_copy_to_accel_4d)
+                                 building   DEPTH(P4A_runtime_copy_from_accel)
+                                 building   DEPTH(P4A_runtime_copy_to_accel)
+                                 building   DEPTH(P4A_runtime_host_ptr_to_accel_ptr)
+                                 building   DEPTH(main)
+                                 building   DEPTH(p4a_stubs!)
+                                 building   DEPTH(vectoradd!)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(main)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(main)
+  RICE_SEMANTICS_DEPENDENCE_GRAPH building   DG(main)
+  RICE_ALL_DEPENDENCE            building   PARALLELIZED_CODE(main)
+  INTERNALIZE_PARALLEL_CODE      building   CODE(main)
+capply INTERNALIZE_PARALLEL_CODE made for [main].
+Request: capply COARSE_GRAIN_PARALLELIZATION for module [main].
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(main)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(main)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(main)
+  PROGRAM_PRECONDITION           building   PROGRAM_PRECONDITION()
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(main)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(main)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(main)
+  MUST_REGIONS                   building   PROPER_REGIONS(main)
+                                 building   REGIONS(main)
+                                 building   INV_REGIONS(main)
+  COARSE_GRAIN_PARALLELIZATION   updating   CODE(main)
+capply COARSE_GRAIN_PARALLELIZATION made for [main].
+set LOOP_FUSION_GREEDY FALSE
+set LOOP_FUSION_MAXIMIZE_PARALLELISM TRUE
+set LOOP_FUSION_KEEP_PERFECT_PARALLEL_LOOP_NESTS TRUE
+set LOOP_FUSION_MAX_FUSED_PER_LOOP -1
+Request: capply LOOP_FUSION for module [main].
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(main)
+  ATOMIC_CHAINS                  building   CHAINS(main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(main)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(main)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(main)
+  PROGRAM_PRECONDITION           building   PROGRAM_PRECONDITION()
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(main)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(main)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(main)
+  RICE_SEMANTICS_DEPENDENCE_GRAPH building   DG(main)
+  LOOP_FUSION                    updating   CODE(main)
+capply LOOP_FUSION made for [main].
+set NESTED_PARALLELISM_THRESHOLD 0
+set NESTED_PARALLELISM_THRESHOLD 3
+Request: capply LIMIT_NESTED_PARALLELISM for module [main].
+  LIMIT_NESTED_PARALLELISM       updating   CODE(main)
+capply LIMIT_NESTED_PARALLELISM made for [main].
+set NESTED_PARALLELISM_THRESHOLD 0
+set GPU_IFY_ANNOTATE_LOOP_NESTS TRUE
+set GPU_LAUNCHER_PREFIX "p4a_launcher"
+set GPU_WRAPPER_PREFIX "p4a_wrapper"
+set GPU_KERNEL_PREFIX "p4a_kernel"
+set GPU_OUTLINE_SUFFIX_WITH_OWNER_NAME TRUE
+set GPU_USE_LAUNCHER TRUE
+set GPU_USE_WRAPPER TRUE
+set GPU_USE_KERNEL TRUE
+set GPU_USE_KERNEL_INDEPENDENT_COMPILATION_UNIT FALSE
+set GPU_USE_LAUNCHER_INDEPENDENT_COMPILATION_UNIT FALSE
+set GPU_USE_WRAPPER_INDEPENDENT_COMPILATION_UNIT FALSE
+set GPU_USE_FORTRAN_WRAPPER FALSE
+set GPU_FORTRAN_WRAPPER_PREFIX "P4A_FORTRAN_WRAPPER"
+set GPU_COORDINATE_INTRINSICS_FORMAT "P4A_vp_%d"
+set GPU_USE_LAUNCHER TRUE
+set OUTLINE_WRITTEN_SCALAR_BY_REFERENCE FALSE
+set GPU_USE_LAUNCHER_INDEPENDENT_COMPILATION_UNIT FALSE
+set GPU_USE_KERNEL_INDEPENDENT_COMPILATION_UNIT FALSE
+set GPU_USE_KERNEL FALSE
+set GPU_USE_WRAPPER FALSE
+set GPU_USE_FORTRAN_WRAPPER FALSE
+set GPU_USE_WRAPPER_INDEPENDENT_COMPILATION_UNIT FALSE
+Request: capply GPU_IFY for module [main].
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(main)
+  ATOMIC_CHAINS                  building   CHAINS(main)
+  PRIVATIZE_MODULE               updating   CODE(main)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(main)
+  GPU_IFY                        updating   CODE(main)
+                                 building   CALLEES(main)
+                                 updating   ENTITIES()
+Registering synthesized file vectoradd.cpp_processed.c
+Registering synthesized file vectoradd.cpp_processed.c
+capply GPU_IFY made for [main].
+set GPU_USE_LAUNCHER TRUE
+set OUTLINE_WRITTEN_SCALAR_BY_REFERENCE TRUE
+set GPU_USE_LAUNCHER_INDEPENDENT_COMPILATION_UNIT FALSE
+set GPU_USE_KERNEL_INDEPENDENT_COMPILATION_UNIT FALSE
+set GPU_USE_KERNEL TRUE
+set GPU_USE_WRAPPER TRUE
+set GPU_USE_FORTRAN_WRAPPER FALSE
+set GPU_USE_WRAPPER_INDEPENDENT_COMPILATION_UNIT FALSE
+Request: build phase/rule GPU_PARALLELIZE_ANNOTATED_LOOP_NEST for module p4a_launcher_main.
+  C_PARSER                       building   PARSED_CODE(p4a_launcher_main)
+                                 building   CALLEES(p4a_launcher_main)
+  CONTROLIZER                    building   CODE(p4a_launcher_main)
+Total number of restructurations: 0
+  GPU_PARALLELIZE_ANNOTATED_LOOP_NEST updating   CODE(p4a_launcher_main)
+GPU_PARALLELIZE_ANNOTATED_LOOP_NEST made for p4a_launcher_main.
+Request: build phase/rule GPU_PARALLELIZE_ANNOTATED_LOOP_NEST for module p4a_launcher_main_1.
+  C_PARSER                       building   PARSED_CODE(p4a_launcher_main_1)
+                                 building   CALLEES(p4a_launcher_main_1)
+  CONTROLIZER                    building   CODE(p4a_launcher_main_1)
+Total number of restructurations: 0
+  GPU_PARALLELIZE_ANNOTATED_LOOP_NEST updating   CODE(p4a_launcher_main_1)
+GPU_PARALLELIZE_ANNOTATED_LOOP_NEST made for p4a_launcher_main_1.
+Request: build phase/rule GPU_CLEAR_ANNOTATIONS_ON_LOOP_NEST for module p4a_launcher_main.
+  GPU_CLEAR_ANNOTATIONS_ON_LOOP_NEST updating   CODE(p4a_launcher_main)
+GPU_CLEAR_ANNOTATIONS_ON_LOOP_NEST made for p4a_launcher_main.
+Request: build phase/rule GPU_CLEAR_ANNOTATIONS_ON_LOOP_NEST for module p4a_launcher_main_1.
+  GPU_CLEAR_ANNOTATIONS_ON_LOOP_NEST updating   CODE(p4a_launcher_main_1)
+GPU_CLEAR_ANNOTATIONS_ON_LOOP_NEST made for p4a_launcher_main_1.
+set LOOP_NORMALIZE_PARALLEL_LOOPS_ONLY FALSE
+set LOOP_NORMALIZE_ONE_INCREMENT FALSE
+set LOOP_NORMALIZE_LOWER_BOUND 1
+set LOOP_NORMALIZE_SKIP_INDEX_SIDE_EFFECT FALSE
+set LOOP_NORMALIZE_LOWER_BOUND 0
+set LOOP_NORMALIZE_ONE_INCREMENT TRUE
+set LOOP_NORMALIZE_SKIP_INDEX_SIDE_EFFECT TRUE
+Request: capply LOOP_NORMALIZE for module [p4a_launcher_main,p4a_launcher_main_1].
+  LOOP_NORMALIZE                 updating   CODE(p4a_launcher_main)
+  LOOP_NORMALIZE                 updating   CODE(p4a_launcher_main_1)
+capply LOOP_NORMALIZE made for [p4a_launcher_main,p4a_launcher_main_1].
+set LOOP_NORMALIZE_LOWER_BOUND 1
+set LOOP_NORMALIZE_ONE_INCREMENT FALSE
+set LOOP_NORMALIZE_SKIP_INDEX_SIDE_EFFECT FALSE
+set GPU_IFY_ANNOTATE_LOOP_NESTS FALSE
+set GPU_LAUNCHER_PREFIX "p4a_launcher"
+set GPU_WRAPPER_PREFIX "p4a_wrapper"
+set GPU_KERNEL_PREFIX "p4a_kernel"
+set GPU_OUTLINE_SUFFIX_WITH_OWNER_NAME TRUE
+set GPU_USE_LAUNCHER TRUE
+set GPU_USE_WRAPPER TRUE
+set GPU_USE_KERNEL TRUE
+set GPU_USE_KERNEL_INDEPENDENT_COMPILATION_UNIT FALSE
+set GPU_USE_LAUNCHER_INDEPENDENT_COMPILATION_UNIT FALSE
+set GPU_USE_WRAPPER_INDEPENDENT_COMPILATION_UNIT FALSE
+set GPU_USE_FORTRAN_WRAPPER FALSE
+set GPU_FORTRAN_WRAPPER_PREFIX "P4A_FORTRAN_WRAPPER"
+set GPU_COORDINATE_INTRINSICS_FORMAT "P4A_vp_%d"
+set GPU_USE_KERNEL_INDEPENDENT_COMPILATION_UNIT FALSE
+set OUTLINE_WRITTEN_SCALAR_BY_REFERENCE FALSE
+set OUTLINE_INDEPENDENT_COMPILATION_UNIT FALSE
+set GPU_USE_LAUNCHER FALSE
+set GPU_USE_WRAPPER_INDEPENDENT_COMPILATION_UNIT FALSE
+Request: capply GPU_IFY for module [p4a_launcher_main,p4a_launcher_main_1].
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_launcher_main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_launcher_main)
+  ATOMIC_CHAINS                  building   CHAINS(p4a_launcher_main)
+  PRIVATIZE_MODULE               updating   CODE(p4a_launcher_main)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_launcher_main_1)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_launcher_main_1)
+  ATOMIC_CHAINS                  building   CHAINS(p4a_launcher_main_1)
+  PRIVATIZE_MODULE               updating   CODE(p4a_launcher_main_1)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_launcher_main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_launcher_main)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_launcher_main_1)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_launcher_main_1)
+  GPU_IFY                        updating   CODE(p4a_launcher_main)
+                                 building   CALLEES(p4a_launcher_main)
+                                 updating   ENTITIES()
+Registering synthesized file vectoradd.cpp_processed.c
+Registering synthesized file vectoradd.cpp_processed.c
+  GPU_IFY                        updating   CODE(p4a_launcher_main_1)
+                                 building   CALLEES(p4a_launcher_main_1)
+                                 updating   ENTITIES()
+Registering synthesized file vectoradd.cpp_processed.c
+Registering synthesized file vectoradd.cpp_processed.c
+capply GPU_IFY made for [p4a_launcher_main,p4a_launcher_main_1].
+set GPU_USE_KERNEL_INDEPENDENT_COMPILATION_UNIT FALSE
+set OUTLINE_WRITTEN_SCALAR_BY_REFERENCE TRUE
+set GPU_USE_WRAPPER_INDEPENDENT_COMPILATION_UNIT FALSE
+set GPU_USE_LAUNCHER TRUE
+set OUTLINE_INDEPENDENT_COMPILATION_UNIT FALSE
+Request: build resource CALLERS for module p4a_kernel_main.
+  C_PARSER                       building   PARSED_CODE(p4a_kernel_main)
+                                 building   CALLEES(p4a_kernel_main)
+  C_PARSER                       building   PARSED_CODE(p4a_kernel_main_1)
+                                 building   CALLEES(p4a_kernel_main_1)
+  C_PARSER                       building   PARSED_CODE(p4a_wrapper_main)
+                                 building   CALLEES(p4a_wrapper_main)
+  C_PARSER                       building   PARSED_CODE(p4a_wrapper_main_1)
+                                 building   CALLEES(p4a_wrapper_main_1)
+  CALLGRAPH                      building   CALLERS(P4A_accel_free)
+                                 building   CALLERS(P4A_accel_malloc)
+                                 building   CALLERS(P4A_copy_from_accel)
+                                 building   CALLERS(P4A_copy_from_accel_1d)
+                                 building   CALLERS(P4A_copy_from_accel_2d)
+                                 building   CALLERS(P4A_copy_from_accel_3d)
+                                 building   CALLERS(P4A_copy_from_accel_4d)
+                                 building   CALLERS(P4A_copy_to_accel)
+                                 building   CALLERS(P4A_copy_to_accel_1d)
+                                 building   CALLERS(P4A_copy_to_accel_2d)
+                                 building   CALLERS(P4A_copy_to_accel_3d)
+                                 building   CALLERS(P4A_copy_to_accel_4d)
+                                 building   CALLERS(P4A_runtime_copy_from_accel)
+                                 building   CALLERS(P4A_runtime_copy_to_accel)
+                                 building   CALLERS(P4A_runtime_host_ptr_to_accel_ptr)
+                                 building   CALLERS(main)
+                                 building   CALLERS(p4a_kernel_main)
+                                 building   CALLERS(p4a_kernel_main_1)
+                                 building   CALLERS(p4a_launcher_main)
+                                 building   CALLERS(p4a_launcher_main_1)
+                                 building   CALLERS(p4a_stubs!)
+                                 building   CALLERS(p4a_wrapper_main)
+                                 building   CALLERS(p4a_wrapper_main_1)
+                                 building   CALLERS(vectoradd!)
+                                 building   HEIGHT(P4A_accel_free)
+                                 building   HEIGHT(P4A_accel_malloc)
+                                 building   HEIGHT(P4A_copy_from_accel)
+                                 building   HEIGHT(P4A_copy_from_accel_1d)
+                                 building   HEIGHT(P4A_copy_from_accel_2d)
+                                 building   HEIGHT(P4A_copy_from_accel_3d)
+                                 building   HEIGHT(P4A_copy_from_accel_4d)
+                                 building   HEIGHT(P4A_copy_to_accel)
+                                 building   HEIGHT(P4A_copy_to_accel_1d)
+                                 building   HEIGHT(P4A_copy_to_accel_2d)
+                                 building   HEIGHT(P4A_copy_to_accel_3d)
+                                 building   HEIGHT(P4A_copy_to_accel_4d)
+                                 building   HEIGHT(P4A_runtime_copy_from_accel)
+                                 building   HEIGHT(P4A_runtime_copy_to_accel)
+                                 building   HEIGHT(P4A_runtime_host_ptr_to_accel_ptr)
+                                 building   HEIGHT(main)
+                                 building   HEIGHT(p4a_kernel_main)
+                                 building   HEIGHT(p4a_kernel_main_1)
+                                 building   HEIGHT(p4a_launcher_main)
+                                 building   HEIGHT(p4a_launcher_main_1)
+                                 building   HEIGHT(p4a_stubs!)
+                                 building   HEIGHT(p4a_wrapper_main)
+                                 building   HEIGHT(p4a_wrapper_main_1)
+                                 building   HEIGHT(vectoradd!)
+                                 building   DEPTH(P4A_accel_free)
+                                 building   DEPTH(P4A_accel_malloc)
+                                 building   DEPTH(P4A_copy_from_accel)
+                                 building   DEPTH(P4A_copy_from_accel_1d)
+                                 building   DEPTH(P4A_copy_from_accel_2d)
+                                 building   DEPTH(P4A_copy_from_accel_3d)
+                                 building   DEPTH(P4A_copy_from_accel_4d)
+                                 building   DEPTH(P4A_copy_to_accel)
+                                 building   DEPTH(P4A_copy_to_accel_1d)
+                                 building   DEPTH(P4A_copy_to_accel_2d)
+                                 building   DEPTH(P4A_copy_to_accel_3d)
+                                 building   DEPTH(P4A_copy_to_accel_4d)
+                                 building   DEPTH(P4A_runtime_copy_from_accel)
+                                 building   DEPTH(P4A_runtime_copy_to_accel)
+                                 building   DEPTH(P4A_runtime_host_ptr_to_accel_ptr)
+                                 building   DEPTH(main)
+                                 building   DEPTH(p4a_kernel_main)
+                                 building   DEPTH(p4a_kernel_main_1)
+                                 building   DEPTH(p4a_launcher_main)
+                                 building   DEPTH(p4a_launcher_main_1)
+                                 building   DEPTH(p4a_stubs!)
+                                 building   DEPTH(p4a_wrapper_main)
+                                 building   DEPTH(p4a_wrapper_main_1)
+                                 building   DEPTH(vectoradd!)
+CALLERS made for p4a_kernel_main.
+Request: build resource CALLEES for module p4a_kernel_main.
+CALLEES made for p4a_kernel_main.
+Request: build resource CALLERS for module p4a_kernel_main_1.
+CALLERS made for p4a_kernel_main_1.
+Request: build resource CALLEES for module p4a_kernel_main_1.
+CALLEES made for p4a_kernel_main_1.
+set SCALARIZATION_PREFIX ""
+set SCALARIZATION_PRESERVE_PERFECT_LOOP_NEST FALSE
+set SCALARIZATION_FORCE_OUT FALSE
+set SEMANTICS_TRUST_ARRAY_DECLARATIONS FALSE
+set SEMANTICS_TRUST_ARRAY_REFERENCES FALSE
+set SCALARIZATION_THRESHOLD 2
+set SCALARIZATION_STRICT_MEMORY_ACCESSES FALSE
+Request: capply SCALARIZATION for module [p4a_kernel_main,p4a_kernel_main_1].
+  CONTROLIZER                    building   CODE(p4a_kernel_main)
+Total number of restructurations: 0
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_kernel_main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_kernel_main)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(p4a_kernel_main)
+  CONTROLIZER                    building   CODE(p4a_wrapper_main_1)
+Total number of restructurations: 0
+  CONTROLIZER                    building   CODE(p4a_kernel_main_1)
+Total number of restructurations: 0
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_kernel_main_1)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_kernel_main_1)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(p4a_kernel_main_1)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_wrapper_main_1)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_wrapper_main_1)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(p4a_wrapper_main_1)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_launcher_main_1)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_launcher_main_1)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(p4a_launcher_main_1)
+  CONTROLIZER                    building   CODE(p4a_wrapper_main)
+Total number of restructurations: 0
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_wrapper_main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_wrapper_main)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(p4a_wrapper_main)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_launcher_main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_launcher_main)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(p4a_launcher_main)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(main)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(main)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(main)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(p4a_kernel_main)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(p4a_kernel_main_1)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(p4a_launcher_main)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(p4a_launcher_main_1)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(p4a_wrapper_main)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(p4a_wrapper_main_1)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(vectoradd!)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(vectoradd!)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(vectoradd!)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(vectoradd!)
+  PROGRAM_PRECONDITION           building   PROGRAM_PRECONDITION()
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(p4a_kernel_main)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(p4a_wrapper_main)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(p4a_launcher_main)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(p4a_kernel_main_1)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(p4a_wrapper_main_1)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(p4a_launcher_main_1)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(main)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(main)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(main)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(p4a_launcher_main)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(p4a_launcher_main)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(p4a_wrapper_main)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(p4a_wrapper_main)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(p4a_kernel_main)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(p4a_kernel_main)
+  MUST_REGIONS                   building   PROPER_REGIONS(p4a_kernel_main)
+                                 building   REGIONS(p4a_kernel_main)
+                                 building   INV_REGIONS(p4a_kernel_main)
+  IN_REGIONS                     building   IN_REGIONS(p4a_kernel_main)
+                                 building   CUMULATED_IN_REGIONS(p4a_kernel_main)
+                                 building   INV_IN_REGIONS(p4a_kernel_main)
+  SUMMARY_REGIONS                building   SUMMARY_REGIONS(p4a_kernel_main)
+  MUST_REGIONS                   building   PROPER_REGIONS(p4a_wrapper_main)
+                                 building   REGIONS(p4a_wrapper_main)
+                                 building   INV_REGIONS(p4a_wrapper_main)
+  IN_SUMMARY_REGIONS             building   IN_SUMMARY_REGIONS(p4a_kernel_main)
+  IN_REGIONS                     building   IN_REGIONS(p4a_wrapper_main)
+                                 building   CUMULATED_IN_REGIONS(p4a_wrapper_main)
+                                 building   INV_IN_REGIONS(p4a_wrapper_main)
+  SUMMARY_REGIONS                building   SUMMARY_REGIONS(p4a_wrapper_main)
+  MUST_REGIONS                   building   PROPER_REGIONS(p4a_launcher_main)
+                                 building   REGIONS(p4a_launcher_main)
+                                 building   INV_REGIONS(p4a_launcher_main)
+  IN_SUMMARY_REGIONS             building   IN_SUMMARY_REGIONS(p4a_wrapper_main)
+  IN_REGIONS                     building   IN_REGIONS(p4a_launcher_main)
+                                 building   CUMULATED_IN_REGIONS(p4a_launcher_main)
+                                 building   INV_IN_REGIONS(p4a_launcher_main)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(p4a_launcher_main_1)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(p4a_launcher_main_1)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(p4a_wrapper_main_1)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(p4a_wrapper_main_1)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(p4a_kernel_main_1)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(p4a_kernel_main_1)
+  MUST_REGIONS                   building   PROPER_REGIONS(p4a_kernel_main_1)
+                                 building   REGIONS(p4a_kernel_main_1)
+                                 building   INV_REGIONS(p4a_kernel_main_1)
+  SUMMARY_REGIONS                building   SUMMARY_REGIONS(p4a_kernel_main_1)
+  MUST_REGIONS                   building   PROPER_REGIONS(p4a_wrapper_main_1)
+                                 building   REGIONS(p4a_wrapper_main_1)
+                                 building   INV_REGIONS(p4a_wrapper_main_1)
+  SUMMARY_REGIONS                building   SUMMARY_REGIONS(p4a_wrapper_main_1)
+  MUST_REGIONS                   building   PROPER_REGIONS(p4a_launcher_main_1)
+                                 building   REGIONS(p4a_launcher_main_1)
+                                 building   INV_REGIONS(p4a_launcher_main_1)
+  SUMMARY_REGIONS                building   SUMMARY_REGIONS(p4a_launcher_main_1)
+  SUMMARY_REGIONS                building   SUMMARY_REGIONS(p4a_launcher_main)
+  MUST_REGIONS                   building   PROPER_REGIONS(main)
+                                 building   REGIONS(main)
+                                 building   INV_REGIONS(main)
+  IN_REGIONS                     building   IN_REGIONS(p4a_kernel_main_1)
+                                 building   CUMULATED_IN_REGIONS(p4a_kernel_main_1)
+                                 building   INV_IN_REGIONS(p4a_kernel_main_1)
+  IN_SUMMARY_REGIONS             building   IN_SUMMARY_REGIONS(p4a_kernel_main_1)
+  IN_REGIONS                     building   IN_REGIONS(p4a_wrapper_main_1)
+                                 building   CUMULATED_IN_REGIONS(p4a_wrapper_main_1)
+                                 building   INV_IN_REGIONS(p4a_wrapper_main_1)
+  IN_SUMMARY_REGIONS             building   IN_SUMMARY_REGIONS(p4a_wrapper_main_1)
+  IN_REGIONS                     building   IN_REGIONS(p4a_launcher_main_1)
+                                 building   CUMULATED_IN_REGIONS(p4a_launcher_main_1)
+                                 building   INV_IN_REGIONS(p4a_launcher_main_1)
+  IN_SUMMARY_REGIONS             building   IN_SUMMARY_REGIONS(p4a_launcher_main_1)
+  IN_SUMMARY_REGIONS             building   IN_SUMMARY_REGIONS(p4a_launcher_main)
+  IN_REGIONS                     building   IN_REGIONS(main)
+                                 building   CUMULATED_IN_REGIONS(main)
+                                 building   INV_IN_REGIONS(main)
+  OUT_SUMMARY_REGIONS            building   OUT_SUMMARY_REGIONS(main)
+  OUT_REGIONS                    building   OUT_REGIONS(main)
+  OUT_SUMMARY_REGIONS            building   OUT_SUMMARY_REGIONS(p4a_launcher_main)
+  OUT_REGIONS                    building   OUT_REGIONS(p4a_launcher_main)
+  OUT_SUMMARY_REGIONS            building   OUT_SUMMARY_REGIONS(p4a_wrapper_main)
+  OUT_REGIONS                    building   OUT_REGIONS(p4a_wrapper_main)
+  OUT_SUMMARY_REGIONS            building   OUT_SUMMARY_REGIONS(p4a_kernel_main)
+  OUT_REGIONS                    building   OUT_REGIONS(p4a_kernel_main)
+  OUT_SUMMARY_REGIONS            building   OUT_SUMMARY_REGIONS(p4a_launcher_main_1)
+  OUT_REGIONS                    building   OUT_REGIONS(p4a_launcher_main_1)
+  OUT_SUMMARY_REGIONS            building   OUT_SUMMARY_REGIONS(p4a_wrapper_main_1)
+  OUT_REGIONS                    building   OUT_REGIONS(p4a_wrapper_main_1)
+  OUT_SUMMARY_REGIONS            building   OUT_SUMMARY_REGIONS(p4a_kernel_main_1)
+  OUT_REGIONS                    building   OUT_REGIONS(p4a_kernel_main_1)
+  SCALARIZATION                  updating   CODE(p4a_kernel_main)
+  SCALARIZATION                  updating   CODE(p4a_kernel_main_1)
+capply SCALARIZATION made for [p4a_kernel_main,p4a_kernel_main_1].
+Request: build phase/rule CLEAN_DECLARATIONS for module main.
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_kernel_main_1)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_kernel_main_1)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(p4a_kernel_main_1)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_wrapper_main_1)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_wrapper_main_1)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(p4a_wrapper_main_1)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_launcher_main_1)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_launcher_main_1)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(p4a_launcher_main_1)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_kernel_main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_kernel_main)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(p4a_kernel_main)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_wrapper_main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_wrapper_main)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(p4a_wrapper_main)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_launcher_main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_launcher_main)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(p4a_launcher_main)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(main)
+  CLEAN_DECLARATIONS             updating   CODE(main)
+CLEAN_DECLARATIONS made for main.
+Request: build phase/rule CLEAN_DECLARATIONS for module p4a_kernel_main.
+  CLEAN_DECLARATIONS             updating   CODE(p4a_kernel_main)
+CLEAN_DECLARATIONS made for p4a_kernel_main.
+Request: build phase/rule CLEAN_DECLARATIONS for module p4a_kernel_main_1.
+  CLEAN_DECLARATIONS             updating   CODE(p4a_kernel_main_1)
+CLEAN_DECLARATIONS made for p4a_kernel_main_1.
+Request: build phase/rule CLEAN_DECLARATIONS for module p4a_wrapper_main.
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_kernel_main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_kernel_main)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(p4a_kernel_main)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_wrapper_main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_wrapper_main)
+  CLEAN_DECLARATIONS             updating   CODE(p4a_wrapper_main)
+CLEAN_DECLARATIONS made for p4a_wrapper_main.
+Request: build phase/rule CLEAN_DECLARATIONS for module p4a_wrapper_main_1.
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_kernel_main_1)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_kernel_main_1)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(p4a_kernel_main_1)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_wrapper_main_1)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_wrapper_main_1)
+  CLEAN_DECLARATIONS             updating   CODE(p4a_wrapper_main_1)
+CLEAN_DECLARATIONS made for p4a_wrapper_main_1.
+Request: build phase/rule CLEAN_DECLARATIONS for module p4a_launcher_main.
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_wrapper_main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_wrapper_main)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(p4a_wrapper_main)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_launcher_main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_launcher_main)
+  CLEAN_DECLARATIONS             updating   CODE(p4a_launcher_main)
+CLEAN_DECLARATIONS made for p4a_launcher_main.
+Request: build phase/rule CLEAN_DECLARATIONS for module p4a_launcher_main_1.
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_wrapper_main_1)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_wrapper_main_1)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(p4a_wrapper_main_1)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_launcher_main_1)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_launcher_main_1)
+  CLEAN_DECLARATIONS             updating   CODE(p4a_launcher_main_1)
+CLEAN_DECLARATIONS made for p4a_launcher_main_1.
+set KERNEL_LOAD_STORE_SCALAR FALSE
+set ISOLATE_STATEMENT_EVEN_NON_LOCAL FALSE
+set KERNEL_LOAD_STORE_ALLOCATE_FUNCTION "P4A_accel_malloc"
+set KERNEL_LOAD_STORE_DEALLOCATE_FUNCTION "P4A_accel_free"
+set KERNEL_LOAD_STORE_LOAD_FUNCTION "P4A_copy_to_accel"
+set KERNEL_LOAD_STORE_STORE_FUNCTION "P4A_copy_from_accel"
+set KERNEL_LOAD_STORE_LOAD_FUNCTION_1D "P4A_copy_to_accel_1d"
+set KERNEL_LOAD_STORE_STORE_FUNCTION_1D "P4A_copy_from_accel_1d"
+set KERNEL_LOAD_STORE_LOAD_FUNCTION_2D "P4A_copy_to_accel_2d"
+set KERNEL_LOAD_STORE_STORE_FUNCTION_2D "P4A_copy_from_accel_2d"
+set KERNEL_LOAD_STORE_LOAD_FUNCTION_3D "P4A_copy_to_accel_3d"
+set KERNEL_LOAD_STORE_STORE_FUNCTION_3D "P4A_copy_from_accel_3d"
+set KERNEL_LOAD_STORE_LOAD_FUNCTION_4D "P4A_copy_to_accel_4d"
+set KERNEL_LOAD_STORE_STORE_FUNCTION_4D "P4A_copy_from_accel_4d"
+set KERNEL_LOAD_STORE_LOAD_FUNCTION_5D "P4A_copy_to_accel_5d"
+set KERNEL_LOAD_STORE_STORE_FUNCTION_5D "P4A_copy_from_accel_5d"
+set KERNEL_LOAD_STORE_LOAD_FUNCTION_6D "P4A_copy_to_accel_6d"
+set KERNEL_LOAD_STORE_STORE_FUNCTION_6D "P4A_copy_from_accel_6d"
+set KERNEL_LOAD_STORE_VAR_PREFIX "P4A_var_"
+set KERNEL_LOAD_STORE_VAR_SUFFIX ""
+set ISOLATE_STATEMENT_EVEN_NON_LOCAL TRUE
+Request: capply KERNEL_LOAD_STORE for module [p4a_launcher_main,p4a_launcher_main_1].
+  BOOTSTRAP_KERNELS              building   KERNELS()
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_launcher_main_1)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_launcher_main_1)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(p4a_launcher_main_1)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(p4a_launcher_main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(p4a_launcher_main)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(p4a_launcher_main)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(main)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(main)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(main)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(p4a_kernel_main)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(p4a_kernel_main_1)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(p4a_launcher_main)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(p4a_launcher_main_1)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(p4a_wrapper_main)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(p4a_wrapper_main_1)
+  PROGRAM_PRECONDITION           building   PROGRAM_PRECONDITION()
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(p4a_kernel_main_1)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(p4a_wrapper_main_1)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(p4a_launcher_main_1)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(p4a_kernel_main)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(p4a_wrapper_main)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(p4a_launcher_main)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(main)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(main)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(main)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(p4a_launcher_main_1)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(p4a_launcher_main_1)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(p4a_wrapper_main_1)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(p4a_wrapper_main_1)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(p4a_kernel_main_1)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(p4a_kernel_main_1)
+  MUST_REGIONS                   building   PROPER_REGIONS(p4a_kernel_main_1)
+                                 building   REGIONS(p4a_kernel_main_1)
+                                 building   INV_REGIONS(p4a_kernel_main_1)
+  SUMMARY_REGIONS                building   SUMMARY_REGIONS(p4a_kernel_main_1)
+  MUST_REGIONS                   building   PROPER_REGIONS(p4a_wrapper_main_1)
+                                 building   REGIONS(p4a_wrapper_main_1)
+                                 building   INV_REGIONS(p4a_wrapper_main_1)
+  SUMMARY_REGIONS                building   SUMMARY_REGIONS(p4a_wrapper_main_1)
+  MUST_REGIONS                   building   PROPER_REGIONS(p4a_launcher_main_1)
+                                 building   REGIONS(p4a_launcher_main_1)
+                                 building   INV_REGIONS(p4a_launcher_main_1)
+  SUMMARY_REGIONS                building   SUMMARY_REGIONS(p4a_launcher_main_1)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(p4a_launcher_main)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(p4a_launcher_main)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(p4a_wrapper_main)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(p4a_wrapper_main)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(p4a_kernel_main)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(p4a_kernel_main)
+  MUST_REGIONS                   building   PROPER_REGIONS(p4a_kernel_main)
+                                 building   REGIONS(p4a_kernel_main)
+                                 building   INV_REGIONS(p4a_kernel_main)
+  SUMMARY_REGIONS                building   SUMMARY_REGIONS(p4a_kernel_main)
+  MUST_REGIONS                   building   PROPER_REGIONS(p4a_wrapper_main)
+                                 building   REGIONS(p4a_wrapper_main)
+                                 building   INV_REGIONS(p4a_wrapper_main)
+  SUMMARY_REGIONS                building   SUMMARY_REGIONS(p4a_wrapper_main)
+  MUST_REGIONS                   building   PROPER_REGIONS(p4a_launcher_main)
+                                 building   REGIONS(p4a_launcher_main)
+                                 building   INV_REGIONS(p4a_launcher_main)
+  SUMMARY_REGIONS                building   SUMMARY_REGIONS(p4a_launcher_main)
+  MUST_REGIONS                   building   PROPER_REGIONS(main)
+                                 building   REGIONS(main)
+                                 building   INV_REGIONS(main)
+  KERNEL_LOAD_STORE              updating   CODE(main)
+                                 building   CALLEES(main)
+                                 updating   KERNELS()
+  KERNEL_LOAD_STORE              updating   CODE(main)
+                                 building   CALLEES(main)
+                                 updating   KERNELS()
+capply KERNEL_LOAD_STORE made for [p4a_launcher_main,p4a_launcher_main_1].
+set ISOLATE_STATEMENT_EVEN_NON_LOCAL FALSE
+set GPU_LOOP_NEST_ANNOTATE_PARALLEL TRUE
+Request: build phase/rule GPU_LOOP_NEST_ANNOTATE for module p4a_launcher_main.
+  GPU_LOOP_NEST_ANNOTATE         updating   CODE(p4a_launcher_main)
+GPU_LOOP_NEST_ANNOTATE made for p4a_launcher_main.
+Request: build phase/rule GPU_LOOP_NEST_ANNOTATE for module p4a_launcher_main_1.
+  GPU_LOOP_NEST_ANNOTATE         updating   CODE(p4a_launcher_main_1)
+GPU_LOOP_NEST_ANNOTATE made for p4a_launcher_main_1.
+set SET_RETURN_TYPE_AS_TYPEDEF_NEW_TYPE "P4A_accel_kernel_wrapper"
+set SET_RETURN_TYPE_AS_TYPEDEF_NEW_TYPE "P4A_accel_kernel_wrapper"
+Request: build phase/rule SET_RETURN_TYPE_AS_TYPEDEF for module p4a_wrapper_main.
+  SET_RETURN_TYPE_AS_TYPEDEF     updating   CODE(p4a_wrapper_main)
+SET_RETURN_TYPE_AS_TYPEDEF made for p4a_wrapper_main.
+Request: build phase/rule SET_RETURN_TYPE_AS_TYPEDEF for module p4a_wrapper_main_1.
+  SET_RETURN_TYPE_AS_TYPEDEF     updating   CODE(p4a_wrapper_main_1)
+SET_RETURN_TYPE_AS_TYPEDEF made for p4a_wrapper_main_1.
+set SET_RETURN_TYPE_AS_TYPEDEF_NEW_TYPE "P4A_accel_kernel_wrapper"
+set SET_RETURN_TYPE_AS_TYPEDEF_NEW_TYPE "P4A_accel_kernel_wrapper"
+set SET_RETURN_TYPE_AS_TYPEDEF_NEW_TYPE "P4A_accel_kernel"
+Request: build phase/rule SET_RETURN_TYPE_AS_TYPEDEF for module p4a_kernel_main.
+  SET_RETURN_TYPE_AS_TYPEDEF     updating   CODE(p4a_kernel_main)
+SET_RETURN_TYPE_AS_TYPEDEF made for p4a_kernel_main.
+Request: build phase/rule SET_RETURN_TYPE_AS_TYPEDEF for module p4a_kernel_main_1.
+  SET_RETURN_TYPE_AS_TYPEDEF     updating   CODE(p4a_kernel_main_1)
+SET_RETURN_TYPE_AS_TYPEDEF made for p4a_kernel_main_1.
+set SET_RETURN_TYPE_AS_TYPEDEF_NEW_TYPE "P4A_accel_kernel_wrapper"
+set PREPEND_COMMENT "/* This comment is added by PREPEND_COMMENT phase */"
+set PREPEND_COMMENT "// Prepend here P4A_init_accel
+"
+Request: build phase/rule PREPEND_COMMENT for module main.
+  PREPEND_COMMENT                updating   CODE(main)
+PREPEND_COMMENT made for main.
+set PREPEND_COMMENT "/* This comment is added by PREPEND_COMMENT phase */"
+set PRETTYPRINT_SEQUENTIAL_STYLE "do"
+Request: build phase/rule UNSPLIT for module %ALL.
+  PRINT_CODE                     building   PRINTED_FILE(P4A_accel_free)
+  PRINT_CODE                     building   PRINTED_FILE(P4A_accel_malloc)
+  PRINT_CODE                     building   PRINTED_FILE(P4A_copy_from_accel)
+  PRINT_CODE                     building   PRINTED_FILE(P4A_copy_from_accel_1d)
+  PRINT_CODE                     building   PRINTED_FILE(P4A_copy_from_accel_2d)
+  PRINT_CODE                     building   PRINTED_FILE(P4A_copy_from_accel_3d)
+  PRINT_CODE                     building   PRINTED_FILE(P4A_copy_from_accel_4d)
+  PRINT_CODE                     building   PRINTED_FILE(P4A_copy_to_accel)
+  PRINT_CODE                     building   PRINTED_FILE(P4A_copy_to_accel_1d)
+  PRINT_CODE                     building   PRINTED_FILE(P4A_copy_to_accel_2d)
+  PRINT_CODE                     building   PRINTED_FILE(P4A_copy_to_accel_3d)
+  PRINT_CODE                     building   PRINTED_FILE(P4A_copy_to_accel_4d)
+  PRINT_CODE                     building   PRINTED_FILE(P4A_runtime_copy_from_accel)
+  PRINT_CODE                     building   PRINTED_FILE(P4A_runtime_copy_to_accel)
+  PRINT_CODE                     building   PRINTED_FILE(P4A_runtime_host_ptr_to_accel_ptr)
+  PRINT_CODE                     building   PRINTED_FILE(main)
+  PRINT_CODE                     building   PRINTED_FILE(p4a_kernel_main)
+  PRINT_CODE                     building   PRINTED_FILE(p4a_kernel_main_1)
+  PRINT_CODE                     building   PRINTED_FILE(p4a_launcher_main)
+  PRINT_CODE                     building   PRINTED_FILE(p4a_launcher_main_1)
+  PRINT_CODE                     building   PRINTED_FILE(p4a_stubs!)
+  PRINT_CODE                     building   PRINTED_FILE(p4a_wrapper_main)
+  PRINT_CODE                     building   PRINTED_FILE(p4a_wrapper_main_1)
+  PRINT_CODE                     building   PRINTED_FILE(vectoradd!)
+  UNSPLIT                        building   USER_FILE()
+UNSPLIT made for %ALL.

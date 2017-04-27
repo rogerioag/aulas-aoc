@@ -1,0 +1,35 @@
+Printing analysis 'Basic Alias Analysis (stateless AA impl)':
+Pass::print not implemented for pass: 'Basic Alias Analysis (stateless AA impl)'!
+Printing analysis 'Polly - Import Scops from JSON (Reads a .jscop file for each Scop)' for region: '%3 => %6' in function 'main':
+Printing analysis 'Execute Cloog code generation' for region: '%3 => %6' in function 'main':
+Printing analysis 'Polly - Import Scops from JSON (Reads a .jscop file for each Scop)' for region: '%1 => %8' in function 'main':
+    Context:
+    {  :  }
+    Statements {
+    	Stmt_2
+            Domain :=
+                { Stmt_2[i0] : i0 >= 0 and i0 <= 4 };
+            Scattering :=
+                { Stmt_2[i0] -> scatteri0ng[0, i0, 0] };
+            MustWriteAccess := 
+                { Stmt_2[i0] -> MemRef_A[i0] };
+    	Stmt_4
+            Domain :=
+                { Stmt_4[i0, i1] : i0 >= 0 and i0 <= 4 and i1 >= 0 and i1 <= 4 };
+            Scattering :=
+                { Stmt_4[i0, i1] -> scatteri0ng[1, i0, i1] };
+            MustWriteAccess := 
+                { Stmt_4[i0, i1] -> MemRef_B[5i0 + i1] };
+    }
+Printing analysis 'Execute Cloog code generation' for region: '%1 => %8' in function 'main':
+main():
+for (c2=0;c2<=4;c2++) {
+  Stmt_2(c2);
+}
+for (c2=0;c2<=4;c2++) {
+  for (c3=0;c3<=4;c3++) {
+    Stmt_4(c2,c3);
+  }
+}
+Printing analysis 'Polly - Import Scops from JSON (Reads a .jscop file for each Scop)' for region: '%0 => <Function Return>' in function 'main':
+Printing analysis 'Execute Cloog code generation' for region: '%0 => <Function Return>' in function 'main':

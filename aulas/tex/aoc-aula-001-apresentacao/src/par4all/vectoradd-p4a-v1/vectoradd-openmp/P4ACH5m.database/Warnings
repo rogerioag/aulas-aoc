@@ -1,0 +1,22 @@
+RICE_SEMANTICS_DEPENDENCE_GRAPH[main] (TestCoupleOfReferences) Dependence between differents variables: 0`b and 0`a
+Dependence assumed
+RICE_SEMANTICS_DEPENDENCE_GRAPH[main] (TestCoupleOfReferences) Dependence between differents variables: 0`c and 0`b
+Dependence assumed
+RICE_SEMANTICS_DEPENDENCE_GRAPH[main] (TestCoupleOfReferences) Dependence between differents variables: 0`c and 0`a
+Dependence assumed
+RICE_SEMANTICS_DEPENDENCE_GRAPH[main] (TestCoupleOfReferences) Dependence between differents variables: 0`sum and 0`c
+Dependence assumed
+LOOP_FUSION[main] (TestCoupleOfReferences) Dependence between differents variables: 0`c and 0`b
+Dependence assumed
+LOOP_FUSION[main] (TestCoupleOfReferences) Dependence between differents variables: 0`c and 0`a
+Dependence assumed
+LOOP_FUSION[main] (TestCoupleOfReferences) Dependence between differents variables: 0`c and 0`b
+Dependence assumed
+LOOP_FUSION[main] (TestCoupleOfReferences) Dependence between differents variables: 0`a and 0`b
+Dependence assumed
+LOOP_FUSION[main] (TestCoupleOfReferences) Dependence between differents variables: 0`c and 0`a
+Dependence assumed
+LOOP_FUSION[main] (TestCoupleOfReferences) Dependence between differents variables: 0`b and 0`a
+Dependence assumed
+LOOP_FUSION[main] (TestCoupleOfReferences) Dependence between differents variables: 0`b and 0`a
+Dependence assumed

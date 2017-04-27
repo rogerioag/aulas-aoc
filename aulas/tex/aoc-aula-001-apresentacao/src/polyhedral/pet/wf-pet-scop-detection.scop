@@ -1,0 +1,66 @@
+start: 51
+end: 203
+indent: 
+context: '[m, n] -> {  : n >= 0 and m <= 2147483647 and m >= 0 and n <= 2147483647
+  }'
+arrays:
+- context: '[m, n] -> {  : n >= 0 and m >= 0 }'
+  extent: '[m, n] -> { A[i0, i1] : i1 <= -1 + m and i1 >= 0 and i0 <= -1 + n and i0
+    >= 0 }'
+  element_type: int
+  element_size: 4
+statements:
+- line: 9
+  domain: '[m, n] -> { S_0[i, j] : j <= -1 + m and j >= 1 and i <= -1 + n and i >=
+    1 }'
+  schedule: '[n, m] -> { S_0[i, j] -> [0, i, 0, j, 0] }'
+  body:
+    type: expression
+    expr:
+      type: op
+      operation: =
+      arguments:
+      - type: access
+        relation: '[m, n] -> { S_0[i, j] -> A[i, j] }'
+        index: '[m, n] -> { S_0[i, j] -> A[(i), (j)] }'
+        reference: __pet_ref_0
+        read: 0
+        write: 1
+      - type: op
+        operation: /
+        arguments:
+        - type: op
+          operation: +
+          arguments:
+          - type: op
+            operation: +
+            arguments:
+            - type: op
+              operation: +
+              arguments:
+              - type: access
+                relation: '[m, n] -> { S_0[i, j] -> A[-1 + i, j] }'
+                index: '[m, n] -> { S_0[i, j] -> A[(-1 + i), (j)] }'
+                reference: __pet_ref_1
+                read: 1
+                write: 0
+              - type: access
+                relation: '[m, n] -> { S_0[i, j] -> A[i, -1 + j] }'
+                index: '[m, n] -> { S_0[i, j] -> A[(i), (-1 + j)] }'
+                reference: __pet_ref_2
+                read: 1
+                write: 0
+            - type: access
+              relation: '[m, n] -> { S_0[i, j] -> A[1 + i, j] }'
+              index: '[m, n] -> { S_0[i, j] -> A[(1 + i), (j)] }'
+              reference: __pet_ref_3
+              read: 1
+              write: 0
+          - type: access
+            relation: '[m, n] -> { S_0[i, j] -> A[i, 1 + j] }'
+            index: '[m, n] -> { S_0[i, j] -> A[(i), (1 + j)] }'
+            reference: __pet_ref_4
+            read: 1
+            write: 0
+        - type: int
+          value: 4

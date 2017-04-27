@@ -1,0 +1,33 @@
+digraph "Scop Graph for 'vectorAdd' function" {
+	label="Scop Graph for 'vectorAdd' function";
+
+	Node0x1f74470 [shape=record,label="{entry:\l  %\"alloca point\" = bitcast i32 0 to i32\l  %\"ssa point\" = bitcast i32 0 to i32\l  br label %\"2\"\l}"];
+	Node0x1f74470 -> Node0x1f74490;
+	Node0x1f74490 [shape=record,label="{\"2\":                                              \l  br label %\"4\"\l}"];
+	Node0x1f74490 -> Node0x1f738b0;
+	Node0x1f738b0 [shape=record,label="{\"4\":                                              \l  %indvar = phi i64 [ %indvar.next, %\"3\" ], [ 0, %\"2\" ]\l  %exitcond = icmp ne i64 %indvar, 1024\l  br i1 %exitcond, label %\"3\", label %\"5\"\l}"];
+	Node0x1f738b0 -> Node0x1f743d0;
+	Node0x1f738b0 -> Node0x1f73740;
+	Node0x1f743d0 [shape=record,label="{\"3\":                                              \l  %0 = load float** @c, align 8\l  %1 = load float** @a, align 8\l  %scevgep1 = getelementptr float* %1, i64 %indvar\l  %2 = load float* %scevgep1, align 4\l  %3 = load float** @b, align 8\l  %scevgep2 = getelementptr float* %3, i64 %indvar\l  %4 = load float* %scevgep2, align 4\l  %5 = fadd float %2, %4\l  %scevgep = getelementptr float* %0, i64 %indvar\l  store float %5, float* %scevgep, align 4\l  %indvar.next = add i64 %indvar, 1\l  br label %\"4\"\l}"];
+	Node0x1f743d0 -> Node0x1f738b0[constraint=false];
+	Node0x1f73740 [shape=record,label="{\"5\":                                              \l  br label %return\l}"];
+	Node0x1f73740 -> Node0x1f73820;
+	Node0x1f73820 [shape=record,label="{return:                                           \l  ret void\l}"];
+	colorscheme = "paired12"
+        subgraph cluster_0x1f6e360 {
+          label = "";
+          style = solid;
+          color = 1
+          subgraph cluster_0x1f6e9f0 {
+            label = "Possible aliasing: \"a\", \"  %1 = load float** @a, align 8\", \"c\"";
+            style = solid;
+            color = 6
+            Node0x1f738b0;
+            Node0x1f743d0;
+          }
+          Node0x1f74470;
+          Node0x1f74490;
+          Node0x1f73740;
+          Node0x1f73820;
+        }
+}

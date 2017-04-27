@@ -1,0 +1,1 @@
+Passei no quadro o exemplo do fatorial com frames do gcc.

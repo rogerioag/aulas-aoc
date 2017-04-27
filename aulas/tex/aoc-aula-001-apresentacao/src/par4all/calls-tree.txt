@@ -1,0 +1,15 @@
++-main() <int main (int argc, char *argv[]) at chamadas-kernels.c:43>
+  +-P4A_accel_malloc()
+  +-p4a_launcher_main() <void p4a_launcher_main (float *a, float *b, int n) at chamadas-kernels.c:36>
+  | +-P4A_call_accel_kernel_1d()
+  | \-p4a_wrapper_main() <P4A_accel_kernel_wrapper p4a_wrapper_main (int i, float *a, float *b, int n) at chamadas-kernels.c:14>
+  |   \-p4a_kernel_main() <P4A_accel_kernel p4a_kernel_main (int i, float *a, float *b, int n) at chamadas-kernels.c:21>
+  |     +-sinf()
+  |     \-cosf()
+  +-P4A_copy_from_accel_1d()
+  +-P4A_accel_free()
+  +-P4A_copy_to_accel_1d()
+  \-p4a_launcher_main_1() <void p4a_launcher_main_1 (float *a, float *b, float *c, int n) at chamadas-kernels.c:29>
+    +-P4A_call_accel_kernel_1d()
+    \-p4a_wrapper_main_1() <P4A_accel_kernel_wrapper p4a_wrapper_main_1 (int i, float *a, float *b, float *c, int n) at chamadas-kernels.c:1>
+      \-p4a_kernel_main_1() <P4A_accel_kernel p4a_kernel_main_1 (int i, float *a, float *b, float *c, int n) at chamadas-kernels.c:8>

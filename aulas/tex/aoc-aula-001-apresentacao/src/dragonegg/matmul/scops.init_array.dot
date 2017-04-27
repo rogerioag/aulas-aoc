@@ -1,0 +1,47 @@
+digraph "Scop Graph for 'init_array' function" {
+	label="Scop Graph for 'init_array' function";
+
+	Node0x15897b0 [shape=record,label="{%0:\l  br label %1\l}"];
+	Node0x15897b0 -> Node0x15897d0;
+	Node0x15897d0 [shape=record,label="{%1:\l\l  %2 = phi i64 [ %indvar.next2, %20 ], [ 0, %0 ]\l  %exitcond4 = icmp ne i64 %2, 1536\l  br i1 %exitcond4, label %3, label %21\l}"];
+	Node0x15897d0 -> Node0x1589990;
+	Node0x15897d0 -> Node0x1589a20;
+	Node0x1589990 [shape=record,label="{%3:\l\l  br label %4\l}"];
+	Node0x1589990 -> Node0x1589920;
+	Node0x1589920 [shape=record,label="{%4:\l\l  %indvar = phi i64 [ %indvar.next, %18 ], [ 0, %3 ]\l  %scevgep3 = getelementptr [1536 x [1536 x float]]* @A, i64 0, i64 %2, i64\l... %indvar\l  %scevgep = getelementptr [1536 x [1536 x float]]* @B, i64 0, i64 %2, i64\l... %indvar\l  %5 = mul i64 %2, %indvar\l  %6 = trunc i64 %5 to i32\l  %exitcond = icmp ne i64 %indvar, 1536\l  br i1 %exitcond, label %7, label %19\l}"];
+	Node0x1589920 -> Node0x1589ae0;
+	Node0x1589920 -> Node0x1589c80;
+	Node0x1589ae0 [shape=record,label="{%7:\l\l  %8 = srem i32 %6, 1024\l  %9 = add nsw i32 1, %8\l  %10 = sitofp i32 %9 to double\l  %11 = fdiv double %10, 2.000000e+00\l  %12 = fptrunc double %11 to float\l  store float %12, float* %scevgep3, align 4\l  %13 = srem i32 %6, 1024\l  %14 = add nsw i32 1, %13\l  %15 = sitofp i32 %14 to double\l  %16 = fdiv double %15, 2.000000e+00\l  %17 = fptrunc double %16 to float\l  store float %17, float* %scevgep, align 4\l  br label %18\l}"];
+	Node0x1589ae0 -> Node0x1589b00;
+	Node0x1589b00 [shape=record,label="{%18:\l\l  %indvar.next = add i64 %indvar, 1\l  br label %4\l}"];
+	Node0x1589b00 -> Node0x1589920[constraint=false];
+	Node0x1589c80 [shape=record,label="{%19:\l\l  br label %20\l}"];
+	Node0x1589c80 -> Node0x1589bb0;
+	Node0x1589bb0 [shape=record,label="{%20:\l\l  %indvar.next2 = add i64 %2, 1\l  br label %1\l}"];
+	Node0x1589bb0 -> Node0x15897d0[constraint=false];
+	Node0x1589a20 [shape=record,label="{%21:\l\l  ret void\l}"];
+	colorscheme = "paired12"
+        subgraph cluster_0x1588db0 {
+          label = "";
+          style = solid;
+          color = 1
+          subgraph cluster_0x158a380 {
+            label = "";
+            style = filled;
+            color = 3            subgraph cluster_0x1589ef0 {
+              label = "";
+              style = solid;
+              color = 5
+              Node0x1589920;
+              Node0x1589ae0;
+              Node0x1589b00;
+            }
+            Node0x15897d0;
+            Node0x1589990;
+            Node0x1589c80;
+            Node0x1589bb0;
+          }
+          Node0x15897b0;
+          Node0x1589a20;
+        }
+}

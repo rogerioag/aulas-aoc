@@ -1,0 +1,48 @@
+Informações obtidas sobre o SCoP (-polly-analyze-ir):
+  opt -load LLVMPolly.so -basicaa -polly-prepare -polly-analyze-ir -analyze ${BENCHMARK}.ll
+  
+Resultado:
+  Scop: bb_5.us.us => bb_6.us.us, Max Loop Depth: 1
+  BB: bb_5.us.us
+    Read x[{{{0,+,(4 * (0 smax ((sext i32 %1 to i64) * (0 smax (sext i32 %0 to i64)))))}<%bb_4.preheader.us>,+,(4 * (0 smax (sext i32 %0 to i64)))}<%bb_5.preheader.us.us>,+,4}<%bb_5.us.us>]
+    Read y[{{{0,+,(4 * (0 smax ((sext i32 %1 to i64) * (0 smax (sext i32 %0 to i64)))))}<%bb_4.preheader.us>,+,(4 * (0 smax (sext i32 %0 to i64)))}<%bb_5.preheader.us.us>,+,4}<%bb_5.us.us>]
+    Write xy[{{{0,+,(4 * (0 smax ((sext i32 %1 to i64) * (0 smax (sext i32 %0 to i64)))))}<%bb_4.preheader.us>,+,(4 * (0 smax (sext i32 %0 to i64)))}<%bb_5.preheader.us.us>,+,4}<%bb_5.us.us>]
+  
+Análise baseada em valor e acessos à memória:
+  opt -load LLVMPolly.so -basicaa -polly-dependences -analyze -polly-dependences-analysis-type={value-based | memory-based} ${BENCHMARK}.ll
+
+Resultado:
+  Printing analysis 'Polly - Calculate dependences' for region: 'bb_5.us.us => bb_6.us.us' in function 'sincos_function_':
+	  RAW dependences:
+		  [p_0, p_1, p_2] -> {  }
+	  WAR dependences:
+		  [p_0, p_1, p_2] -> {  }
+	  WAW dependences:
+		  [p_0, p_1, p_2] -> {  }
+
+Código gerado pelo CLooG para o SCoP:
+  opt -load LLVMPolly.so -basicaa -polly-cloog -analyze -q ${BENCHMARK}.ll
+Resultado para a função sincos_function_:
+  sincos_function_():
+  if (p_0 >= 1) {
+    for (c2=0;c2<=p_0-1;c2++) {
+      Stmt_bb_5_us_us(c2);
+    }
+  }
+
+Polly gerando uma AST do SCoP com isl:
+  opt -load LLVMPolly.so -basicaa -polly-ast -polly-ast-detect-parallel -analyze ${BENCHMARK}.ll
+
+Resultado:
+  Printing analysis 'Polly - Generate an AST from the SCoP (isl)' for region: 'bb_5.us.us => bb_6.us.us' in function 'sincos_function_':
+  sincos_function_():
+
+  if (1)
+
+      #pragma simd
+      #pragma omp parallel for
+      for (int c1 = 0; c1 < p_0; c1 += 1)
+	Stmt_bb_5_us_us(c1);
+
+  else
+      {  /* original code */ }

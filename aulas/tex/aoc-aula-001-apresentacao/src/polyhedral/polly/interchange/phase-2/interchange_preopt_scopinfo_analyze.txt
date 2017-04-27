@@ -1,0 +1,7 @@
+Printing analysis 'Basic Alias Analysis (stateless AA impl)':
+Pass::print not implemented for pass: 'Basic Alias Analysis (stateless AA impl)'!
+Printing analysis 'Polly - Prepare code for polly' for function 'main':
+Printing analysis 'Polly - Analyse the LLVM-IR in the detected regions' for function 'main':
+Scop: <bb 5>.preheader => <bb 8>, Max Loop Depth: 2
+BB: <bb 4>
+  Write A[{{0,+,20}<%"<bb 5>.preheader">,+,4}<%"<bb 4>">]

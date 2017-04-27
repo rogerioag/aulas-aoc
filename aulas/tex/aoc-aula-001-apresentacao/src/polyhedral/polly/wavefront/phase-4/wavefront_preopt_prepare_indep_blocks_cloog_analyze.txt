@@ -1,0 +1,8 @@
+Pass::print not implemented for pass: 'Basic Alias Analysis (stateless AA impl)'!
+main():
+for (c2=0;c2<=3;c2++) {
+  Stmt__<bb 5>_preheader_(c2);
+  for (c4=0;c4<=3;c4++) {
+    Stmt__<bb 4>_(c2,c4);
+  }
+}

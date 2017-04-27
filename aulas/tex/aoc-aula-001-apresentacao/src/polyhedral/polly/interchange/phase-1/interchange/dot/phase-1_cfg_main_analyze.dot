@@ -1,0 +1,15 @@
+digraph "CFG for 'main' function" {
+	label="CFG for 'main' function";
+
+	Node0x2092100 [shape=record,label="{entry:\l  br label %\"\<bb 5\>.preheader\"\l}"];
+	Node0x2092100 -> Node0x209f090;
+	Node0x209f1a0 [shape=record,label="{\"\<bb 4\>\":                                         \l  %indvars.iv = phi i64 [ 0, %\"\<bb 5\>.preheader\" ], [ %indvars.iv.next, %\"\<bb\l... 4\>\" ]\l  %0 = add nsw i64 %indvars.iv, %indvars.iv4\l  %ar1 = getelementptr inbounds [5 x [5 x i32]]* @A, i64 0, i64 %indvars.iv4,\l... i64 %indvars.iv\l  %1 = trunc i64 %0 to i32\l  store i32 %1, i32* %ar1, align 4, !tbaa !0\l  %indvars.iv.next = add nuw nsw i64 %indvars.iv, 1\l  %exitcond = icmp eq i64 %indvars.iv.next, 5\l  br i1 %exitcond, label %\"\<bb 6\>\", label %\"\<bb 4\>\"\l|{<s0>T|<s1>F}}"];
+	Node0x209f1a0:s0 -> Node0x20a2c00;
+	Node0x209f1a0:s1 -> Node0x209f1a0;
+	Node0x20a2c00 [shape=record,label="{\"\<bb 6\>\":                                         \l  %indvars.iv.next5 = add nuw nsw i64 %indvars.iv4, 1\l  %exitcond6 = icmp eq i64 %indvars.iv.next5, 5\l  br i1 %exitcond6, label %\"\<bb 8\>\", label %\"\<bb 5\>.preheader\"\l|{<s0>T|<s1>F}}"];
+	Node0x20a2c00:s0 -> Node0x20a2eb0;
+	Node0x20a2c00:s1 -> Node0x209f090;
+	Node0x209f090 [shape=record,label="{\"\<bb 5\>.preheader\":                               \l  %indvars.iv4 = phi i64 [ 0, %entry ], [ %indvars.iv.next5, %\"\<bb 6\>\" ]\l  br label %\"\<bb 4\>\"\l}"];
+	Node0x209f090 -> Node0x209f1a0;
+	Node0x20a2eb0 [shape=record,label="{\"\<bb 8\>\":                                         \l  %2 = call i32 (i8*, ...)* @printf(i8* noalias getelementptr inbounds ([32 x\l... i8]* @.cst, i64 0, i64 0), i32 0) #1\l  ret i32 0\l}"];
+}

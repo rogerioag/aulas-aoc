@@ -1,0 +1,21 @@
+RAG: Gerando OpenMP...
+RAG: p4a -v -k --openmp --c-flags="-lm" --cpp-flags="-lm" --cxx-flags="-lm" --ld-flags="-lm" vectoradd.c -o vectoradd-openmp
+p4a: Generated project name: P4ApMU2
+p4a: CPP flags: -lm
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`b and 0`a
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`c and 0`b
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`c and 0`a
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`sum and 0`c
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`a and 0`b
+p4a: Not removing database directory /usr/local/par4all/examples/P4A/vectoradd/P4ApMU2.database (--keep-database)
+p4a: Generated /usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.c
+p4a: Building /usr/local/par4all/examples/P4A/vectoradd/vectoradd-openmp
+p4a: gcc -c -lm -Wall -fno-strict-aliasing -fPIC -lm -O3 -std=gnu99 -fopenmp -o "/usr/local/par4all/examples/P4A/vectoradd/P4ApMU2.build/vectoradd.p4a_ywQO.o" "/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.c"
+p4a: gcc -o "/usr/local/par4all/examples/P4A/vectoradd/vectoradd-openmp" "/usr/local/par4all/examples/P4A/vectoradd/P4ApMU2.build/vectoradd.p4a_ywQO.o" -lm -fopenmp
+p4a: Generated /usr/local/par4all/examples/P4A/vectoradd/vectoradd-openmp
+p4a: rm -rf /usr/local/par4all/examples/P4A/vectoradd/P4ApMU2.build/
+RAG: Executando vectoradd-openmp 
+final result: 1.000000
+RAG: Compactando diretorio vectoradd
+  adding: vectoradd/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/p4a-saida-openmp.txt

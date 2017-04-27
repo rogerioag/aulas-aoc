@@ -1,0 +1,2 @@
+gcc -DTEST matmul.c -o matmul
+

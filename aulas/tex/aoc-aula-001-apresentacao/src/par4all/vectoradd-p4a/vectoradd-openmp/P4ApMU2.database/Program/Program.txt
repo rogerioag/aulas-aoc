@@ -1,0 +1,3 @@
+! module / file
+vectoradd!: ./P4ApMU2.database/Src/vectoradd.c
+main: ./P4ApMU2.database/Src/vectoradd.c

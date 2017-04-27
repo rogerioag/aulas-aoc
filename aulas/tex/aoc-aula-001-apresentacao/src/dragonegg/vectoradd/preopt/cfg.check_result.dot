@@ -1,0 +1,14 @@
+digraph "CFG for 'check_result' function" {
+	label="CFG for 'check_result' function";
+
+	Node0x22a1d80 [shape=record,label="{%0:\l  br label %1\l}"];
+	Node0x22a1d80 -> Node0x22a1de0;
+	Node0x22a1de0 [shape=record,label="{%1:\l\l  %indvar = phi i64 [ %indvar.next, %5 ], [ 0, %0 ]\l  %sum.0 = phi float [ 0.000000e+00, %0 ], [ %4, %5 ]\l  %scevgep = getelementptr [1024 x float]* @h_c, i64 0, i64 %indvar\l  %exitcond = icmp ne i64 %indvar, 1024\l  br i1 %exitcond, label %2, label %6\l|{<s0>T|<s1>F}}"];
+	Node0x22a1de0:s0 -> Node0x22a2400;
+	Node0x22a1de0:s1 -> Node0x22a2460;
+	Node0x22a2400 [shape=record,label="{%2:\l\l  %3 = load float* %scevgep, align 4\l  %4 = fadd float %sum.0, %3\l  br label %5\l}"];
+	Node0x22a2400 -> Node0x22a1ec0;
+	Node0x22a1ec0 [shape=record,label="{%5:\l\l  %indvar.next = add i64 %indvar, 1\l  br label %1\l}"];
+	Node0x22a1ec0 -> Node0x22a1de0;
+	Node0x22a2460 [shape=record,label="{%6:\l\l  %sum.0.lcssa = phi float [ %sum.0, %1 ]\l  %7 = load %struct._IO_FILE** @stdout, align 8\l  %8 = fpext float %sum.0.lcssa to double\l  %9 = fdiv float %sum.0.lcssa, 1.024000e+03\l  %10 = fpext float %9 to double\l  %11 = call i32 (%struct._IO_FILE*, i8*, ...)* @fprintf(%struct._IO_FILE* %7,\l... i8* getelementptr inbounds ([24 x i8]* @.str3, i32 0, i32 0), double %8,\l... double %10)\l  ret void\l}"];
+}

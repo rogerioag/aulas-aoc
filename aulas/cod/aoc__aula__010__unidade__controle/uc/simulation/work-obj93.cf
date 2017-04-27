@@ -1,0 +1,7 @@
+v 3
+file "/dados/rogerio/UTFPR/docencia/disciplinas/2013/AOC__BCC33B/2_2013/aulas/cod/aoc__aula__010__unidade__controle/uc/" "src/uc.vhd" "20130704011331.000" "20131126134351.847":
+  entity uc at 6( 123) + 0 on 4;
+  architecture funcional of uc at 19( 600) + 0 on 4;
+file "/dados/rogerio/UTFPR/docencia/disciplinas/2013/AOC__BCC33B/2_2013/aulas/cod/aoc__aula__010__unidade__controle/uc/" "testbench/uc_tb.vhd" "20130703232325.000" "20131126134351.847":
+  entity uc_tb at 6( 121) + 0 on 4;
+  architecture funcional of uc_tb at 18( 327) + 0 on 4;

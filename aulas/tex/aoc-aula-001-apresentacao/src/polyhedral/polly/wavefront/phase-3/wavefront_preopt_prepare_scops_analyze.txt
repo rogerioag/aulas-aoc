@@ -1,0 +1,37 @@
+Printing analysis 'Basic Alias Analysis (stateless AA impl)':
+Pass::print not implemented for pass: 'Basic Alias Analysis (stateless AA impl)'!
+Printing analysis 'Polly - Create polyhedral description of Scops' for region: '<bb 4> => <bb 6>' in function 'main':
+Invalid Scop!
+Printing analysis 'Polly - Create polyhedral description of Scops' for region: '<bb 5>.preheader => <bb 8>' in function 'main':
+    Context:
+    {  :  }
+    Statements {
+    	Stmt__<bb 5>_preheader_
+            Domain :=
+                { Stmt__<bb 5>_preheader_[i0] : i0 >= 0 and i0 <= 3 };
+            Scattering :=
+                { Stmt__<bb 5>_preheader_[i0] -> scattering[0, i0, 0, 0, 0] };
+            ReadAccess := 
+                { Stmt__<bb 5>_preheader_[i0] -> MemRef_A[5 + 5i0] };
+            MustWriteAccess := 
+                { Stmt__<bb 5>_preheader_[i0] -> MemRef__reg2mem[0] };
+    	Stmt__<bb 4>_
+            Domain :=
+                { Stmt__<bb 4>_[i0, i1] : i0 >= 0 and i0 <= 3 and i1 >= 0 and i1 <= 3 };
+            Scattering :=
+                { Stmt__<bb 4>_[i0, i1] -> scattering[0, i0, 1, i1, 0] };
+            ReadAccess := 
+                { Stmt__<bb 4>_[i0, i1] -> MemRef__reg2mem[0] };
+            ReadAccess := 
+                { Stmt__<bb 4>_[i0, i1] -> MemRef_A[1 + 5i0 + i1] };
+            ReadAccess := 
+                { Stmt__<bb 4>_[i0, i1] -> MemRef_A[11 + 5i0 + i1] };
+            ReadAccess := 
+                { Stmt__<bb 4>_[i0, i1] -> MemRef_A[7 + 5i0 + i1] };
+            MustWriteAccess := 
+                { Stmt__<bb 4>_[i0, i1] -> MemRef_A[6 + 5i0 + i1] };
+            MustWriteAccess := 
+                { Stmt__<bb 4>_[i0, i1] -> MemRef__reg2mem[0] };
+    }
+Printing analysis 'Polly - Create polyhedral description of Scops' for region: 'entry => <Function Return>' in function 'main':
+Invalid Scop!

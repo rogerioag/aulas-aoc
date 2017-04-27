@@ -1,0 +1,21 @@
+{
+   "context" : "{  :  }",
+   "name" : "%3 => %6",
+   "statements" : [
+      {
+         "accesses" : [
+            {
+               "kind" : "write",
+               "relation" : "{ Stmt_4[i0] -> MemRef_h_a[i0] }"
+            },
+            {
+               "kind" : "write",
+               "relation" : "{ Stmt_4[i0] -> MemRef_h_b[i0] }"
+            }
+         ],
+         "domain" : "{ Stmt_4[i0] : i0 >= 0 and i0 <= 1023 }",
+         "name" : "Stmt_4",
+         "schedule" : "{ Stmt_4[i0] -> scattering[0, i0, 0] }"
+      }
+   ]
+}

@@ -1,0 +1,59 @@
+{
+   "context" : "{  :  }",
+   "name" : "4 => 8",
+   "statements" : [
+      {
+         "accesses" : [
+            {
+               "kind" : "write",
+               "relation" : "{ Stmt__3_[i0] -> MemRef_0[i0] }"
+            },
+            {
+               "kind" : "write",
+               "relation" : "{ Stmt__3_[i0] -> MemRef_1[i0] }"
+            }
+         ],
+         "domain" : "{ Stmt__3_[i0] : i0 >= 0 and i0 <= 1023 }",
+         "name" : "Stmt__3_",
+         "schedule" : "{ Stmt__3_[i0] -> scattering[0, i0, 0] }"
+      },
+      {
+         "accesses" : [
+            {
+               "kind" : "write",
+               "relation" : "{ Stmt__5_[] -> MemRef__s2a4[0] }"
+            },
+            {
+               "kind" : "write",
+               "relation" : "{ Stmt__5_[] -> MemRef__s2a2[0] }"
+            },
+            {
+               "kind" : "write",
+               "relation" : "{ Stmt__5_[] -> MemRef__s2a[0] }"
+            }
+         ],
+         "domain" : "{ Stmt__5_[] }",
+         "name" : "Stmt__5_",
+         "schedule" : "{ Stmt__5_[] -> scattering[1, 0, 0] }"
+      },
+      {
+         "accesses" : [
+            {
+               "kind" : "read",
+               "relation" : "{ Stmt__6_[i0] -> MemRef_0[i0] }"
+            },
+            {
+               "kind" : "read",
+               "relation" : "{ Stmt__6_[i0] -> MemRef_1[i0] }"
+            },
+            {
+               "kind" : "write",
+               "relation" : "{ Stmt__6_[i0] -> MemRef_2[i0] }"
+            }
+         ],
+         "domain" : "{ Stmt__6_[i0] : i0 >= 0 and i0 <= 1023 }",
+         "name" : "Stmt__6_",
+         "schedule" : "{ Stmt__6_[i0] -> scattering[2, i0, 0] }"
+      }
+   ]
+}

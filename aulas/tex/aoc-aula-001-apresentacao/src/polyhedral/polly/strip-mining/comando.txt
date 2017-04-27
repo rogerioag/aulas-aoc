@@ -1,0 +1,17 @@
+Exportar:
+/dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/bin/opt -load /dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/lib/LLVMPolly.so -basicaa -polly-export-jscop strip-mining_preopt_prepare.ll
+
+
+Importar:
+/dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/bin/opt -load /dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/lib/LLVMPolly.so -basicaa -polly-import-jscop -polly-import-jscop-postfix=strip -polly-cloog -analyze strip-mining_preopt_prepare.ll
+
+
+Exportar para CLooG:
+/dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/bin/opt -load /dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/lib/LLVMPolly.so -basicaa -polly-export-cloog strip-mining_preopt_prepare.ll
+
+Gerar Código com o CLooG:
+/dados/rogerio/USP/doutorado/cloog-0.18.1/cloog -compilable 1 main___%_bb_5_preheader---%_bb_8_.cloog
+
+
+Skewed:
+/dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/bin/opt -load /dados/rogerio/USP/doutorado/prototipo-34-gpu/llvm_build/lib/LLVMPolly.so -basicaa -polly-import-jscop -polly-import-jscop-postfix=skewed -polly-cloog -analyze strip-mining_preopt_prepare.ll

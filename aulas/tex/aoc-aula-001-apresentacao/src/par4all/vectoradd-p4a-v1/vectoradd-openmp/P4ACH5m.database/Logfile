@@ -1,0 +1,112 @@
+Registering file /usr/local/par4all/examples/P4A/vectoradd/vectoradd.c
+Checking C syntax of file "/usr/local/par4all/examples/P4A/vectoradd/vectoradd.c"
+Preprocessing file /usr/local/par4all/examples/P4A/vectoradd/vectoradd.c
+Splitting file    ./P4ACH5m.database/Tmp/vectoradd.cpp_processed.c
+  Module         main
+  Module         vectoradd!
+Workspace P4ACH5m created and opened.
+Module main selected
+set PREPROCESSOR_MISSING_FILE_HANDLING "internal_resolver"
+Selecting rule: MUST_REGIONS
+set FOR_TO_DO_LOOP_IN_CONTROLIZER TRUE
+set UNSPAGHETTIFY_TEST_RESTRUCTURING TRUE
+set SEMANTICS_FIX_POINT_OPERATOR "derivative"
+set UNSPAGHETTIFY_RECURSIVE_DECOMPOSITION TRUE
+set ALIASING_ACROSS_IO_STREAMS FALSE
+set ABORT_ON_USER_ERROR FALSE
+set SEMANTICS_COMPUTE_TRANSFORMERS_IN_CONTEXT TRUE
+set CONSTANT_PATH_EFFECTS FALSE
+set PRETTYPRINT_SEQUENTIAL_STYLE "do"
+Request: build phase/rule PRIVATIZE_MODULE for module main.
+  BOOTSTRAP                      building   ENTITIES()
+  COMPILATION_UNIT_PARSER        building   DECLARATIONS(vectoradd!)
+  C_PARSER                       building   PARSED_CODE(main)
+                                 building   CALLEES(main)
+  CONTROLIZER                    building   CODE(main)
+Total number of restructurations: 0
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(main)
+  ATOMIC_CHAINS                  building   CHAINS(main)
+  PRIVATIZE_MODULE               updating   CODE(main)
+PRIVATIZE_MODULE made for main.
+Request: capply COARSE_GRAIN_PARALLELIZATION for module [main].
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(main)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(main)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(main)
+  CONTROLIZER                    building   CODE(vectoradd!)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(vectoradd!)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(vectoradd!)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(vectoradd!)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(vectoradd!)
+  PROGRAM_PRECONDITION           building   PROGRAM_PRECONDITION()
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(main)
+  CALLGRAPH                      building   CALLERS(main)
+                                 building   CALLERS(vectoradd!)
+                                 building   HEIGHT(main)
+                                 building   HEIGHT(vectoradd!)
+                                 building   DEPTH(main)
+                                 building   DEPTH(vectoradd!)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(main)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(main)
+  MUST_REGIONS                   building   PROPER_REGIONS(main)
+                                 building   REGIONS(main)
+                                 building   INV_REGIONS(main)
+  COARSE_GRAIN_PARALLELIZATION   updating   CODE(main)
+capply COARSE_GRAIN_PARALLELIZATION made for [main].
+Request: capply FLAG_PARALLEL_REDUCED_LOOPS_WITH_OPENMP_DIRECTIVES for module [main].
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(main)
+  PROPER_REFERENCES              building   PROPER_REFERENCES(main)
+  PROPER_REDUCTIONS              building   PROPER_REDUCTIONS(main)
+  CUMULATED_REDUCTIONS           building   CUMULATED_REDUCTIONS(main)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(main)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(main)
+  PROGRAM_PRECONDITION           building   PROGRAM_PRECONDITION()
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(main)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(main)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(main)
+  MUST_REGIONS                   building   PROPER_REGIONS(main)
+                                 building   REGIONS(main)
+                                 building   INV_REGIONS(main)
+  COARSE_GRAIN_PARALLELIZATION_WITH_REDUCTION building   REDUCTION_PARALLEL_LOOPS(main)
+  FLAG_PARALLEL_REDUCED_LOOPS_WITH_OPENMP_DIRECTIVES updating   CODE(main)
+capply FLAG_PARALLEL_REDUCED_LOOPS_WITH_OPENMP_DIRECTIVES made for [main].
+set LOOP_FUSION_GREEDY FALSE
+set LOOP_FUSION_MAXIMIZE_PARALLELISM TRUE
+set LOOP_FUSION_KEEP_PERFECT_PARALLEL_LOOP_NESTS TRUE
+set LOOP_FUSION_MAX_FUSED_PER_LOOP -1
+Request: capply LOOP_FUSION for module [main].
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(main)
+  ATOMIC_CHAINS                  building   CHAINS(main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(main)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(main)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(main)
+  PROGRAM_PRECONDITION           building   PROGRAM_PRECONDITION()
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(main)
+  CALLGRAPH                      building   CALLERS(main)
+                                 building   CALLERS(vectoradd!)
+                                 building   HEIGHT(main)
+                                 building   HEIGHT(vectoradd!)
+                                 building   DEPTH(main)
+                                 building   DEPTH(vectoradd!)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(main)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(main)
+  RICE_SEMANTICS_DEPENDENCE_GRAPH building   DG(main)
+  LOOP_FUSION                    updating   CODE(main)
+capply LOOP_FUSION made for [main].
+set PRAGMA_TYPE "expr"
+Request: capply OMPIFY_CODE for module [main].
+  OMPIFY_CODE                    updating   CODE(main)
+capply OMPIFY_CODE made for [main].
+set OMP_MERGE_POLICY "outer"
+set OMP_IF_MERGE_POLICY "ignore"
+Request: capply OMP_MERGE_PRAGMA for module [main].
+  OMP_MERGE_PRAGMA               updating   CODE(main)
+capply OMP_MERGE_PRAGMA made for [main].
+set PRETTYPRINT_SEQUENTIAL_STYLE "do"
+Request: build phase/rule UNSPLIT for module %ALL.
+  PRINT_CODE                     building   PRINTED_FILE(main)
+  PRINT_CODE                     building   PRINTED_FILE(vectoradd!)
+  UNSPLIT                        building   USER_FILE()
+UNSPLIT made for %ALL.

@@ -1,0 +1,23 @@
+Printing analysis 'Basic Alias Analysis (stateless AA impl)':
+Pass::print not implemented for pass: 'Basic Alias Analysis (stateless AA impl)'!
+Printing analysis 'Polly - Import Scops from JSON (Reads a .jscop file for each Scop)' for region: '%1 => %4' in function 'main':
+    Context:
+    {  :  }
+    Statements {
+    	Stmt_2
+            Domain :=
+                { Stmt_2[i0] : i0 >= 0 and i0 <= 4 };
+            Scattering :=
+                { Stmt_2[i0] -> scattering[i0, i1, 0] : exists (e0 = [(i0)/4]: 4e0 = i0 and i1 >= i0 and i1 <= 3 + i0) };
+            MustWriteAccess := 
+                { Stmt_2[i0] -> MemRef_A[i0] };
+    }
+Printing analysis 'Execute Cloog code generation' for region: '%1 => %4' in function 'main':
+main():
+for (c1=0;c1<=4;c1+=4) {
+  for (c2=c1;c2<=c1+3;c2++) {
+    Stmt_2(c1);
+  }
+}
+Printing analysis 'Polly - Import Scops from JSON (Reads a .jscop file for each Scop)' for region: '%0 => <Function Return>' in function 'main':
+Printing analysis 'Execute Cloog code generation' for region: '%0 => <Function Return>' in function 'main':

@@ -1,0 +1,30 @@
+digraph "Scop Graph for 'check_result' function" {
+	label="Scop Graph for 'check_result' function";
+
+	Node0x16011d0 [shape=record,label="{%0}"];
+	Node0x16011d0 -> Node0x16294a0;
+	Node0x16294a0 [shape=record,label="{%1}"];
+	Node0x16294a0 -> Node0x1628f90;
+	Node0x16294a0 -> Node0x162d0a0;
+	Node0x1628f90 [shape=record,label="{%2}"];
+	Node0x1628f90 -> Node0x1629000;
+	Node0x1629000 [shape=record,label="{%5}"];
+	Node0x1629000 -> Node0x16294a0[constraint=false];
+	Node0x162d0a0 [shape=record,label="{%6}"];
+	colorscheme = "paired12"
+        subgraph cluster_0x1629080 {
+          label = "";
+          style = solid;
+          color = 1
+          subgraph cluster_0x1628e10 {
+            label = "";
+            style = solid;
+            color = 6
+            Node0x16294a0;
+            Node0x1628f90;
+            Node0x1629000;
+          }
+          Node0x16011d0;
+          Node0x162d0a0;
+        }
+}

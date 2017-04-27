@@ -1,0 +1,133 @@
+RAG: p4a -v -k --cuda vectoradd.c -o vectoradd-cuda
+p4a: Enabling --accel because of --cuda
+p4a: Generated project name: P4AkTId
+p4a: CUDA_DIR environment variable undefined. Using '/usr/local/cuda' as default location for CUDA installation
+p4a: CPP flags: -I/usr/local/cuda/include -DP4A_ACCEL_CUDA -I/usr/local/par4all/share/p4a_accel
+p4a: PIPS: user warning in generic_proper_effects_of_complex_address_call_expression: PIPS currently does not know how to precisely handle address values used in complex call expressions expression
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`b and 0`a
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`c and 0`b
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`c and 0`a
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`sum and 0`c
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`a and 0`b
+p4a: Not removing database directory /usr/local/par4all/examples/P4A/vectoradd/P4AkTId.database (--keep-database)
+p4a: Generated /usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.cu
+p4a: Building /usr/local/par4all/examples/P4A/vectoradd/vectoradd-cuda
+p4a: nvcc --cuda -I/usr/local/cuda/include -DP4A_ACCEL_CUDA -I/usr/local/par4all/share/p4a_accel -arch=sm_20 -o /usr/local/par4all/examples/P4A/vectoradd/P4AkTId.build/vectoradd.p4a_0NLl.cu.cpp /usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.cu
+p4a: nvcc --cuda -I/usr/local/cuda/include -DP4A_ACCEL_CUDA -I/usr/local/par4all/share/p4a_accel -arch=sm_20 -o /usr/local/par4all/examples/P4A/vectoradd/P4AkTId.build/p4a_accel_SCqx.cu.cpp /usr/local/par4all/share/p4a_accel/p4a_accel.cu
+p4a: g++ -c -I/usr/local/cuda/include -DP4A_ACCEL_CUDA -I/usr/local/par4all/share/p4a_accel -Wall -fno-strict-aliasing -fPIC -O3 -o "/usr/local/par4all/examples/P4A/vectoradd/P4AkTId.build/vectoradd.p4a_0NLl.cu_B2ep.o" "/usr/local/par4all/examples/P4A/vectoradd/P4AkTId.build/vectoradd.p4a_0NLl.cu.cpp"
+/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.cu: In function 'void p4a_launcher_main_1(float*, float*, float*, int)':
+/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.cu:63:1618: warning: 'i' may be used uninitialized in this function [-Wuninitialized]
+/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.cu:62:5: note: 'i' was declared here
+/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.cu: In function 'void p4a_launcher_main(float*, float*, int)':
+/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.cu:69:1606: warning: 'i' may be used uninitialized in this function [-Wuninitialized]
+/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.cu:68:5: note: 'i' was declared here
+p4a: g++ -c -I/usr/local/cuda/include -DP4A_ACCEL_CUDA -I/usr/local/par4all/share/p4a_accel -Wall -fno-strict-aliasing -fPIC -O3 -o "/usr/local/par4all/examples/P4A/vectoradd/P4AkTId.build/p4a_accel_SCqx.cu_eDNy.o" "/usr/local/par4all/examples/P4A/vectoradd/P4AkTId.build/p4a_accel_SCqx.cu.cpp"
+p4a: g++ -o "/usr/local/par4all/examples/P4A/vectoradd/vectoradd-cuda" "/usr/local/par4all/examples/P4A/vectoradd/P4AkTId.build/vectoradd.p4a_0NLl.cu_B2ep.o" "/usr/local/par4all/examples/P4A/vectoradd/P4AkTId.build/p4a_accel_SCqx.cu_eDNy.o" -L/usr/local/cuda/lib64 -L/usr/local/cuda/lib -Bdynamic -lcudart
+p4a: Generated /usr/local/par4all/examples/P4A/vectoradd/vectoradd-cuda
+p4a: rm -rf /usr/local/par4all/examples/P4A/vectoradd/P4AkTId.build/
+RAG: Executando vectoradd-cuda 
+final result: 1.000000
+RAG: Compactando diretorio vectoradd 
+  adding: vectoradd/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/comandos.txt	(in=1732) (out=543) (deflated 69%)
+  adding: vectoradd/vectoradd-cuda	(in=41463) (out=21704) (deflated 48%)
+  adding: vectoradd/p4a-saida-cuda-nopt.txt	(in=3895) (out=937) (deflated 76%)
+  adding: vectoradd/P4AkTId.database/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/P4A/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/P4A/vectoradd.cu	(in=4419) (out=1001) (deflated 77%)
+  adding: vectoradd/P4AkTId.database/P4A/vectoradd.c	(in=4419) (out=1001) (deflated 77%)
+  adding: vectoradd/P4AkTId.database/Src/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/Src/p4a_stubs.c 	(in=91722) (out=17086) (deflated 81%)
+  adding: vectoradd/P4AkTId.database/Src/vectoradd.c	(in=4511) (out=998) (deflated 78%)
+  adding: vectoradd/P4AkTId.database/p4a_stubs!/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/p4a_stubs!/p4a_stubs!.pre.c 	(in=85570) (out=16521) (deflated 81%)
+  adding: vectoradd/P4AkTId.database/p4a_stubs!/p4a_stubs!.c 	(in=95068) (out=17701) (deflated 81%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_from_accel_3d/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_from_accel_3d/P4A_copy_from_accel_3d.c	(in=843) (out=283) (deflated 66%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_from_accel_3d/P4A_copy_from_accel_3d.pre.c	(in=687) (out=262) (deflated 62%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_to_accel_3d/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_to_accel_3d/P4A_copy_to_accel_3d.c	(in=833) (out=281) (deflated 66%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_to_accel_3d/P4A_copy_to_accel_3d.pre.c	(in=685) (out=260) (deflated 62%)
+  adding: vectoradd/P4AkTId.database/main/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/main/main.pre.c	(in=2183) (out=603) (deflated 72%)
+  adding: vectoradd/P4AkTId.database/main/main.c	(in=1020) (out=426) (deflated 58%)
+  adding: vectoradd/P4AkTId.database/main/PARALLELIZED_CODE	(in=5416) (out=798) (deflated 85%)
+  adding: vectoradd/P4AkTId.database/p4a_kernel_main/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/p4a_kernel_main/p4a_kernel_main.pre.c	(in=153) (out=108) (deflated 29%)
+  adding: vectoradd/P4AkTId.database/p4a_kernel_main/p4a_kernel_main.c	(in=146) (out=104) (deflated 29%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_to_accel_2d/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_to_accel_2d/P4A_copy_to_accel_2d.pre.c	(in=530) (out=222) (deflated 58%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_to_accel_2d/P4A_copy_to_accel_2d.c	(in=568) (out=236) (deflated 58%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_from_accel_4d/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_from_accel_4d/P4A_copy_from_accel_4d.pre.c	(in=981) (out=320) (deflated 67%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_from_accel_4d/P4A_copy_from_accel_4d.c	(in=1094) (out=342) (deflated 69%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_from_accel/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_from_accel/P4A_copy_from_accel.pre.c	(in=244) (out=150) (deflated 39%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_from_accel/P4A_copy_from_accel.c	(in=259) (out=159) (deflated 39%)
+  adding: vectoradd/P4AkTId.database/Logfile	(in=57675) (out=4356) (deflated 92%)
+  adding: vectoradd/P4AkTId.database/P4A_runtime_copy_from_accel/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/P4A_runtime_copy_from_accel/P4A_runtime_copy_from_accel.c	(in=141) (out=106) (deflated 25%)
+  adding: vectoradd/P4AkTId.database/P4A_runtime_copy_from_accel/P4A_runtime_copy_from_accel.pre.c	(in=118) (out=82) (deflated 31%)
+  adding: vectoradd/P4AkTId.database/P4A_accel_malloc/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/P4A_accel_malloc/P4A_accel_malloc.c	(in=91) (out=72) (deflated 21%)
+  adding: vectoradd/P4AkTId.database/P4A_accel_malloc/P4A_accel_malloc.pre.c	(in=83) (out=65) (deflated 22%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_to_accel_1d/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_to_accel_1d/P4A_copy_to_accel_1d.pre.c	(in=351) (out=181) (deflated 48%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_to_accel_1d/P4A_copy_to_accel_1d.c	(in=380) (out=190) (deflated 50%)
+  adding: vectoradd/P4AkTId.database/p4a_wrapper_main/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/p4a_wrapper_main/p4a_wrapper_main.pre.c	(in=158) (out=121) (deflated 23%)
+  adding: vectoradd/P4AkTId.database/p4a_wrapper_main/p4a_wrapper_main.c	(in=143) (out=116) (deflated 19%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_to_accel_4d/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_to_accel_4d/P4A_copy_to_accel_4d.pre.c	(in=979) (out=318) (deflated 68%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_to_accel_4d/P4A_copy_to_accel_4d.c	(in=1084) (out=340) (deflated 69%)
+  adding: vectoradd/P4AkTId.database/P4A_runtime_host_ptr_to_accel_ptr/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/P4A_runtime_host_ptr_to_accel_ptr/P4A_runtime_host_ptr_to_accel_ptr.c	(in=178) (out=109) (deflated 39%)
+  adding: vectoradd/P4AkTId.database/P4A_runtime_host_ptr_to_accel_ptr/P4A_runtime_host_ptr_to_accel_ptr.pre.c	(in=171) (out=104) (deflated 39%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_from_accel_1d/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_from_accel_1d/P4A_copy_from_accel_1d.c	(in=392) (out=190) (deflated 52%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_from_accel_1d/P4A_copy_from_accel_1d.pre.c	(in=353) (out=184) (deflated 48%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_to_accel/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_to_accel/P4A_copy_to_accel.c	(in=267) (out=158) (deflated 41%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_to_accel/P4A_copy_to_accel.pre.c	(in=242) (out=150) (deflated 38%)
+  adding: vectoradd/P4AkTId.database/p4a_launcher_main/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/p4a_launcher_main/p4a_launcher_main.pre.c	(in=241) (out=166) (deflated 31%)
+  adding: vectoradd/P4AkTId.database/p4a_launcher_main/p4a_launcher_main.c	(in=283) (out=180) (deflated 36%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_from_accel_2d/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_from_accel_2d/P4A_copy_from_accel_2d.c	(in=572) (out=234) (deflated 59%)
+  adding: vectoradd/P4AkTId.database/P4A_copy_from_accel_2d/P4A_copy_from_accel_2d.pre.c	(in=526) (out=223) (deflated 58%)
+  adding: vectoradd/P4AkTId.database/P4A_accel_free/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/P4A_accel_free/P4A_accel_free.c	(in=65) (out=54) (deflated 17%)
+  adding: vectoradd/P4AkTId.database/P4A_accel_free/P4A_accel_free.pre.c	(in=57) (out=47) (deflated 18%)
+  adding: vectoradd/P4AkTId.database/p4a_wrapper_main_1/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/p4a_wrapper_main_1/p4a_wrapper_main_1.c	(in=160) (out=120) (deflated 25%)
+  adding: vectoradd/P4AkTId.database/p4a_wrapper_main_1/p4a_wrapper_main_1.pre.c	(in=175) (out=126) (deflated 28%)
+  adding: vectoradd/P4AkTId.database/P4A_runtime_copy_to_accel/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/P4A_runtime_copy_to_accel/P4A_runtime_copy_to_accel.c	(in=137) (out=104) (deflated 24%)
+  adding: vectoradd/P4AkTId.database/P4A_runtime_copy_to_accel/P4A_runtime_copy_to_accel.pre.c	(in=114) (out=80) (deflated 30%)
+  adding: vectoradd/P4AkTId.database/Warnings	(in=6387) (out=369) (deflated 94%)
+  adding: vectoradd/P4AkTId.database/vectoradd!/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/vectoradd!/vectoradd!.pre.c 	(in=162266) (out=28644) (deflated 82%)
+  adding: vectoradd/P4AkTId.database/vectoradd!/vectoradd!.c 	(in=182017) (out=30411) (deflated 83%)
+  adding: vectoradd/P4AkTId.database/Tmp/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/Tmp/vectoradd.cpp_processed.c.stderr	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/Tmp/vectoradd.cpp_processed.c	(in=160) (out=120) (deflated 25%)
+  adding: vectoradd/P4AkTId.database/Tmp/p4a_stubs.cpp_processed.c 	(in=99391) (out=18297) (deflated 82%)
+  adding: vectoradd/P4AkTId.database/Tmp/p4a_stubs.c 	(in=91744) (out=17097) (deflated 81%)
+  adding: vectoradd/P4AkTId.database/Tmp/p4a_stubs.cpp_processed.c.stderr	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/Tmp/pipsdef.h	(in=622) (out=271) (deflated 56%)
+  adding: vectoradd/P4AkTId.database/Tmp/vectoradd.c 	(in=165609) (out=29344) (deflated 82%)
+  adding: vectoradd/P4AkTId.database/p4a_kernel_main_1/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/p4a_kernel_main_1/p4a_kernel_main_1.c	(in=115) (out=92) (deflated 20%)
+  adding: vectoradd/P4AkTId.database/p4a_kernel_main_1/p4a_kernel_main_1.pre.c	(in=122) (out=95) (deflated 22%)
+  adding: vectoradd/P4AkTId.database/Program/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/Program/Program.txt	(in=1349) (out=207) (deflated 85%)
+  adding: vectoradd/P4AkTId.database/Program/PROGRAM_PRECONDITION	(in=26) (out=24) (deflated 8%)
+  adding: vectoradd/P4AkTId.database/p4a_launcher_main_1/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/P4AkTId.database/p4a_launcher_main_1/p4a_launcher_main_1.pre.c	(in=258) (out=172) (deflated 33%)
+  adding: vectoradd/P4AkTId.database/p4a_launcher_main_1/p4a_launcher_main_1.c	(in=246) (out=168) (deflated 32%)
+  adding: vectoradd/testes-par4all.sh	(in=3867) (out=644) (deflated 83%)
+  adding: vectoradd/vectoradd.p4a.cu	(in=4419) (out=1001) (deflated 77%)
+  adding: vectoradd/Makefile	(in=42) (out=36) (deflated 14%)
+  adding: vectoradd/vectoradd.mk	(in=228) (out=186) (deflated 18%)
+  adding: vectoradd/vectoradd.c	(in=1047) (out=443) (deflated 58%)
+total bytes=1133492, compressed=217843 -> 81% savings

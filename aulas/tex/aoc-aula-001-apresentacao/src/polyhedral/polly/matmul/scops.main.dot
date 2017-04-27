@@ -1,0 +1,65 @@
+digraph "Scop Graph for 'main' function" {
+	label="Scop Graph for 'main' function";
+
+	Node0x1ce37f0 [shape=record,label="{%0:\l  br label %1\l}"];
+	Node0x1ce37f0 -> Node0x1ce3b70;
+	Node0x1ce3b70 [shape=record,label="{%1:\l\l  %indvar3 = phi i64 [ %indvar.next4, %16 ], [ 0, %0 ]\l  %exitcond9 = icmp ne i64 %indvar3, 1024\l  br i1 %exitcond9, label %2, label %17\l}"];
+	Node0x1ce3b70 -> Node0x1ce3b40;
+	Node0x1ce3b70 -> Node0x1ce32d0;
+	Node0x1ce3b40 [shape=record,label="{%2:\l\l  br label %3\l}"];
+	Node0x1ce3b40 -> Node0x1ce3c00;
+	Node0x1ce3c00 [shape=record,label="{%3:\l\l  %indvar1 = phi i64 [ %indvar.next2, %14 ], [ 0, %2 ]\l  %scevgep8 = getelementptr [1024 x [1024 x float]]* @C, i64 0, i64 %indvar3,\l... i64 %indvar1\l  %exitcond6 = icmp ne i64 %indvar1, 1024\l  br i1 %exitcond6, label %4, label %15\l}"];
+	Node0x1ce3c00 -> Node0x1ce3d60;
+	Node0x1ce3c00 -> Node0x1ce3c20;
+	Node0x1ce3d60 [shape=record,label="{%4:\l\l  store float 0.000000e+00, float* %scevgep8, align 4\l  br label %5\l}"];
+	Node0x1ce3d60 -> Node0x1ce3c90;
+	Node0x1ce3c90 [shape=record,label="{%5:\l\l  %indvar = phi i64 [ %indvar.next, %12 ], [ 0, %4 ]\l  %scevgep5 = getelementptr [1024 x [1024 x float]]* @A, i64 0, i64 %indvar3,\l... i64 %indvar\l  %scevgep = getelementptr [1024 x [1024 x float]]* @B, i64 0, i64 %indvar,\l... i64 %indvar1\l  %exitcond = icmp ne i64 %indvar, 1024\l  br i1 %exitcond, label %6, label %13\l}"];
+	Node0x1ce3c90 -> Node0x1ce3cf0;
+	Node0x1ce3c90 -> Node0x1ce7b20;
+	Node0x1ce3cf0 [shape=record,label="{%6:\l\l  %7 = load float* %scevgep8, align 4\l  %8 = load float* %scevgep5, align 4\l  %9 = load float* %scevgep, align 4\l  %10 = fmul float %8, %9\l  %11 = fadd float %7, %10\l  store float %11, float* %scevgep8, align 4\l  br label %12\l}"];
+	Node0x1ce3cf0 -> Node0x1ce7b80;
+	Node0x1ce7b80 [shape=record,label="{%12:\l\l  %indvar.next = add i64 %indvar, 1\l  br label %5\l}"];
+	Node0x1ce7b80 -> Node0x1ce3c90[constraint=false];
+	Node0x1ce7b20 [shape=record,label="{%13:\l\l  br label %14\l}"];
+	Node0x1ce7b20 -> Node0x1ce7ff0;
+	Node0x1ce7ff0 [shape=record,label="{%14:\l\l  %indvar.next2 = add i64 %indvar1, 1\l  br label %3\l}"];
+	Node0x1ce7ff0 -> Node0x1ce3c00[constraint=false];
+	Node0x1ce3c20 [shape=record,label="{%15:\l\l  br label %16\l}"];
+	Node0x1ce3c20 -> Node0x1ce8050;
+	Node0x1ce8050 [shape=record,label="{%16:\l\l  %indvar.next4 = add i64 %indvar3, 1\l  br label %1\l}"];
+	Node0x1ce8050 -> Node0x1ce3b70[constraint=false];
+	Node0x1ce32d0 [shape=record,label="{%17:\l\l  ret i32 0\l}"];
+	colorscheme = "paired12"
+        subgraph cluster_0x1ce31f0 {
+          label = "";
+          style = solid;
+          color = 1
+          subgraph cluster_0x1ce4290 {
+            label = "";
+            style = filled;
+            color = 3            subgraph cluster_0x1ce4210 {
+              label = "";
+              style = solid;
+              color = 5
+              subgraph cluster_0x1ce3d80 {
+                label = "";
+                style = solid;
+                color = 7
+                Node0x1ce3c90;
+                Node0x1ce3cf0;
+                Node0x1ce7b80;
+              }
+              Node0x1ce3c00;
+              Node0x1ce3d60;
+              Node0x1ce7b20;
+              Node0x1ce7ff0;
+            }
+            Node0x1ce3b70;
+            Node0x1ce3b40;
+            Node0x1ce3c20;
+            Node0x1ce8050;
+          }
+          Node0x1ce37f0;
+          Node0x1ce32d0;
+        }
+}

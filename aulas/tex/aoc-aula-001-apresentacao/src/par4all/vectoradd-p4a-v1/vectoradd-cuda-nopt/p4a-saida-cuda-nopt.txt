@@ -1,0 +1,34 @@
+RAG: p4a -v -k --cuda vectoradd.c -o vectoradd-cuda
+p4a: Enabling --accel because of --cuda
+p4a: Generated project name: P4AI7eR
+p4a: CUDA_DIR environment variable undefined. Using '/usr/local/cuda' as default location for CUDA installation
+p4a: CPP flags: -I/usr/local/cuda/include -DP4A_ACCEL_CUDA -I/usr/local/par4all/share/p4a_accel
+p4a: PIPS: user warning in generic_proper_effects_of_complex_address_call_expression: PIPS currently does not know how to precisely handle address values used in complex call expressions expression
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`b and 0`a
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`c and 0`b
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`c and 0`a
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`sum and 0`c
+p4a: PIPS: user warning in TestCoupleOfReferences: Dependence between differents variables: 0`a and 0`b
+p4a: Not removing database directory /usr/local/par4all/examples/P4A/vectoradd/P4AI7eR.database (--keep-database)
+p4a: Generated /usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.cu
+p4a: Building /usr/local/par4all/examples/P4A/vectoradd/vectoradd-cuda
+p4a: nvcc --cuda -I/usr/local/cuda/include -DP4A_ACCEL_CUDA -I/usr/local/par4all/share/p4a_accel -arch=sm_20 -o /usr/local/par4all/examples/P4A/vectoradd/P4AI7eR.build/vectoradd.p4a_l2Yn.cu.cpp /usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.cu
+p4a: nvcc --cuda -I/usr/local/cuda/include -DP4A_ACCEL_CUDA -I/usr/local/par4all/share/p4a_accel -arch=sm_20 -o /usr/local/par4all/examples/P4A/vectoradd/P4AI7eR.build/p4a_accel_g801.cu.cpp /usr/local/par4all/share/p4a_accel/p4a_accel.cu
+p4a: g++ -c -I/usr/local/cuda/include -DP4A_ACCEL_CUDA -I/usr/local/par4all/share/p4a_accel -Wall -fno-strict-aliasing -fPIC -O3 -o "/usr/local/par4all/examples/P4A/vectoradd/P4AI7eR.build/vectoradd.p4a_l2Yn.cu_TyjP.o" "/usr/local/par4all/examples/P4A/vectoradd/P4AI7eR.build/vectoradd.p4a_l2Yn.cu.cpp"
+/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.cu: In function 'void p4a_launcher_main_1(float*, float*, float*, int)':
+/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.cu:63:1618: warning: 'i' may be used uninitialized in this function [-Wuninitialized]
+/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.cu:62:5: note: 'i' was declared here
+/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.cu: In function 'void p4a_launcher_main(float*, float*, int)':
+/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.cu:69:1606: warning: 'i' may be used uninitialized in this function [-Wuninitialized]
+/usr/local/par4all/examples/P4A/vectoradd/vectoradd.p4a.cu:68:5: note: 'i' was declared here
+p4a: g++ -c -I/usr/local/cuda/include -DP4A_ACCEL_CUDA -I/usr/local/par4all/share/p4a_accel -Wall -fno-strict-aliasing -fPIC -O3 -o "/usr/local/par4all/examples/P4A/vectoradd/P4AI7eR.build/p4a_accel_g801.cu_Hmkf.o" "/usr/local/par4all/examples/P4A/vectoradd/P4AI7eR.build/p4a_accel_g801.cu.cpp"
+p4a: g++ -o "/usr/local/par4all/examples/P4A/vectoradd/vectoradd-cuda" "/usr/local/par4all/examples/P4A/vectoradd/P4AI7eR.build/vectoradd.p4a_l2Yn.cu_TyjP.o" "/usr/local/par4all/examples/P4A/vectoradd/P4AI7eR.build/p4a_accel_g801.cu_Hmkf.o" -L/usr/local/cuda/lib64 -L/usr/local/cuda/lib -Bdynamic -lcudart
+p4a: Generated /usr/local/par4all/examples/P4A/vectoradd/vectoradd-cuda
+p4a: rm -rf /usr/local/par4all/examples/P4A/vectoradd/P4AI7eR.build/
+RAG: Executando vectoradd-cuda 
+final result: 1.000000
+RAG: Compactando diretorio vectoradd 
+  adding: vectoradd/	(in=0) (out=0) (stored 0%)
+  adding: vectoradd/comandos.txt	(in=1732) (out=543) (deflated 69%)
+  adding: vectoradd/vectoradd-cuda	(in=41463) (out=21705) (deflated 48%)
+  adding: vectoradd/p4a-saida-cuda-nopt.txt

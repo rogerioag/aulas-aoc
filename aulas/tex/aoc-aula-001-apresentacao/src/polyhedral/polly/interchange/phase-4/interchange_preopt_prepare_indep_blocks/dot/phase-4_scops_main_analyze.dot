@@ -1,0 +1,38 @@
+digraph "Scop Graph for 'main' function" {
+	label="Scop Graph for 'main' function";
+
+	Node0x1365920 [shape=record,label="{entry:\l  br label %entry.split\l}"];
+	Node0x1365920 -> Node0x1366420;
+	Node0x1366420 [shape=record,label="{entry.split:                                      \l  br label %\"\<bb 5\>.preheader\"\l}"];
+	Node0x1366420 -> Node0x1366270;
+	Node0x1366270 [shape=record,label="{\"\<bb 5\>.preheader\":                               \l  %indvars.iv4 = phi i64 [ 0, %entry.split ], [ %3, %\"\<bb 6\>\" ]\l  br label %\"\<bb 4\>\"\l}"];
+	Node0x1366270 -> Node0x13663f0;
+	Node0x13663f0 [shape=record,label="{\"\<bb 4\>\":                                         \l  %indvars.iv = phi i64 [ 0, %\"\<bb 5\>.preheader\" ], [ %2, %\"\<bb 4\>\" ]\l  %0 = add i64 %indvars.iv4, %indvars.iv\l  %1 = trunc i64 %0 to i32\l  %ar1 = getelementptr [5 x [5 x i32]]* @A, i64 0, i64 %indvars.iv4, i64\l... %indvars.iv\l  store i32 %1, i32* %ar1, align 4, !tbaa !0\l  %2 = add nuw nsw i64 %indvars.iv, 1\l  %exitcond1 = icmp eq i64 %2, 5\l  br i1 %exitcond1, label %\"\<bb 6\>\", label %\"\<bb 4\>\"\l}"];
+	Node0x13663f0 -> Node0x1369b90;
+	Node0x13663f0 -> Node0x13663f0[constraint=false];
+	Node0x1369b90 [shape=record,label="{\"\<bb 6\>\":                                         \l  %3 = add nuw nsw i64 %indvars.iv4, 1\l  %exitcond = icmp eq i64 %3, 5\l  br i1 %exitcond, label %\"\<bb 8\>\", label %\"\<bb 5\>.preheader\"\l}"];
+	Node0x1369b90 -> Node0x1369bf0;
+	Node0x1369b90 -> Node0x1366270[constraint=false];
+	Node0x1369bf0 [shape=record,label="{\"\<bb 8\>\":                                         \l  %4 = call i32 (i8*, ...)* @printf(i8* noalias getelementptr inbounds ([32 x\l... i8]* @.cst, i64 0, i64 0), i32 0) #1\l  ret i32 0\l}"];
+	colorscheme = "paired12"
+        subgraph cluster_0x1365940 {
+          label = "";
+          style = solid;
+          color = 1
+          subgraph cluster_0x1366440 {
+            label = "";
+            style = filled;
+            color = 3            subgraph cluster_0x1365ba0 {
+              label = "";
+              style = solid;
+              color = 5
+              Node0x13663f0;
+            }
+            Node0x1366270;
+            Node0x1369b90;
+          }
+          Node0x1365920;
+          Node0x1366420;
+          Node0x1369bf0;
+        }
+}

@@ -1,0 +1,1 @@
+/dados/rogerio/USP/doutorado/prototipo-tar/llvm_build/bin/opt -load /dados/rogerio/USP/doutorado/prototipo-tar/llvm_build/lib/CallPrinterPass.so -callprinter vectoradd.c.normalopt.ll

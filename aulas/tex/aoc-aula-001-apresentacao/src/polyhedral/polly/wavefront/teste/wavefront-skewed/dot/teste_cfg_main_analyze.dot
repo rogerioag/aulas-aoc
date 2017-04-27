@@ -1,0 +1,18 @@
+digraph "CFG for 'main' function" {
+	label="CFG for 'main' function";
+
+	Node0x2590200 [shape=record,label="{entry:\l  br label %\"\<bb 4\>\"\l}"];
+	Node0x2590200 -> Node0x258d1e0;
+	Node0x258d1e0 [shape=record,label="{\"\<bb 4\>\":                                         \l  %c1_111 = phi i32 [ 2, %entry ], [ %c1_42, %\"\<bb 7\>\" ]\l  %0 = add nsw i32 %c1_111, -4\l  %c2_18 = call i32 (...)* @max(i32 1, i32 %0) #1\l  %1 = add nsw i32 %c1_111, -1\l  %2 = call i32 (...)* @min(i32 %1, i32 4) #1\l  %3 = icmp slt i32 %2, %c2_18\l  br i1 %3, label %\"\<bb 7\>\", label %\"\<bb 5\>.lr.ph\"\l|{<s0>T|<s1>F}}"];
+	Node0x258d1e0:s0 -> Node0x258dba0;
+	Node0x258d1e0:s1 -> Node0x2590830;
+	Node0x2590830 [shape=record,label="{\"\<bb 5\>.lr.ph\":                                   \l  %4 = sext i32 %c2_18 to i64\l  br label %\"\<bb 5\>\"\l}"];
+	Node0x2590830 -> Node0x2590a50;
+	Node0x2590a50 [shape=record,label="{\"\<bb 5\>\":                                         \l  %indvars.iv = phi i64 [ %4, %\"\<bb 5\>.lr.ph\" ], [ %indvars.iv.next, %\"\<bb 5\>\"\l... ]\l  %5 = add nsw i64 %indvars.iv, -1\l  %6 = trunc i64 %indvars.iv to i32\l  %7 = sub nsw i32 %c1_111, %6\l  %8 = sext i32 %7 to i64\l  %ar1 = getelementptr inbounds [5 x [5 x i32]]* @A, i64 0, i64 %5, i64 %8\l  %9 = load i32* %ar1, align 4, !tbaa !0\l  %10 = add nsw i32 %7, -1\l  %11 = sext i32 %10 to i64\l  %ar3 = getelementptr inbounds [5 x [5 x i32]]* @A, i64 0, i64 %indvars.iv,\l... i64 %11\l  %12 = load i32* %ar3, align 4, !tbaa !0\l  %13 = add nsw i32 %12, %9\l  %indvars.iv.next = add nsw i64 %indvars.iv, 1\l  %ar5 = getelementptr inbounds [5 x [5 x i32]]* @A, i64 0, i64\l... %indvars.iv.next, i64 %8\l  %14 = load i32* %ar5, align 4, !tbaa !0\l  %15 = add nsw i32 %13, %14\l  %16 = add nsw i32 %7, 1\l  %17 = sext i32 %16 to i64\l  %ar7 = getelementptr inbounds [5 x [5 x i32]]* @A, i64 0, i64 %indvars.iv,\l... i64 %17\l  %18 = load i32* %ar7, align 4, !tbaa !0\l  %19 = add nsw i32 %15, %18\l  %20 = sdiv i32 %19, 4\l  %ar9 = getelementptr inbounds [5 x [5 x i32]]* @A, i64 0, i64 %indvars.iv,\l... i64 %8\l  store i32 %20, i32* %ar9, align 4, !tbaa !0\l  %21 = call i32 (...)* @min(i32 %1, i32 4) #1\l  %22 = trunc i64 %indvars.iv.next to i32\l  %23 = icmp slt i32 %21, %22\l  br i1 %23, label %\"\<bb 7\>\", label %\"\<bb 5\>\"\l|{<s0>T|<s1>F}}"];
+	Node0x2590a50:s0 -> Node0x258dba0;
+	Node0x2590a50:s1 -> Node0x2590a50;
+	Node0x258dba0 [shape=record,label="{\"\<bb 7\>\":                                         \l  %c1_42 = add nsw i32 %c1_111, 1\l  %exitcond = icmp eq i32 %c1_42, 9\l  br i1 %exitcond, label %\"\<bb 9\>\", label %\"\<bb 4\>\"\l|{<s0>T|<s1>F}}"];
+	Node0x258dba0:s0 -> Node0x2592a00;
+	Node0x258dba0:s1 -> Node0x258d1e0;
+	Node0x2592a00 [shape=record,label="{\"\<bb 9\>\":                                         \l  ret i32 0\l}"];
+}

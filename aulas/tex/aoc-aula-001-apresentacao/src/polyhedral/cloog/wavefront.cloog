@@ -1,0 +1,36 @@
+# ---------------------- CONTEXTO ----------------------
+C   # linguagem C
+
+# Contexto (restricoes nos parametros)
+2 4							# 2 linhas e 4 colunas
+# eq/in  n  m  1    eq/in: 1 para desigualdade >=0, 0 para igualdade =0
+    1    1  0 -1   # 1*n + 0*m -1*1 >= 0, que e n >= 1
+    1    0  1 -1   # 0*n + 1*m -1*1 >= 0, que e m >= 1
+
+1   # Definicao manual dos nomes dos parametros.
+n m			# nomes dos parametros.
+
+# ---------------------- STATEMENTS ----------------------
+1   # Numero de statements.
+
+1   # Primeiro statement: um dominio.
+# Primeiro dominio.
+4 6   # 4 linhas e 6 colunas.
+# eq/in   i   j   n   m   1
+    1     1   0   0   0  -1  # i >= 1   ->  i        -1   >= 0
+    1    -1   0   1   0  -1  # i <= n-1 -> -i   +n   -1   >= 0
+    1     0   1   0   0  -1  # j >= 1   ->    j      -1   >= 0
+    1     0  -1   0   1  -1  # j <= m-1 ->   -j   +m -1   >= 0
+0   0     0                  # Para opcoes futuras.
+
+0 # Definir manualmente o nome dos iterators, nao.
+
+# ---------------------- SCATTERING ----------------------
+1
+2 8
+# eq/in  c1  c2   i   j   n   m   1
+    0    1   0   -1  -1   0   0   0  # c1 -i -j = 0 -> c1 = i + j (skewing).
+    0    0   1   -1   0   0   0   0  # c2 -i    = 0 -> c2 = i.
+
+1 # Definir manualmente o nome das dimensoes do scattering.
+c1 c2				# nomes das dimensoes.

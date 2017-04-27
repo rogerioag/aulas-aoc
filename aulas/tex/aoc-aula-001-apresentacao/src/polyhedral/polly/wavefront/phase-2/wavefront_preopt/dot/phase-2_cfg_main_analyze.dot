@@ -1,0 +1,15 @@
+digraph "CFG for 'main' function" {
+	label="CFG for 'main' function";
+
+	Node0x17a4ff0 [shape=record,label="{entry:\l  br label %\"\<bb 5\>.preheader\"\l}"];
+	Node0x17a4ff0 -> Node0x17a51b0;
+	Node0x17b2110 [shape=record,label="{\"\<bb 4\>\":                                         \l  %indvar = phi i64 [ 0, %\"\<bb 5\>.preheader\" ], [ %indvar.next, %\"\<bb 4\>\" ]\l  %0 = phi i32 [ %.pre, %\"\<bb 5\>.preheader\" ], [ %9, %\"\<bb 4\>\" ]\l  %1 = add i64 %indvar, 1\l  %ar1 = getelementptr [5 x [5 x i32]]* @A, i64 0, i64 %indvar2, i64 %1\l  %ar5 = getelementptr [5 x [5 x i32]]* @A, i64 0, i64 %indvars.iv.next13, i64\l... %1\l  %2 = add i64 %indvar, 2\l  %ar7 = getelementptr [5 x [5 x i32]]* @A, i64 0, i64 %10, i64 %2\l  %ar9 = getelementptr [5 x [5 x i32]]* @A, i64 0, i64 %10, i64 %1\l  %3 = load i32* %ar1, align 4, !tbaa !0\l  %4 = add nsw i32 %0, %3\l  %5 = load i32* %ar5, align 4, !tbaa !0\l  %6 = add nsw i32 %4, %5\l  %7 = load i32* %ar7, align 4, !tbaa !0\l  %8 = add nsw i32 %6, %7\l  %9 = sdiv i32 %8, 4\l  store i32 %9, i32* %ar9, align 4, !tbaa !0\l  %indvar.next = add i64 %indvar, 1\l  %exitcond1 = icmp eq i64 %indvar.next, 4\l  br i1 %exitcond1, label %\"\<bb 6\>\", label %\"\<bb 4\>\"\l|{<s0>T|<s1>F}}"];
+	Node0x17b2110:s0 -> Node0x17b66c0;
+	Node0x17b2110:s1 -> Node0x17b2110;
+	Node0x17b66c0 [shape=record,label="{\"\<bb 6\>\":                                         \l  %indvar.next3 = add i64 %indvar2, 1\l  %exitcond = icmp eq i64 %indvar.next3, 4\l  br i1 %exitcond, label %\"\<bb 8\>\", label %\"\<bb 5\>.preheader\"\l|{<s0>T|<s1>F}}"];
+	Node0x17b66c0:s0 -> Node0x17a5080;
+	Node0x17b66c0:s1 -> Node0x17a51b0;
+	Node0x17a51b0 [shape=record,label="{\"\<bb 5\>.preheader\":                               \l  %indvar2 = phi i64 [ %indvar.next3, %\"\<bb 6\>\" ], [ 0, %entry ]\l  %indvars.iv.next13 = add i64 %indvar2, 2\l  %10 = add i64 %indvar2, 1\l  %ar3.phi.trans.insert = getelementptr [5 x [5 x i32]]* @A, i64 0, i64 %10,\l... i64 0\l  %.pre = load i32* %ar3.phi.trans.insert, align 4, !tbaa !0\l  br label %\"\<bb 4\>\"\l}"];
+	Node0x17a51b0 -> Node0x17b2110;
+	Node0x17a5080 [shape=record,label="{\"\<bb 8\>\":                                         \l  ret i32 0\l}"];
+}

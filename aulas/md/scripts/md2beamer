@@ -1,0 +1,37 @@
+#!/usr/bin/python
+# coding: utf-8
+
+from subprocess import getoutput as gop
+from sys import argv
+from re import search
+
+if len(argv) > 1:
+	fname = argv[1]
+	g = search('(?P<name>.+)?\.', fname)
+	output = g.group('name')
+	print('Gerando o PDF de apresentação')
+	out = gop('pandoc -V theme:Madrid -V toc -V lang=pt-br -t beamer --template=../templates/utfpr.beamer %s -o %s.pdf' % (fname, output))
+	if out:
+	    print ('Erros encontrados:\n\n')
+	    print (out)
+	else:
+	    gop('rm *.log')
+	    print ('Aula %s.pdf construída com sucesso!' % g.group('name'))
+
+	print('Gerando o PDF como anotações')
+	out = gop('pandoc -V theme:Madrid -V toc -V handout -V lang=pt-br -t beamer --template=../templates/utfpr.beamer %s -o %s.pdf' % (fname, output+"-noted"))
+	if out:
+	    print ('Erros encontrados:\n\n')
+	    print (out)
+	else:
+	    gop('rm *.log')
+	    print ('Aula %s.pdf construída com sucesso!' % (output+"-noted"))
+	
+	print('Gerando o PDF de impressão')  
+	out = gop('pdfnup %s.pdf -o %s.pdf --nup 1x2 --no-landscape --keepinfo --paper letterpaper --frame true --scale 0.9 --suffix "nup"' % (output+"-noted", output+"-handout"))
+	if out:
+	    print (out)
+	else:
+	    gop('rm *.log')
+	    print ('Aula %s.pdf construída com sucesso!' % (output+"-handout"))
+	    

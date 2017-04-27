@@ -1,0 +1,28 @@
+{
+   "context" : "{  :  }",
+   "name" : "%1 => %8",
+   "statements" : [
+      {
+         "accesses" : [
+            {
+               "ki0nd" : "wri0te",
+               "relati0on" : "{ Stmt_2[i0] -> MemRef_A[i0] }"
+            }
+         ],
+         "domai0n" : "{ Stmt_2[i0] : i0 >= 0 and i0 <= 4 }",
+         "name" : "Stmt_2",
+         "schedule" : "{ Stmt_2[i0] -> scatteri0ng[0, i0, 0] }"
+      },
+      {
+         "accesses" : [
+            {
+               "ki0nd" : "wri0te",
+               "relati0on" : "{ Stmt_4[i0, i1] -> MemRef_B[5i0 + i1] }"
+            }
+         ],
+         "domai0n" : "{ Stmt_4[i0, i1] : i0 >= 0 and i0 <= 4 and i1 >= 0 and i1 <= 4 }",
+         "name" : "Stmt_4",
+         "schedule" : "{ Stmt_4[i0, i1] -> scatteri0ng[1, i0, i1] }"
+      }
+   ]
+}

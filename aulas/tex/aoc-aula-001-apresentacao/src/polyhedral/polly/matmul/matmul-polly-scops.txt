@@ -1,0 +1,46 @@
+Printing analysis 'Basic Alias Analysis (stateless AA impl)':
+Pass::print not implemented for pass: 'Basic Alias Analysis (stateless AA impl)'!
+Printing analysis 'Polly - Create polyhedral description of Scops' for region: '_bb_5_ => _bb_7_' in function 'main':
+Invalid Scop!
+Printing analysis 'Polly - Create polyhedral description of Scops' for region: '_bb_4_ => _bb_9_' in function 'main':
+Invalid Scop!
+Printing analysis 'Polly - Create polyhedral description of Scops' for region: '_bb_8_preheader => _bb_11_' in function 'main':
+    Context:
+    {  :  }
+    Statements {
+    	Stmt__bb_4_
+            Domain :=
+                { Stmt__bb_4_[i0, i1] : i0 >= 0 and i0 <= 1023 and i1 >= 0 and i1 <= 1023 };
+            Scattering :=
+                { Stmt__bb_4_[i0, i1] -> scattering[0, i0, 0, i1, 0, 0, 0] };
+            MustWriteAccess := 
+                { Stmt__bb_4_[i0, i1] -> MemRef_C[1024i0 + i1] };
+            MustWriteAccess := 
+                { Stmt__bb_4_[i0, i1] -> MemRef__reg2mem[0] };
+    	Stmt__bb_5_
+            Domain :=
+                { Stmt__bb_5_[i0, i1, i2] : i0 >= 0 and i0 <= 1023 and i1 >= 0 and i1 <= 1023 and i2 >= 0 and i2 <= 1023 };
+            Scattering :=
+                { Stmt__bb_5_[i0, i1, i2] -> scattering[0, i0, 0, i1, 1, i2, 0] };
+            ReadAccess := 
+                { Stmt__bb_5_[i0, i1, i2] -> MemRef__reg2mem[0] };
+            ReadAccess := 
+                { Stmt__bb_5_[i0, i1, i2] -> MemRef_A[1024i0 + i2] };
+            ReadAccess := 
+                { Stmt__bb_5_[i0, i1, i2] -> MemRef_B[i1 + 1024i2] };
+            MustWriteAccess := 
+                { Stmt__bb_5_[i0, i1, i2] -> MemRef__lcssa_reg2mem[0] };
+            MustWriteAccess := 
+                { Stmt__bb_5_[i0, i1, i2] -> MemRef__reg2mem[0] };
+    	Stmt__bb_7_
+            Domain :=
+                { Stmt__bb_7_[i0, i1] : i0 >= 0 and i0 <= 1023 and i1 >= 0 and i1 <= 1023 };
+            Scattering :=
+                { Stmt__bb_7_[i0, i1] -> scattering[0, i0, 0, i1, 2, 0, 0] };
+            ReadAccess := 
+                { Stmt__bb_7_[i0, i1] -> MemRef__lcssa_reg2mem[0] };
+            MustWriteAccess := 
+                { Stmt__bb_7_[i0, i1] -> MemRef_C[1024i0 + i1] };
+    }
+Printing analysis 'Polly - Create polyhedral description of Scops' for region: 'entry => <Function Return>' in function 'main':
+Invalid Scop!

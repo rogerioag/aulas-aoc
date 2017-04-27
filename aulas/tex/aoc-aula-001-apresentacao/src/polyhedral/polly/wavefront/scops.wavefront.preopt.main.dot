@@ -1,0 +1,47 @@
+digraph "Scop Graph for 'main' function" {
+	label="Scop Graph for 'main' function";
+
+	Node0x15781f0 [shape=record,label="{%0:\l  br label %1\l}"];
+	Node0x15781f0 -> Node0x1578540;
+	Node0x1578540 [shape=record,label="{%1:\l\l  %indvar1 = phi i64 [ %indvar.next2, %19 ], [ 0, %0 ]\l  %2 = add i64 %indvar1, 2\l  %3 = add i64 %indvar1, 1\l  %exitcond7 = icmp ne i64 %indvar1, 4\l  br i1 %exitcond7, label %4, label %20\l}"];
+	Node0x1578540 -> Node0x1578510;
+	Node0x1578540 -> Node0x1578300;
+	Node0x1578510 [shape=record,label="{%4:\l\l  br label %5\l}"];
+	Node0x1578510 -> Node0x1578320;
+	Node0x1578320 [shape=record,label="{%5:\l\l  %indvar = phi i64 [ %indvar.next, %17 ], [ 0, %4 ]\l  %6 = add i64 %indvar, 1\l  %scevgep6 = getelementptr [5 x [5 x i32]]* @A, i64 0, i64 %indvar1, i64 %6\l  %scevgep4 = getelementptr [5 x [5 x i32]]* @A, i64 0, i64 %2, i64 %6\l  %scevgep5 = getelementptr [5 x [5 x i32]]* @A, i64 0, i64 %3, i64 %indvar\l  %7 = add i64 %indvar, 2\l  %scevgep3 = getelementptr [5 x [5 x i32]]* @A, i64 0, i64 %3, i64 %7\l  %scevgep = getelementptr [5 x [5 x i32]]* @A, i64 0, i64 %3, i64 %6\l  %exitcond = icmp ne i64 %indvar, 4\l  br i1 %exitcond, label %8, label %18\l}"];
+	Node0x1578320 -> Node0x15785f0;
+	Node0x1578320 -> Node0x1578610;
+	Node0x15785f0 [shape=record,label="{%8:\l\l  %9 = load i32* %scevgep6, align 4\l  %10 = load i32* %scevgep5, align 4\l  %11 = add nsw i32 %9, %10\l  %12 = load i32* %scevgep4, align 4\l  %13 = add nsw i32 %11, %12\l  %14 = load i32* %scevgep3, align 4\l  %15 = add nsw i32 %13, %14\l  %16 = sdiv i32 %15, 4\l  store i32 %16, i32* %scevgep, align 4\l  br label %17\l}"];
+	Node0x15785f0 -> Node0x15786c0;
+	Node0x15786c0 [shape=record,label="{%17:\l\l  %indvar.next = add i64 %indvar, 1\l  br label %5\l}"];
+	Node0x15786c0 -> Node0x1578320[constraint=false];
+	Node0x1578610 [shape=record,label="{%18:\l\l  br label %19\l}"];
+	Node0x1578610 -> Node0x157b520;
+	Node0x157b520 [shape=record,label="{%19:\l\l  %indvar.next2 = add i64 %indvar1, 1\l  br label %1\l}"];
+	Node0x157b520 -> Node0x1578540[constraint=false];
+	Node0x1578300 [shape=record,label="{%20:\l\l  ret i32 0\l}"];
+	colorscheme = "paired12"
+        subgraph cluster_0x15777f0 {
+          label = "";
+          style = solid;
+          color = 1
+          subgraph cluster_0x1578db0 {
+            label = "";
+            style = filled;
+            color = 3            subgraph cluster_0x1578920 {
+              label = "";
+              style = solid;
+              color = 5
+              Node0x1578320;
+              Node0x15785f0;
+              Node0x15786c0;
+            }
+            Node0x1578540;
+            Node0x1578510;
+            Node0x1578610;
+            Node0x157b520;
+          }
+          Node0x15781f0;
+          Node0x1578300;
+        }
+}

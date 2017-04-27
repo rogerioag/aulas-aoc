@@ -1,0 +1,30 @@
+digraph "Scop Graph for 'print_array' function" {
+	label="Scop Graph for 'print_array' function";
+
+	Node0x1628e60 [shape=record,label="{%0}"];
+	Node0x1628e60 -> Node0x1628e80;
+	Node0x1628e80 [shape=record,label="{%3}"];
+	Node0x1628e80 -> Node0x1629030;
+	Node0x1628e80 -> Node0x16292a0;
+	Node0x1629030 [shape=record,label="{%4}"];
+	Node0x1629030 -> Node0x162d090;
+	Node0x162d090 [shape=record,label="{%9}"];
+	Node0x162d090 -> Node0x1628e80[constraint=false];
+	Node0x16292a0 [shape=record,label="{%10}"];
+	colorscheme = "paired12"
+        subgraph cluster_0x1629080 {
+          label = "";
+          style = solid;
+          color = 1
+          subgraph cluster_0x1629410 {
+            label = "";
+            style = solid;
+            color = 6
+            Node0x1628e80;
+            Node0x1629030;
+            Node0x162d090;
+          }
+          Node0x1628e60;
+          Node0x16292a0;
+        }
+}

@@ -1,0 +1,55 @@
+digraph "Scop Graph for 'main' function" {
+	label="Scop Graph for 'main' function";
+
+	Node0x933840 [shape=record,label="{%0:\l  br label %.split\l}"];
+	Node0x933840 -> Node0x9339c0;
+	Node0x9339c0 [shape=record,label="{.split:                                           \l  br label %1\l}"];
+	Node0x9339c0 -> Node0x933de0;
+	Node0x933de0 [shape=record,label="{%1:\l\l  %indvar1 = phi i64 [ %indvar.next2, %9 ], [ 0, %.split ]\l  %i.0 = trunc i64 %indvar1 to i32\l  %scevgep5 = getelementptr [5 x i32]* @A, i64 0, i64 %indvar1\l  %exitcond3 = icmp ne i64 %indvar1, 5\l  br i1 %exitcond3, label %2, label %10\l}"];
+	Node0x933de0 -> Node0x933990;
+	Node0x933de0 -> Node0x9338e0;
+	Node0x933990 [shape=record,label="{%2:\l\l  store i32 %i.0, i32* %scevgep5, align 4\l  br label %3\l}"];
+	Node0x933990 -> Node0x933b00;
+	Node0x933b00 [shape=record,label="{%3:\l\l  %indvar = phi i64 [ %indvar.next, %7 ], [ 0, %2 ]\l  %4 = add i64 %indvar1, %indvar\l  %5 = trunc i64 %4 to i32\l  %scevgep = getelementptr [5 x [5 x i32]]* @B, i64 0, i64 %indvar1, i64\l... %indvar\l  %exitcond = icmp ne i64 %indvar, 5\l  br i1 %exitcond, label %6, label %8\l}"];
+	Node0x933b00 -> Node0x933b60;
+	Node0x933b00 -> Node0x933bc0;
+	Node0x933b60 [shape=record,label="{%6:\l\l  store i32 %5, i32* %scevgep, align 4\l  br label %7\l}"];
+	Node0x933b60 -> Node0x937a60;
+	Node0x937a60 [shape=record,label="{%7:\l\l  %indvar.next = add i64 %indvar, 1\l  br label %3\l}"];
+	Node0x937a60 -> Node0x933b00[constraint=false];
+	Node0x933bc0 [shape=record,label="{%8:\l\l  br label %9\l}"];
+	Node0x933bc0 -> Node0x937ed0;
+	Node0x937ed0 [shape=record,label="{%9:\l\l  %indvar.next2 = add i64 %indvar1, 1\l  br label %1\l}"];
+	Node0x937ed0 -> Node0x933de0[constraint=false];
+	Node0x9338e0 [shape=record,label="{%10:\l\l  ret i32 0\l}"];
+	colorscheme = "paired12"
+        subgraph cluster_0x932ba0 {
+          label = "";
+          style = solid;
+          color = 1
+          subgraph cluster_0x934290 {
+            label = "";
+            style = solid;
+            color = 6
+            subgraph cluster_0x9339e0 {
+              label = "";
+              style = filled;
+              color = 3              subgraph cluster_0x933e00 {
+                label = "";
+                style = solid;
+                color = 7
+                Node0x933b00;
+                Node0x933b60;
+                Node0x937a60;
+              }
+              Node0x933bc0;
+            }
+            Node0x933de0;
+            Node0x933990;
+            Node0x937ed0;
+          }
+          Node0x933840;
+          Node0x9339c0;
+          Node0x9338e0;
+        }
+}

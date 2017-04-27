@@ -1,0 +1,33 @@
+{
+   "context" : "{  :  }",
+   "name" : "%1 => %16",
+   "statements" : [
+      {
+         "accesses" : [
+            {
+               "kind" : "read",
+               "relation" : "{ Stmt_4[i, j] -> MemRef_A[1 + 5i + j] }"
+            },
+            {
+               "kind" : "read",
+               "relation" : "{ Stmt_4[i, j] -> MemRef_A[5 + 5i + j] }"
+            },
+            {
+               "kind" : "read",
+               "relation" : "{ Stmt_4[i, j] -> MemRef_A[11 + 5i + j] }"
+            },
+            {
+               "kind" : "read",
+               "relation" : "{ Stmt_4[i, j] -> MemRef_A[7 + 5i + j] }"
+            },
+            {
+               "kind" : "write",
+               "relation" : "{ Stmt_4[i, j] -> MemRef_A[6 + 5i + j] }"
+            }
+         ],
+         "domain" : "{ Stmt_4[i, j] : i >= 1 and i <= 4 and j >= 1 and j <= 4 }",
+         "name" : "Stmt_4",
+         "schedule" : "{ Stmt_4[i, j] -> scattering[c1, c2]: c1=i+j and c2=i and c1 >= 2 and c1 <= 8 and c2 >= c1-1 and c2 <= c1-4 }"
+      }
+   ]
+}

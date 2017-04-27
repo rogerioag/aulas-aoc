@@ -1,0 +1,18 @@
+LD_LIBRARY_PATH=/dados/rogerio/USP/doutorado/prototipo/llvm_build/lib gcc -fplugin=/dados/rogerio/USP/doutorado/prototipo/dragonegg/dragonegg.so -fplugin-arg-dragonegg-llvm-option=-load:/dados/rogerio/USP/doutorado/prototipo/llvm_build/lib/LLVMPolly.so -O3 -fplugin-arg-dragonegg-llvm-option=-polly vectoradd.c
+
+# Gerando um .bc
+LD_LIBRARY_PATH=/dados/rogerio/USP/doutorado/prototipo/llvm_build/lib gcc -fplugin=/dados/rogerio/USP/doutorado/prototipo/dragonegg/dragonegg.so -O3 -flto -S -o - -fplugin-arg-dragonegg-llvm-ir-optimize=0 vectoradd.c | /dados/rogerio/USP/doutorado/prototipo/llvm_build/bin/opt -O3 -load /dados/rogerio/USP/doutorado/prototipo/llvm_build/lib/LLVMPolly.so -polly -o vectoradd.bc
+
+# Executavel:
+/dados/rogerio/USP/doutorado/prototipo/llvm_build/bin/clang vectoradd.bc -o vectoradd.exe
+
+# Gerando um .ll
+ LD_LIBRARY_PATH=/dados/rogerio/USP/doutorado/prototipo/llvm_build/lib gcc -fplugin=/dados/rogerio/USP/doutorado/prototipo/dragonegg/dragonegg.so -O3 -flto -S -o - -fplugin-arg-dragonegg-llvm-ir-optimize=0 vectoradd.c | /dados/rogerio/USP/doutorado/prototipo/llvm_build/bin/opt -O3 -load /dados/rogerio/USP/doutorado/prototipo/llvm_build/lib/LLVMPolly.so -polly -o - | /dados/rogerio/USP/doutorado/prototipo/llvm_build/bin/opt -S -o vectoradd.ll
+
+# Integrando com Pipe:
+LD_LIBRARY_PATH=/dados/rogerio/USP/doutorado/prototipo-3.3/llvm_build/lib:/dados/rogerio/USP/doutorado/prototipo-3.3/cloog_install/lib gcc vectoradd.c -S -O3 -fplugin=/dados/rogerio/USP/doutorado/prototipo-3.3/dragonegg/dragonegg.so -fplugin-arg-dragonegg-emit-ir -fplugin-arg-dragonegg-llvm-ir-optimize=0 -o - | LD_LIBRARY_PATH=/dados/rogerio/USP/doutorado/prototipo-3.3/llvm_build/lib:/dados/rogerio/USP/doutorado/prototipo-3.3/cloog_install/lib  /dados/rogerio/USP/doutorado/prototipo-3.3/llvm_build/bin/opt -load /dados/rogerio/USP/doutorado/prototipo-3.3/llvm_build/lib/LLVMPolly.so -basicaa -polly-cloog -analyze -polly-codegen -q
+
+LD_LIBRARY_PATH=/dados/rogerio/USP/doutorado/prototipo-3.3/llvm_build/lib:/dados/rogerio/USP/doutorado/prototipo-3.3/cloog_install/lib gcc vectoradd.c -S -O3 -fplugin=/dados/rogerio/USP/doutorado/prototipo-3.3/dragonegg/dragonegg.so -fplugin-arg-dragonegg-emit-ir -fplugin-arg-dragonegg-llvm-ir-optimize=0 -o - | LD_LIBRARY_PATH=/dados/rogerio/USP/doutorado/prototipo-3.3/llvm_build/lib:/dados/rogerio/USP/doutorado/prototipo-3.3/cloog_install/lib  /dados/rogerio/USP/doutorado/prototipo-3.3/llvm_build/bin/opt -load /dados/rogerio/USP/doutorado/prototipo-3.3/llvm_build/lib/LLVMPolly.so -basicaa -polly-import-jscop-postfix=transformed+gpu -enable-polly-openmp -polly-opt-fusion=nvptx64-unknown-unknown -polly-codegen -S -o -
+
+# Gerando bc:
+LD_LIBRARY_PATH=/dados/rogerio/USP/doutorado/prototipo-3.3/llvm_build/lib:/dados/rogerio/USP/doutorado/prototipo-3.3/cloog_install/lib gcc vectoradd.c -S -O3 -fplugin=/dados/rogerio/USP/doutorado/prototipo-3.3/dragonegg/dragonegg.so -fplugin-arg-dragonegg-emit-ir -fplugin-arg-dragonegg-llvm-ir-optimize=0 -o - | LD_LIBRARY_PATH=/dados/rogerio/USP/doutorado/prototipo-3.3/llvm_build/lib:/dados/rogerio/USP/doutorado/prototipo-3.3/cloog_install/lib  /dados/rogerio/USP/doutorado/prototipo-3.3/llvm_build/bin/opt -load /dados/rogerio/USP/doutorado/prototipo-3.3/llvm_build/lib/LLVMPolly.so -basicaa -polly-codegen -polly-vectorizer=polly -enable-polly-openmp > vectoradd.bc

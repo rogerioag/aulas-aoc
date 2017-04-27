@@ -1,0 +1,44 @@
+# CLooG -> CLooG
+# This is an automatic dump of a CLooG input file from a CloogInput data
+# structure.
+
+# Language: C
+c
+
+# Context:
+1
+
+0 2 0 0 0 0
+
+0 # Parameter name(s)
+
+# Statement number:
+1
+
+# Iteration domain of statement 1 (Stmt__bb_4_).
+1
+
+4 4 2 0 0 0
+1     1     0     0
+1    -1     0     4
+1     0     1     0
+1     0    -1     4
+
+0 0 0 # For future options.
+
+
+0 # Iterator name(s)
+# --------------------- SCATTERING --------------------
+1 # Scattering functions
+
+# Scattering of statement 1 (Stmt__bb_4_).
+1
+
+5 9 5 2 0 0
+0     0     0     0     0     1     0     0     0
+0     0     0     0     1     0     0    -1     0
+0     0     0     1     0     0     0     0     0
+0     0     1     0     0     0    -1     0     0
+0     1     0     0     0     0     0     0     0
+
+0 # Scattering dimension name(s)
