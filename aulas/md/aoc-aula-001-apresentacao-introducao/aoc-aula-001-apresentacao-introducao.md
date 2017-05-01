@@ -29,6 +29,9 @@ banner-classnotes: figuras/banner-classnotes.pdf
 
 ## Bloco
 
+* Blabla
+  \note{Nota Bla Bla}
+
 ### Bloco Teste
 Bla bla bla bla
 

@@ -32,6 +32,8 @@ BEAMEROPTIONS += --include-in-header=${TEMPLATES}/header-beamer.tex
 BEAMEROPTIONS += -V toc
 BEAMEROPTIONS += --highlight-style=pygments
 
+HANDOUTOPTIONS = -V handout
+
 # Notes options.
 PDFOPTIONS = -V lang=brazil -M lang=pt-br -V babel-lang=brazil
 PDFOPTIONS += -N --latex-engine=pdflatex
@@ -55,7 +57,7 @@ all : clean $(SLIDES) $(HANDOUTS) $(NOTES)
 	evince $@ &
 
 %.md.handout.pdf : %.md
-	pandoc $^ ${COMMOMOPTIONS} ${BEAMEROPTIONS} -o $@ 
+	pandoc $^ ${COMMOMOPTIONS} ${BEAMEROPTIONS} ${HANDOUTOPTIONS} -o $@ 
 	pdfnup $@ --nup 1x2 --no-landscape --keepinfo \
 		--paper letterpaper --frame true --scale 0.9 \
 		--suffix "nup"
