@@ -107,6 +107,22 @@ Conforme foi apresentado na Figura \ref{mylabel}.
   }
 ```
 
+## Exemplo de Código usando estilo
+
+```{.c caption="Código" style=C basicstyle=\scriptsize}
+  /*
+   * cHelloWorld.c
+   *
+   */
+  #include <stdio.h>
+
+  int main() {
+      printf("Hello World from C  :-)\n");
+      return 0;
+  }
+```
+
+
 ## Hello World
 
 * Bla
