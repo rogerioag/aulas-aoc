@@ -15,6 +15,8 @@ subjectname: BCC33B - Arquitetura e Organização de Computadores
 idsubjectcourseinstitution: BCC33B-IC3A
 abstract: Resumo da Aula.
 banner: figuras/banner.pdf
+banner-slides: figuras/banner-slides.pdf
+banner-classnotes: figuras/banner-classnotes.pdf
 ---
 
 # Introdução
@@ -118,6 +120,9 @@ Conforme foi apresentado na Figura \ref{mylabel}.
 rogerio@chamonix:hello-world$  ./hello-world.exe
 Hello World!!!
 Teste
+Teste2
+teste3
+rogerio@chamonix:hello-world$
 [/terminal]
 
 ## Organizando as Threads

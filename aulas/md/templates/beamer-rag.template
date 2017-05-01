@@ -185,9 +185,9 @@ $if(section-titles)$
     \usebackgroundtemplate{}
     \frame{\sectionpage}
     % \frame{\fontsize{14pt}{7.2}\selectfont \begin{minipage}[t][\textheight][t]{\textwidth} \sectionpage \end{minipage}}
-    $if(banner)$
+    $if(banner-slides)$
       % \usebackgroundtemplate{\includegraphics[trim=1.0cm 1.0cm 1.0cm 1.0cm, scale=0.47]{$banner$}}
-      \pgfdeclareimage[width=\paperwidth,height=\paperheight]{background}{$banner$}
+      \pgfdeclareimage[width=\paperwidth,height=\paperheight]{background}{$banner-slides$}
       \usebackgroundtemplate{\pgfuseimage{background}}
     $else$
       % Tentativa de corrigir o problema de que quando se adiciona uma imagem as imagem de fundo desaparece.
